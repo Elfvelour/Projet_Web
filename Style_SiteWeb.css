@@ -72,19 +72,6 @@ ul li {
   font-family: var(--font-corps);
 }
 
-ul li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 6px;
-  width: 0;
-  height: 0;
-  border-top: 6px solid transparent;
-  border-bottom: 6px solid transparent;
-  border-left: 10px solid var(--bleu-academique);
-}
-
-
 
 header {
   background: var(--bleu-academique);
@@ -92,29 +79,6 @@ header {
   position: relative;
 }
 
-header img.logo {
-  height: 48px;
-  position: absolute;
-  top: 20px;
-  left: 20px;
-}
-
-/* Zone de protection autour du logo */
-header img.logo {
-  margin: 20px;
-}
-
-/* HERO BANNER (DIAGONALE) */
-
-.hero {
-  position: relative;
-  background: var(--bleu-academique);
-  color: var(--blanc-pur);
-  padding: 5rem 3rem;
-  clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
-}
-
-/* SECTIONS */
 
 section {
   background: var(--blanc-pur);
@@ -123,37 +87,9 @@ section {
   max-width: 1100px;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-  text-align: left; /* Alignement institutionnel */
+  text-align: left;
 }
 
-/* BOUTONS & INTERACTIONS */
-
-button,
-a.button {
-  background: var(--jaune-electrique);
-  color: #000;
-  padding: 0.7rem 1.4rem;
-  border-radius: 6px;
-  text-decoration: none;
-  font-weight: 600;
-  transition: 0.2s;
-}
-
-button:hover,
-a.button:hover {
-  background: var(--cyan-tech);
-}
-
-/* ACCRÉDITATIONS */
-
-.accreditations {
-  background: var(--blanc-pur);
-  padding: 1rem;
-  border-radius: 6px;
-  display: flex;
-  gap: 1rem;
-  justify-content: flex-end;
-}
 
 .bloc-image-texte {
   margin: 20px;
