@@ -82,7 +82,7 @@ header{
     padding: 10px;
 }
 
-<<<<<<< HEAD
+
 .header-top {
     display: flex;
     align-items: center;  
@@ -153,8 +153,6 @@ nav a:hover{
 }
 
 /* SECTIONS */
-=======
->>>>>>> 59518103243bf31f334f8323ac0232d9a0ed5378
 
 section {
   background: var(--blanc-pur);
@@ -179,7 +177,7 @@ section {
   border-radius: 10px;
 }
 
-img {
+section img {
     width: 50%;
     border-radius: 10px;
     margin: 10px auto; /* auto pour centrer */
