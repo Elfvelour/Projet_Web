@@ -134,10 +134,12 @@ nav a {
   border-radius: 10px;
   border: 1px solid black;
   background-color: white;
+  text-decoration: none;
 }
 
 nav a:hover {
   background-color: var(--cyan-tech);
+  text-decoration: none;
 }
 
 /* ------------------ HERO BANNER ----------------------------- */
@@ -221,24 +223,27 @@ footer p {
 /* ------------------------- LABEL EFREI --------------------- */
 
 .certif-efrei {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 400px;
-  padding: 20px;
-}
-
-.certif-efrei img {
-  width: 200px;
-  height: auto;
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+    gap: 400px;
+    padding: 20px;
+    width: 100%;
 }
 
 .certif-efrei .logo-u {
-  filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1);
 }
 
-.certif-efrei .cti {
-  height: 100px;
+.certif-efrei img{
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+}
+
+.certif-efrei .cti{
+    height: 100px;
+    object-fit: contain;
 }
 
 /* ------------------- RÉSEAUX -------------------- */
@@ -253,6 +258,7 @@ footer p {
 .reseaux img {
   width: 80px;
   height: auto;
+  object-fit: contain;
 }
 
 .reseaux .image1 {

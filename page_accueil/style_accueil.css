@@ -124,10 +124,10 @@ footer p{
 }
 
 .propos{
-    border-radius: 10px;
+    text-decoration: none;
 }
 .propos:hover{
-    background-color: var(--cyan-tech);
+    text-decoration:underline;
 }
 /*----------------label-efrei-------------------*/
 .certif-efrei {
