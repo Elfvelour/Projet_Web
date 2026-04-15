@@ -1,0 +1,93 @@
+
+
+body{
+    background-color: white;
+}
+/*---------------------header---------------*/
+
+header{
+    background-color: #0A316C ;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+.header-top {
+    display: flex;
+    align-items: center;  
+    gap:25%; 
+    padding: 10px;
+    padding-bottom: 50px;
+}
+
+header img {
+    width: 300px;         
+    height: auto;
+}
+
+.header-title h1 {
+    font-family: bold;
+    font-size: 40px;
+    text-align: center;
+    margin: 0;
+}
+
+.header-title h2 {
+    font-size: 32px;
+    padding: 10px;
+    margin: 0;
+}
+
+/*-------------------------nav------------------------*/
+nav{
+    display: block;
+}
+
+nav a{
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+nav a:hover{
+    background-color: #81ECEC ;
+}
+
+/*-----------------histoire_efrei------------------*/
+section{
+    color:black;
+}
+
+section a{
+    text-decoration: none;
+    text-align: center;
+}
+/*-----------------video----------------*/
+iframe{
+    border-radius: 8px;
+}
+
+/*-----------------footer-----------------------*/
+footer{
+    background-color: #0A316C;
+    padding: 20px;
+    color:white;
+    text-align: center;
+}
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
+.reseaux {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.reseaux img{
+    width: 80px;
+    height: auto;
+    filter: sepia(100%);
+}
