@@ -265,6 +265,10 @@ footer p {
   filter: brightness(0) invert(1);
 }
 
+.reseaux .image1:hover{
+    filter: brightness(0);
+}
+
 /* ------------------- YOUTUBE ICON ------------------------ */
 
 .yt-icon {
@@ -272,3 +276,8 @@ footer p {
   height: auto;
   fill: white;
 }
+
+.yt-icon:hover{
+    filter: brightness(0);
+}
+

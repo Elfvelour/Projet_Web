@@ -90,6 +90,16 @@ nav a{
 nav a:hover{
     background-color: var(--cyan-tech) ;
 }
+/*--------------------section-----------------------------*/
+section {
+  background: var(--blanc-pur);
+  padding: 2rem 2.5rem;
+  margin: 2rem auto;
+  max-width: 1100px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
 
 /*-----------------histoire_efrei------------------*/
 section{
@@ -174,10 +184,18 @@ footer p{
 .reseaux .image1{
     filter: brightness(0) invert(1);
 }
+
+.reseaux .image1:hover{
+    filter: brightness(0);
+}
 /*------------------------yt----------------------*/
 .yt-icon {
     width: 60px;
     height: auto;
     fill: white;
+}
+
+.yt-icon:hover{
+    filter: brightness(0);
 }
 
