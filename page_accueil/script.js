@@ -6,15 +6,14 @@
     const prev = document.querySelector('#prev');
     const next = document.querySelector('#next');
 
-    const $slides = document.querySelectorAll('.slide'); 
+    const $slides = document.querySelectorAll('.slide');
+    const $text = document.querySelectorAll('.carousel-txt');
 
     let $dots;
     let intervalId;
-
-    let currentSlide = 0;                                 
+    let currentSlide = 0;
 
     function slideTo(index){
-        console.log("slideTo appelé avec :", index);
         if(index >= $slides.length){
             currentSlide = 0;
         } 
@@ -31,27 +30,28 @@
         $dots.forEach(($elt, key) => {
             $elt.className = `dot ${key === currentSlide ? 'active' : 'inactive'}`;
         });
-    }   
+
+        $text.forEach(($elt, key) => {
+            $elt.classList.toggle('visible', key === currentSlide);
+        });
+    }
 
     function showSlide(){
-    slideTo(currentSlide + 1);
+        slideTo(currentSlide + 1);
     }
 
     const dotsContainer = document.querySelector('.carousel-dots');
-
     for(let i = 0; i < $slides.length; i++){
-        let dotClass = i === currentSlide ? 'active' : 'inactive';
         let span = document.createElement('span');
-        span.className = `dot ${dotClass}`;
+        span.className = `dot ${i === currentSlide ? 'active' : 'inactive'}`;
         span.dataset.slideId = i;
         dotsContainer.appendChild(span);
     }
 
-    $dots = document.querySelectorAll('.dot');        
-
+    $dots = document.querySelectorAll('.dot');
     $dots.forEach(($elt, key) => $elt.addEventListener('click', () => slideTo(key)));
 
-    slideTo(currentSlide);
+    slideTo(0);
 
     prev.addEventListener('click', () => slideTo(currentSlide - 1));
     next.addEventListener('click', () => slideTo(currentSlide + 1));

@@ -166,12 +166,10 @@ section {
   max-width: 1100px;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-  transition: transform 0.3s ease-in-out;
-}
+  }
 
 section:hover{
   box-shadow: 0 2px 6px var(--bleu-academique);
-  transform: scale(1.05,1.05);
 }
 
 /* Bloc image + texte */
@@ -303,10 +301,12 @@ footer p {
   max-width: 1100px;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease-in-out;
 }
 
 .temoignage:hover{
-  box-shadow: 0 2px 6px var(--bleu-academique)
+  box-shadow: 0 2px 6px var(--bleu-academique);
+  transform: scale(1.05,1.05);
 }
 
 .box-temoin {
