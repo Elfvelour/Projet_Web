@@ -166,6 +166,12 @@ section {
   max-width: 1100px;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease-in-out;
+}
+
+section:hover{
+  box-shadow: 0 2px 6px var(--bleu-academique);
+  transform: scale(1.05,1.05);
 }
 
 /* Bloc image + texte */
@@ -281,3 +287,48 @@ footer p {
     filter: brightness(0);
 }
 
+/*------------------------- TEMOIGNAGE ------------------------*/
+
+.title-box{
+  font-size: 32px;
+  font-weight: 700;
+  color:black;
+  font-family: var(--font-titres);
+}
+
+.temoignage {
+  background: var(--blanc-pur);
+  padding: 2rem 2.5rem;
+  margin: 2rem auto;
+  max-width: 1100px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.temoignage:hover{
+  box-shadow: 0 2px 6px var(--bleu-academique)
+}
+
+.box-temoin {
+    display: flex;
+    flex-direction: column;
+}
+
+.etudiant-temoin {
+    display: flex;
+    align-items: center;
+    left: 5%;
+    gap: 30%;
+}
+
+.etudiant-temoin img {
+    width: 200px;
+    height: auto;
+    object-fit: contain;
+}
+
+.photo-temoin{
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
