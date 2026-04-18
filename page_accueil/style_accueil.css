@@ -140,12 +140,15 @@ section:hover{
     height: 100%;
     object-fit: cover;
     border-radius: 10px;
-    transition: transform 0.5s ease-in-out;
+    justify-content: center;
+    transition: transform 0.8s ease-in-out;
+    opacity: 0.9;
 }
 
 
 .carousel:hover img{
     transform: scale(1.1);
+    opacity: 1;
 }
 
 

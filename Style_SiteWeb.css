@@ -317,18 +317,69 @@ footer p {
 .etudiant-temoin {
     display: flex;
     align-items: center;
+    justify-content: center;
     left: 5%;
     gap: 30%;
+    background-color: var(--bleu-academique);
+    margin: 2%;
+    border-radius: 10px;
+    color: white;
 }
 
 .etudiant-temoin img {
     width: 200px;
     height: auto;
     object-fit: contain;
+    border-radius: 10px;
+}
+
+.etudiant-temoin p{
+  font-family: var(--font-corps);
+  font-style: italic;
 }
 
 .photo-temoin{
   flex-direction: column;
   justify-content: center;
   text-align: center;
+}
+
+/*-----------------PLAN_ACCES-------------------*/
+#maps{
+  display: flex;
+  flex-direction: column;
+  object-fit: contain;
+}
+
+#position-maps{
+  display: flex;
+  flex-direction: row;
+  gap: 10%;
+}
+
+.campus{
+  display: flex;
+  flex-direction: column;
+}
+
+.site{
+  background: var(--blanc-pur);
+  padding: 2rem 2.5rem;
+  margin: 2rem auto;
+  max-width: 1100px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+/*---------------------CONTENU-DEPLIABLE------------------*/
+.triangle{
+  font-size:large;
+  margin: 0px 0px 10px 10px;
+  padding-right: 3%;
+}
+
+
+.depliable{
+  display: flex;
+  flex-wrap: wrap;
 }

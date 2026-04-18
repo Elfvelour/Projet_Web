@@ -84,3 +84,16 @@
         });
     });
 })();
+
+
+
+function triangle(){
+    const current = document.querySelector('.triangle p');
+
+    if(current.innerHTML === '▶'){
+        current.innerHTML = '▼';
+    } else {
+        current.innerHTML = '▶';
+    }
+   
+}
