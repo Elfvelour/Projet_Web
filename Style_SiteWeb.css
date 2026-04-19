@@ -50,14 +50,31 @@ p {
   font-style: italic;
 }
 
-a {
-  color: var(--bleu-academique);
+
+/*------------------------SOULIGNAGE-DYNAMIQUE-------------------*/
+footer .propos{
+  position: relative;
+  display: inline-block;
+  color: white;
   text-decoration: none;
+  padding: 5px;
 }
 
-a:hover {
-  text-decoration: underline;
+footer .propos::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: white;
+  transition: width 0.3s ease-in-out;
 }
+
+footer .propos:hover::after{
+  width: 100%;
+}
+
 
 /* -------------- LISTES ---------------- */
 
@@ -121,25 +138,39 @@ header img {
 }
 
 /* ------------------- NAV --------------------- */
-
-nav {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
+nav{
+    display: flex;         
+    justify-content: center;
+    gap: 20px; 
 }
 
-nav a {
-  color: black;
-  padding: 5px 20px;
-  border-radius: 10px;
-  border: 1px solid black;
-  background-color: white;
-  text-decoration: none;
+nav a{
+    position: relative;
+    text-decoration: none;
+    color: white;
+    padding: 5px 20px;
 }
 
-nav a:hover {
-  background-color: var(--cyan-tech);
-  text-decoration: none;
+
+nav a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--cyan-tech);
+    transition: width 0.3s ease-in-out;
+
+}
+
+nav a:hover::after, nav a.active::after{
+    width: 100%;
+}
+
+
+nav a:hover, nav a.active{
+    color: var(--cyan-tech);
 }
 
 /* ------------------ HERO BANNER ----------------------------- */
@@ -223,6 +254,7 @@ footer a {
 footer p {
   margin: 2px 0;
 }
+
 
 /* ------------------------- LABEL EFREI --------------------- */
 

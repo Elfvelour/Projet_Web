@@ -1,12 +1,14 @@
 (function(){
     "use strict";
 
-    const slideTimeout = 5000;
+    const $slides = document.querySelectorAll('.slide');
+    const dotsContainer = document.querySelector('.carousel-dots');
 
+    if($slides.length === 0 || !dotsContainer) return;
+
+    const slideTimeout = 5000;
     const prev = document.querySelector('#prev');
     const next = document.querySelector('#next');
-
-    const $slides = document.querySelectorAll('.slide');
     const $text = document.querySelectorAll('.carousel-txt');
 
     let $dots;
@@ -16,11 +18,9 @@
     function slideTo(index){
         if(index >= $slides.length){
             currentSlide = 0;
-        } 
-        else if(index < 0){
+        } else if(index < 0){
             currentSlide = $slides.length - 1;
-        } 
-        else {
+        } else {
             currentSlide = index;
         }
 
@@ -40,7 +40,6 @@
         slideTo(currentSlide + 1);
     }
 
-    const dotsContainer = document.querySelector('.carousel-dots');
     for(let i = 0; i < $slides.length; i++){
         let span = document.createElement('span');
         span.className = `dot ${i === currentSlide ? 'active' : 'inactive'}`;
@@ -62,10 +61,7 @@
         let startX;
         let endX;
 
-        $elt.addEventListener('mouseover', () => {
-            clearInterval(intervalId);
-        }, false);
-
+        $elt.addEventListener('mouseover', () => clearInterval(intervalId), false);
         $elt.addEventListener('mouseout', () => {
             intervalId = setInterval(showSlide, slideTimeout);
         }, false);
@@ -76,15 +72,12 @@
 
         $elt.addEventListener('touchend', (event) => {
             endX = event.changedTouches[0].clientX;
-            if(startX > endX){
-                slideTo(currentSlide + 1);
-            } else if(startX < endX){
-                slideTo(currentSlide - 1);
-            }
+            if(startX > endX) slideTo(currentSlide + 1);
+            else if(startX < endX) slideTo(currentSlide - 1);
         });
     });
-})();
 
+})();
 
 
 function triangle(){
@@ -95,5 +88,15 @@ function triangle(){
     } else {
         current.innerHTML = '▶';
     }
-   
 }
+
+
+const navLinks = document.querySelectorAll('nav a');
+    const currentPage = window.location.pathname.split('/').pop();
+
+    navLinks.forEach(link => {
+        const linkPage = link.getAttribute('href').split('/').pop();
+        if(linkPage === currentPage && linkPage !== '#'){
+            link.classList.add('active');
+        }
+    });

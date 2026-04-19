@@ -79,17 +79,34 @@ nav{
 }
 
 nav a{
+    position: relative;
     text-decoration: none;
-    color: black;
+    color: white;
     padding: 5px 20px;
-    border-radius: 10px;
-    border: 1px solid black ;
-    background-color: white;
 }
 
-nav a:hover{
-    background-color: var(--cyan-tech) ;
+
+nav a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--cyan-tech);
+    transition: width 0.3s ease-in-out;
+
 }
+
+nav a:hover::after, nav a.active::after{
+    width: 100%;
+}
+
+nav a:hover,nav a.active{
+    color: var(--cyan-tech);
+}
+
+
 /*--------------------section-----------------------------*/
 section {
   background: var(--blanc-pur);
@@ -243,11 +260,28 @@ footer p{
    margin: 2px 0;
 }
 
-.propos{
-    text-decoration: none;
+/*------------------------SOULIGNAGE-DYNAMIQUE-------------------*/
+footer .propos{
+  position: relative;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: 5px;
 }
-.propos:hover{
-    text-decoration:underline;
+
+footer .propos::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: white;
+  transition: width 0.3s ease-in-out;
+}
+
+footer .propos:hover::after{
+  width: 100%;
 }
 /*----------------label-efrei-------------------*/
 .certif-efrei {
@@ -308,4 +342,3 @@ footer p{
 .yt-icon:hover{
     filter: brightness(0);
 }
-
