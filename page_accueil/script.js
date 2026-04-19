@@ -80,19 +80,23 @@
 })();
 
 
-function triangle(){
-    const current = document.querySelector('.triangle p');
+function triangle(id){
+    const section = document.getElementById(id);         
+    const triangleP = section.querySelector('.triangle p');
+    const contenu = section.querySelector('.hidden');
 
-    if(current.innerHTML === '▶'){
-        current.innerHTML = '▼';
+    if(triangleP.innerHTML === '▶'){
+        triangleP.innerHTML = '▼';
+        contenu.classList.add('active');
     } else {
-        current.innerHTML = '▶';
+        triangleP.innerHTML = '▶';
+        contenu.classList.remove('active');
     }
 }
 
 
 const navLinks = document.querySelectorAll('nav a');
-    const currentPage = window.location.pathname.split('/').pop();
+const currentPage = window.location.pathname.split('/').pop();
 
     navLinks.forEach(link => {
         const linkPage = link.getAttribute('href').split('/').pop();
