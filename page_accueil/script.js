@@ -1,3 +1,4 @@
+/*------------------------Caroussel----------------------*/
 (function(){
     "use strict";
 
@@ -79,7 +80,7 @@
 
 })();
 
-
+/*----------------------------Contenu-depliable-----------------*/
 function triangle(id){
     const section = document.getElementById(id);         
     const triangleP = section.querySelector('.triangle p');
@@ -94,7 +95,7 @@ function triangle(id){
     }
 }
 
-
+/*--------------------Suivi-navigation-bar-------------------*/
 const navLinks = document.querySelectorAll('nav a');
 const currentPage = window.location.pathname.split('/').pop();
 
@@ -105,6 +106,7 @@ const currentPage = window.location.pathname.split('/').pop();
         }
     });
 
+/*-----------------Bouton-copiez-collez----------------------*/    
 const buttons = document.querySelectorAll('.copyBtn');
 const textElements = document.querySelectorAll('.textcopie');
 
@@ -122,3 +124,34 @@ buttons.forEach((button, index) => {
             });
     });
 });
+
+/*-----------------------Graphique-----------------------------*/
+    google.charts.load("current", {packages:['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ["Note", "Satisfaction (en %)", { role: "style" } ],
+        ["Très bien", 8.94, "#b87333"],
+        ["Bien", 10.49, "silver"],
+        ["Moyen", 19.30, "gold"],
+        ["Mécontent", 21.45, "color: #e5e4e2"]
+      ]);
+
+      var view = new google.visualization.DataView(data);
+      view.setColumns([0, 1,
+                       { calc: "stringify",
+                         sourceColumn: 1,
+                         type: "string",
+                         role: "annotation" },
+                       2]);
+
+      var options = {
+        title: "Satisfaction étudiante sur le département informatique",
+        width: 600,
+        height: 400,
+        bar: {groupWidth: "95%"},
+        legend: { position: "none" },
+      };
+      var chart = new google.visualization.ColumnChart(document.getElementById("chart_div"));
+      chart.draw(view, options);
+  }
