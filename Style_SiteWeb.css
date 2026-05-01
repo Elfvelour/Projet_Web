@@ -495,3 +495,25 @@ footer p {
   width: 70%;
   height: auto;
 }
+/*------------------------------FAQ-------------*/
+.hidden .site {
+    max-width: 100%;
+    width: 100%;
+    margin: 0.5rem 0;       
+    box-sizing: border-box;
+}
+
+#FAQ .hidden{
+  display: none;
+  flex-direction: column;
+  width: 100%;
+}
+
+#FAQ .hidden.active {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    padding-top: 10px;
+}
+

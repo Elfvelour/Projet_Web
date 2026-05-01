@@ -155,3 +155,20 @@ buttons.forEach((button, index) => {
       var chart = new google.visualization.ColumnChart(document.getElementById("chart_div"));
       chart.draw(view, options);
   }
+
+  /*-------------------FAQ-----------------------*/
+  function triangle_FAQ(id,event){
+    event.stopPropagation();
+
+    const section = document.getElementById(id);         
+    const triangleP = section.querySelector(':scope > .contenu-depliable > .depliable-header .triangle p');
+    const contenu = section.querySelector(':scope > .contenu-depliable > .hidden');
+
+    if(triangleP.innerHTML === '▶'){
+        triangleP.innerHTML = '▼';
+        contenu.classList.add('active');
+    } else {
+        triangleP.innerHTML = '▶';
+        contenu.classList.remove('active');
+    }
+}
