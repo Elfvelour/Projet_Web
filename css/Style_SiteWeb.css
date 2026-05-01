@@ -317,7 +317,7 @@ footer p {
     filter: brightness(0);
 }
 
-/*------------------------- TEMOIGNAGE ------------------------*/
+/*------------------------- TEMOIGNAGES------------------------*/
 
 .title-box{
   font-size: 32px;
@@ -362,7 +362,7 @@ footer p {
   text-align: center;
 }
 
-/*-----------------PLAN_ACCES-------------------*/
+/*-----------------PLAN D'ACCES-------------------*/
 #maps{
   display: flex;
   flex-direction: column;
@@ -374,11 +374,10 @@ footer p {
   flex-direction: column;
 }
 
-.site{
+.postit{
   background: var(--blanc-pur);
-  padding: 1.5rem 2rem;
-  margin: 1.5rem auto;
-  max-width: 1100px;
+  padding: 5%;
+  margin: 1% 0;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.06);
   width: 425px;
@@ -392,15 +391,7 @@ footer p {
   font-size: 20px;
 }
 
-.infosite{
-  display: flex;
-  flex-direction: row;
-  gap: 30px;
-  align-items: flex-start;
-}
-
-
-.adresse{
+.infos-site-campus{
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -408,23 +399,23 @@ footer p {
   flex:1;
 }
 
-.adresse a{
+.infos-site-campus a{
   text-decoration: none;
   color: #222;
 }
-.adresse p {
+.infos-site-campus p {
     color: var(--bleu-academique);
     font-weight: bold;
     margin: 0;              
 }
-.adresse span {
+.infos-site-campus span {
     display: flex;
     align-items: center;
     gap: 5px;               
     color: #222;
 }
 
-.adresse a:hover{
+.infos-site-campus a:hover{
   text-decoration:underline;
 }
 #position-maps{
@@ -448,7 +439,7 @@ footer p {
 }
 
 
-/*---------------------CONTENU-DEPLIABLE------------------*/
+/*---------------------CONTENU DEPLIABLE------------------*/
 .triangle{
   font-size:large;
   margin: 0;
@@ -462,7 +453,7 @@ footer p {
   cursor: pointer;
 }
 
-.contenu-depliable{
+.depliable-contenu{
   flex-direction: column;
   width: 100%;
 }
@@ -482,7 +473,7 @@ footer p {
   width: 100%;
 }
 
-/*---------------PARAGRAPHE------------------*/
+/*------------- PARAGRAPHE ------------*/
 .paragraphe{
   display: flex;
   text-align: center;
@@ -495,7 +486,7 @@ footer p {
   width: 70%;
   height: auto;
 }
-/*------------------------------FAQ-------------*/
+/*----------------- FAQ -------------*/
 .hidden .site {
     max-width: 100%;
     width: 100%;
