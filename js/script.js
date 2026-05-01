@@ -80,7 +80,7 @@
 
 })();
 
-/*----------------------------Contenu-depliable-----------------*/
+/*----------------------------Contenu depliable-----------------*/
 function triangle(id){
     const section = document.getElementById(id);         
     const triangleP = section.querySelector('.triangle p');
@@ -95,7 +95,7 @@ function triangle(id){
     }
 }
 
-/*--------------------Suivi-navigation-bar-------------------*/
+/*--------------------Suivi navigation-bar-------------------*/
 const navLinks = document.querySelectorAll('nav a');
 const currentPage = window.location.pathname.split('/').pop();
 
@@ -106,7 +106,7 @@ const currentPage = window.location.pathname.split('/').pop();
         }
     });
 
-/*-----------------Bouton-copiez-collez----------------------*/    
+/*-----------------Bouton copier-coller----------------------*/    
 const buttons = document.querySelectorAll('.copyBtn');
 const textElements = document.querySelectorAll('.textcopie');
 
@@ -156,7 +156,7 @@ buttons.forEach((button, index) => {
       chart.draw(view, options);
   }
 
-  /*-------------------FAQ-----------------------*/
+  /*-------------------FAQ et plan d'accès-----------------------*/
   function triangle_FAQ(id,event){
     event.stopPropagation();
 
@@ -171,4 +171,22 @@ buttons.forEach((button, index) => {
         triangleP.innerHTML = '▶';
         contenu.classList.remove('active');
     }
+}
+
+function switchCampus(campusId, btn) {
+    // Masquer les deux conteneurs de campus
+    const villejuif = document.getElementById('campus-villejuif');
+    const bordeaux = document.getElementById('campus-bordeaux');
+    if (villejuif) villejuif.style.display = 'none';
+    if (bordeaux) bordeaux.style.display = 'none';
+    
+    // Retirer la classe 'active' de tous les boutons
+    document.querySelectorAll('.campus-choisi').forEach(button => {
+        button.classList.remove('active');
+    });
+    
+    // Afficher le campus sélectionné et activer le bouton
+    const selectedCampus = document.getElementById(campusId);
+    if (selectedCampus) selectedCampus.style.display = 'block';
+    btn.classList.add('active');
 }
