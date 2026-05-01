@@ -1,0 +1,89 @@
+{
+  "faq": [
+    {
+        "category": "📌 Admissions",
+        "questions": [
+            {
+                "q": "Comment candidater en post‑bac ?",
+                "a": "Les candidatures s’effectuent sur Parcoursup via le concours Puissance Alpha (étude de dossier + épreuves écrites). La date limite de dépôt des vœux est fixée au 12 mars 2026, et celle des dossiers au 1er avril 2026."
+            },
+            {
+                "q": "Quels sont les profils admis en admissions parallèles ?",
+                "a": "Les admissions parallèles sont ouvertes aux titulaires d’un Bac+2 / Bac+3 scientifique (BUT, DUT, Licence, etc.). La sélection se fait sur étude de dossier et entretien, sans frais de dossier."
+            },
+            {
+                "q": "Quelle est la procédure pour les candidats internationaux ?",
+                "a": "La procédure « Études en France » (Campus France) est obligatoire pour les étudiants de certains pays hors UE. Pour les entrées en L1, une DAP (Demande d’Admission Préalable) peut être exigée. Un niveau B2 en français ou en anglais (selon la formation) est recommandé."
+            }
+        ]
+    },
+    {
+        "category": "🎓 Programmes & Formations",
+        "questions": [
+            {
+                "q": "Quelles sont les spécialisations possibles en cycle ingénieur ?",
+                "a": "Le cycle ingénieur (Grade Master) propose 4 filières : Information Technology, Sécurité & Réseaux, Data Science, Systèmes Embarqués. Les étudiants peuvent choisir parmi 13 majeures, dont l’intelligence artificielle, la data engineering, la cybersécurité, les systèmes robotiques et les drones."
+            },
+            {
+                "q": "Existe‑t‑il des programmes d’échange ou de double‑diplôme ?",
+                "a": "Oui, le programme ingénieur inclut une mobilité obligatoire (semestre à l’étranger) et offre plus de 40 opportunités de double‑diplôme dans 13 universités partenaires."
+            }
+        ]
+    },
+    {
+        "category": "💰 Frais de scolarité & Financement",
+        "questions": [
+            {
+                "q": "Combien coûte la formation en cycle ingénieur ?",
+                "a": "Pour l’année 2026‑2027, les frais de scolarité en formation initiale varient de 10 000 € à 12 000 € selon l’année. En alternance, ils s’élèvent à 14 800 € (intégralement pris en charge par l’entreprise). À ces montants s’ajoutent des frais de (ré)inscription de 1 600 €."
+            },
+            {
+                "q": "Existe‑t‑il des facilités de paiement ou des bourses ?",
+                "a": "Les frais peuvent être réglés en une fois, en 2 ou 10 échéances. L’EFREI propose des bourses internes, et vous pouvez également solliciter les bourses externes (aide au mérite, passeport mobilité, etc.)."
+            },
+            {
+                "q": "Quels sont les autres frais à prévoir (BTS, Bachelor, Mastère) ?",
+                "a": "Pour les programmes experts : BTS 7 000 €/an, Bachelor jusqu’à 10 000 €, Mastère jusqu’à 11 000 €. En alternance, les montants varient de 8 700 € à 13 800 €."
+            }
+        ]
+    },
+    {
+        "category": "🏠 Vie étudiante",
+        "questions": [
+            {
+                "q": "Comment se passe la vie associative sur les campus ?",
+                "a": "La vie associative est très dynamique : plus de 65 associations et clubs étudiants animent la vie scolaire (sport, tech, culture, humanitaire, médias…). Chaque année, ce sont plus de 100 événements et 8 500 actions valorisées."
+            },
+            {
+                "q": "Quelles sont les infrastructures disponibles (sport, fablab, logement, restauration) ?",
+                "a": "Les campus disposent de fablabs, de laboratoires de recherche, d’espaces de coworking, d’un studio vidéo, de salles de sport et d’un restaurant universitaire (CROUS) accessible le midi. L’EFREI aide également les étudiants à trouver un logement via des résidences partenaires et une plateforme dédiée."
+            },
+            {
+                "q": "L’école propose‑t‑elle des aides pour le logement ou le matériel informatique ?",
+                "a": "Les étudiants bénéficient d’un accès prioritaire à de nombreuses résidences privées et universitaires. Par ailleurs, l’EFREI recommande le mode BYOD (Bring Your Own Device) : chaque étudiant utilise son propre ordinateur, ce qui favorise la flexibilité et l’immersion professionnelle."
+            }
+        ]
+    },
+    {
+        "category": "💼 Stages & Alternance",
+        "questions": [
+            {
+                "q": "Les stages sont-ils obligatoires en cycle ingénieur ?",
+                "a": "Oui, le cursus ingénieur comporte plusieurs stages obligatoires : un stage de découverte en 1ʳᵉ année, un stage technique en 2ᵉ année, et un stage de fin d’études (ou contrat d’alternance) en dernière année. L’école accompagne activement les étudiants via son service carrières."
+            },
+            {
+                "q": "Quelles sont les périodes pour effectuer un stage ?",
+                "a": "En général, les stages de 1ʳᵉ année ont lieu en été (2 mois), ceux de 2ᵉ année durent 3 à 4 mois, et le stage de fin d’études (ou l’alternance) s’étend sur 6 à 12 mois. Les calendriers précis sont communiqués en début d’année."
+            },
+            {
+                "q": "Comment trouver une alternance et quels sont les rythmes ?",
+                "a": "L’EFREI met à disposition une plateforme de recrutement, organise des job datings et un forum entreprises. Les rythmes d’alternance sont généralement : 1 semaine à l’école / 1 semaine en entreprise (ou 2/2 selon les filières). L’alternance est possible dès la 3ᵉ année du cycle ingénieur."
+            },
+            {
+                "q": "Les stages sont-ils rémunérés ?",
+                "a": "Oui, obligatoirement à partir de 2 mois consécutifs. La rémunération minimale légale s’applique (environ 4,35 €/h en 2025). En alternance, le salaire est fixé par contrat d’apprentissage ou de professionnalisation, avec un pourcentage du SMIC évoluant selon l’âge et l’année d’exécution."
+            }
+        ]
+    }
+  ]
+}

@@ -173,6 +173,29 @@ buttons.forEach((button, index) => {
     }
 }
 
+/*------------------------FAQ---------------------------*/
+/*async function chargerFAQ() {
+    try {
+        const response = await fetch('../data/faq.json');
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const data = await response.json();
+        const container = document.getElementById('faq-container');
+        if (!container) return;
+        container.innerHTML = '';
+        data.faq.forEach((cat, idx) => {
+            // ... construction comme dans ton script ...
+        });
+    } catch (err) {
+        console.error(err);
+        document.getElementById('faq-container').innerHTML = '<p>FAQ indisponible</p>';
+    }
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    chargerFAQ();
+});*/
+
+/*-------------------Plan d'accès-----------------------*/
 function switchCampus(campusId, btn) {
     // Masquer les deux conteneurs de campus
     const villejuif = document.getElementById('campus-villejuif');
