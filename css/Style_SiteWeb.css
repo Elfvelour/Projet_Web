@@ -418,7 +418,12 @@ footer p {
 .infos-site-campus a:hover{
   text-decoration:underline;
 }
-#position-maps{
+
+#campus-bordeaux {
+    display: none;
+}
+
+.position-maps{
   display: flex;
   flex-direction: row;
   gap: 5%;
