@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>EFREI: Département d'informatique</title>
+        <meta charset="UTF-8">
+        <meta name="description" content="Accueil">
+        <link rel="stylesheet" type="text/css" href="../css/style_SiteWeb.css">
+        <script src="../js/script.js" defer></script>
+    </head>
+
+    <body>
+
+        <header>
+            <div class="header-top">
+                <a href="https://www.efrei.fr/">
+                    <img alt="efrei_logo" src="../img/Logo-Efrei-Blanc.png">
+                </a>
+                <div class="header-title">
+                        <h1>Vie étudiante</h1>
+                        <p class="title">Vie étudiante</p>
+                    </div>
+            </div>
+            <nav>
+                <a href="./Page_accueil.html">Accueil</a>
+                <a href="./Cours_Formations.html">Formation</a>
+                <a href="./Enseignants_Recherche.html">Corps Enseignant &amp; Recherche</a>
+                <a href="./vie_etudiante.html">Vie étudiante</a>
+                <a href="./partenariats.html">Partenariats &amp; Professionnalisation</a>
+                <a href="./Contact_et_Admission.html">Contact &amp; Admissions</a> 
+            </nav>
+        </header>
+
+        <!-- ===== INSTALLATIONS ET MOYENS ===== -->
+        <section id="installations">
+            <h2>🖥️ Installations et Moyens</h2>
+
+            <div class="postit" id="depliable-labs" onclick="triangle('depliable-labs')">
+                <div class="depliable-header">
+                    <div class="triangle"><p>▶</p></div>
+                    <p class="title-box">Labs informatiques & espaces de travail</p>
+                </div>
+                <div class="hidden">
+                    <div class="paragraphe">
+                        <p>Le campus de Villejuif dispose d'infrastructures modernes pensées pour la formation et l'innovation :</p>
+                        <ul>
+                            <li><strong>Labs informatiques</strong> — des salles équipées de postes performants, disponibles en dehors des cours pour travailler sur vos projets.</li>
+                            <li><strong>Espaces de coworking</strong> — des zones de travail collaboratif ouvertes à tous, idéales pour les projets de groupe ou le travail en autonomie.</li>
+                            <li><strong>I-Lab (Innovation Lab)</strong> — l'espace de fabrication numérique avec imprimantes 3D, découpe laser, découpe vinyle, électronique et outillage varié. Accessible sur réservation avec des référents étudiants formés.</li>
+                            <li><strong>Studio vidéo</strong> — fond vert, éclairages réglables, micros et matériel de captation pour vos podcasts, vidéos promo et projets pédagogiques.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="postit" id="depliable-plateformes" onclick="triangle('depliable-plateformes')">
+                <div class="depliable-header">
+                    <div class="triangle"><p>▶</p></div>
+                    <p class="title-box">Plateformes pédagogiques</p>
+                </div>
+                <div class="hidden">
+                    <div class="paragraphe">
+                        <p>En tant qu'étudiant EFREI, vous bénéficiez d'un accès à des plateformes d'apprentissage en ligne de référence :</p>
+                        <ul>
+                            <li><strong>OpenClassrooms</strong> — des milliers de cours en ligne sur le développement, la data, la cybersécurité et bien plus.</li>
+                            <li><strong>LinkedIn Learning</strong> — des formations courtes sur les compétences techniques et professionnelles, reconnues par les recruteurs.</li>
+                        </ul>
+                        <p>Ces ressources viennent compléter les enseignements et vous permettent de progresser à votre rythme, en dehors des heures de cours.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== VIE ASSOCIATIVE ===== -->
+        <section id="vie-associative">
+            <h2>🎓 Vie associative</h2>
+
+            <div class="postit" id="depliable-clubs-assos" onclick="triangle('depliable-clubs-assos')">
+                <div class="depliable-header">
+                    <div class="triangle"><p>▶</p></div>
+                    <p class="title-box">Clubs et associations liés à l'informatique</p>
+                </div>
+                <div class="hidden">
+                    <div class="paragraphe">
+                        <p>L'EFREI compte plus de 65 associations et clubs étudiants. Parmi eux, plusieurs sont spécialisés en informatique :</p>
+                        <ul>
+                            <li><strong>Club Rezo</strong> — administration réseau, infrastructure et systèmes.</li>
+                            <li><strong>CTFrei</strong> — compétitions de cybersécurité Capture The Flag, ouverts à tous les niveaux.</li>
+                            <li><strong>Linux User Group</strong> — culture open source, distributions Linux, logiciels libres.</li>
+                            <li><strong>Clubs de robotique</strong> — conception et programmation de robots, participation à des compétitions nationales.</li>
+                            <li><strong>Clubs e-sport</strong> — compétitions en ligne et tournois inter-écoles.</li>
+                            <li><strong>Clubs de programmation</strong> — algorithmes, développement de jeux, projets open source.</li>
+                        </ul>
+                        <p>Et si vous ne trouvez pas votre bonheur, vous pouvez toujours créer votre propre association !</p>
+                    </div>
+                    <div id="asso-logo">
+                        <a href="https://club-rezo.net/"><img src="../img/clubrezo-logo.png" alt="Club Rezo"></a>
+                        <a href="https://ctfrei.fr/"><img src="../img/ctf-logo.png" alt="CTFrei"></a>
+                        <img src="../img/linux-logo.jpeg" alt="Linux User Group">
+                        <img src="../img/logo-chouette-equipe-compete.jpeg" alt="Équipe compétition">
+                    </div>
+                </div>
+            </div>
+
+            <div class="postit" id="depliable-evenements" onclick="triangle('depliable-evenements')">
+                <div class="depliable-header">
+                    <div class="triangle"><p>▶</p></div>
+                    <p class="title-box">Événements & compétitions</p>
+                </div>
+                <div class="hidden">
+                    <div class="paragraphe">
+                        <p>Tout au long de l'année, de nombreux événements animent la vie du campus :</p>
+                        <ul>
+                            <li><strong>Hackathons</strong> — des défis de 24h ou 48h pour coder des projets innovants en équipe.</li>
+                            <li><strong>CTF (Capture The Flag)</strong> — des compétitions de cybersécurité organisées par CTFrei.</li>
+                            <li><strong>Nuit de l'Info</strong> — une compétition nationale de développement web en une nuit.</li>
+                            <li><strong>Forum entreprises</strong> — plus de 100 entreprises à la rencontre des étudiants chaque année.</li>
+                            <li><strong>Job datings</strong> — des sessions de recrutement express organisées par le service carrières.</li>
+                        </ul>
+                        <p>Plus de 100 événements sont organisés chaque année, représentant plus de 8 500 actions valorisées.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== TÉMOIGNAGES ===== -->
+        <section id="temoignages">
+            <h2>💬 Témoignages</h2>
+
+            <div class="postit" id="depliable-temoignages" onclick="triangle('depliable-temoignages')">
+                <div class="depliable-header">
+                    <div class="triangle"><p>▶</p></div>
+                    <p class="title-box">Ce qu'ils en disent</p>
+                </div>
+                <div class="hidden">
+                    <div class="box-temoin">
+                        <div class="etudiant-temoin">
+                            <div class="photo-temoin">
+                                <p>Mathias Leroy</p>
+                                <a href="https://www.linkedin.com/in/mathias-leroy-85356032a/">
+                                    <img src="../img/Mathias_temoin.jpg" alt="Mathias Leroy">
+                                </a>
+                                <p>Promo 2029</p>
+                            </div>
+                            <p>"L'EFREI est une école où l'on apprend vraiment, avec des projets concrets et une vraie vie associative. Je recommande !"</p>
+                        </div>
+                        <div class="etudiant-temoin">
+                            <div class="photo-temoin">
+                                <p>Matthieu Galland</p>
+                                <a href="https://www.linkedin.com/in/matthieu-galland-95084b324/">
+                                    <img src="../img/Matthieu_temoin.jpg" alt="Matthieu Galland">
+                                </a>
+                                <p>Promo 2029</p>
+                            </div>
+                            <p>"L'ambiance entre étudiants est top, et les associations permettent de développer des compétences qu'on ne trouve pas en cours."</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== PROJETS ÉTUDIANTS ===== -->
+        <section id="projets">
+            <h2>🚀 Projets Étudiants</h2>
+
+            <div class="postit" id="depliable-projets-web" onclick="triangle('depliable-projets-web')">
+                <div class="depliable-header">
+                    <div class="triangle"><p>▶</p></div>
+                    <p class="title-box">Développement web & applications</p>
+                </div>
+                <div class="hidden">
+                    <div class="paragraphe">
+                        <p>Chaque année, les étudiants réalisent des projets web et applicatifs dans le cadre de leurs cours ou en autonomie. Ces projets couvrent notamment :</p>
+                        <ul>
+                            <li>Sites web complets avec front-end et back-end</li>
+                            <li>Applications mobiles iOS et Android</li>
+                            <li>APIs et microservices</li>
+                            <li>Projets open source publiés sur GitHub</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="postit" id="depliable-projets-ia" onclick="triangle('depliable-projets-ia')">
+                <div class="depliable-header">
+                    <div class="triangle"><p>▶</p></div>
+                    <p class="title-box">Intelligence artificielle & data</p>
+                </div>
+                <div class="hidden">
+                    <div class="paragraphe">
+                        <p>Les étudiants des filières Data Science et IA travaillent sur des projets ambitieux :</p>
+                        <ul>
+                            <li>Modèles de machine learning appliqués à des problématiques réelles</li>
+                            <li>Analyse et visualisation de données massives</li>
+                            <li>Projets de computer vision et traitement du langage naturel</li>
+                            <li>Participations à des compétitions Kaggle</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="postit" id="depliable-projets-fab" onclick="triangle('depliable-projets-fab')">
+                <div class="depliable-header">
+                    <div class="triangle"><p>▶</p></div>
+                    <p class="title-box">Fabrication & systèmes embarqués</p>
+                </div>
+                <div class="hidden">
+                    <div class="paragraphe">
+                        <p>Grâce à l'I-Lab, les étudiants concrétisent leurs idées en objets physiques :</p>
+                        <ul>
+                            <li>Robots autonomes et drones programmés</li>
+                            <li>Prototypes IoT (Internet des Objets)</li>
+                            <li>Pièces et maquettes réalisées en impression 3D ou découpe laser</li>
+                            <li>Systèmes embarqués à base d'Arduino ou Raspberry Pi</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <footer>    
+            <div class="certif-efrei">
+                    <a href="https://www.cti-commission.fr"><img class="cti" src="../img/cti-logo.png"></a>
+                    <a href="https://www.assas-universite.fr/fr"><img class="logo-u" src="../img/Logo_Panthéon-Assas.png" alt="logo-universite"></a>
+                    <a href="https://www.enseignementsup-recherche.gouv.fr/fr/la-qualification-d-etablissement-d-enseignement-superieur-prive-d-interet-general-eespig-46277"><img class="eespig" src="../img/logo-eespig.png" alt="logo-eespig"></a>
+            </div>
+            <p>©️2026 P2-SC1 Girault Brémand</p>
+            <p>Tous droits réservés.</p>
+            <a href="./A_Propos.html" class="propos">À propos</a>
+            <div class="reseaux">
+                <a href="https://github.com/Elfvelour/Projet_Web"><img class="image1" src="../img/reseaux/Github-Logo-Transparent.png" alt="Github"></a>
+                <a href="https://www.linkedin.com/school/efrei/posts/?feedView=all"><img class="image1" src="../img/reseaux/logo-linkedin.png" alt="LinkedIn"></a>
+                <a href="https://www.youtube.com/@efrei">
+                    <svg  class="yt-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <title>YouTube</title>
+                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                    </svg>
+                </a>    
+            </div>
+        </footer>
+        
+    </body>
+</html>

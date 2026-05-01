@@ -472,8 +472,22 @@ footer p {
     background-color: rgb(244, 244, 244);
 }
 
+/* Bouton de choix de campus */
+#campus-choix {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
 
-/*---------------------CONTENU DEPLIABLE------------------*/
+.campus-choisi.active {
+  background: #004b8d;
+  color: #fff;
+}
+
+.campus-choisi:hover:not(.active) {
+  background: #e8f0fb;
+}
+
+/*---------------------CONTENU DEPLIABLE--------------------*/
 .triangle{
   font-size:large;
   margin: 0;
