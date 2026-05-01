@@ -135,8 +135,8 @@ buttons.forEach((button, index) => {
     });
 });
 
-/*-----------------------Graphique-----------------------------*/ /* Attention ça fait une erreur (indiquée par F12 sur le site) ! */
-    /*google.charts.load("current", {packages:['corechart']});
+/*-----------------------Graphique-----------------------------*/ 
+    google.charts.load("current", {packages:['corechart']});
     google.charts.setOnLoadCallback(drawChart);
     function drawChart() {
       var data = google.visualization.arrayToDataTable([
@@ -164,7 +164,7 @@ buttons.forEach((button, index) => {
       };
       var chart = new google.visualization.ColumnChart(document.getElementById("chart_div"));
       chart.draw(view, options);
-  }*/
+    }
 
 /*-------------------FAQ et plan d'accès-----------------------*/
 function triangle_FAQ(id, event) {
