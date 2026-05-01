@@ -320,7 +320,7 @@ footer p {
 /*------------------------- TEMOIGNAGES------------------------*/
 
 .title-box{
-  font-size: 32px;
+  font-size: 22px;
   font-weight: 700;
   color: var(--bleu-academique);
   font-family: var(--font-titres);
@@ -380,7 +380,36 @@ footer p {
   margin: 1% 0;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.campus .postit{
   width: 425px;
+}
+
+#FAQ .postit {
+    padding: 2%;
+    margin: 4px 0;
+}
+
+#plan-acces .postit {
+    padding: 4%;
+    margin: 6px 0;
+}
+
+#FAQ .triangle p, #FAQ .title-box, #plan-acces .triangle p, #plan-acces .title-box {
+    margin: 0;
+    padding: 0;
+}
+
+#FAQ .title-box {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+#FAQ p {
+    font-size: 14px;
+    font-style: normal;
+    letter-spacing: 0.5px;
 }
 
 #maps iframe{

@@ -81,12 +81,22 @@
 })();
 
 /*----------------------------Contenu depliable-----------------*/
-function triangle(id){
-    const section = document.getElementById(id);         
+function triangle(id) {
+    const section = document.getElementById(id);
     const triangleP = section.querySelector('.triangle p');
     const contenu = section.querySelector('.hidden');
 
-    if(triangleP.innerHTML === '▶'){
+    const freres = section.parentElement.querySelectorAll(':scope > .postit');
+    freres.forEach(frere => {
+        if (frere !== section) {
+            const t = frere.querySelector('.triangle p');
+            const c = frere.querySelector('.hidden');
+            if (t) t.innerHTML = '▶';
+            if (c) c.classList.remove('active');
+        }
+    });
+
+    if (triangleP.innerHTML === '▶') {
         triangleP.innerHTML = '▼';
         contenu.classList.add('active');
     } else {
@@ -125,8 +135,8 @@ buttons.forEach((button, index) => {
     });
 });
 
-/*-----------------------Graphique-----------------------------*/
-    google.charts.load("current", {packages:['corechart']});
+/*-----------------------Graphique-----------------------------*/ /* Attention ça fait une erreur (indiquée par F12 sur le site) ! */
+    /*google.charts.load("current", {packages:['corechart']});
     google.charts.setOnLoadCallback(drawChart);
     function drawChart() {
       var data = google.visualization.arrayToDataTable([
@@ -154,17 +164,29 @@ buttons.forEach((button, index) => {
       };
       var chart = new google.visualization.ColumnChart(document.getElementById("chart_div"));
       chart.draw(view, options);
-  }
+  }*/
 
-  /*-------------------FAQ et plan d'accès-----------------------*/
-  function triangle_FAQ(id,event){
+/*-------------------FAQ et plan d'accès-----------------------*/
+function triangle_FAQ(id, event) {
     event.stopPropagation();
 
-    const section = document.getElementById(id);         
-    const triangleP = section.querySelector(':scope > .contenu-depliable > .depliable-header .triangle p');
-    const contenu = section.querySelector(':scope > .contenu-depliable > .hidden');
+    const section = document.getElementById(id);
+    const triangleP = section.querySelector(':scope > .depliable-contenu > .depliable-header .triangle p');
+    const contenu = section.querySelector(':scope > .depliable-contenu > .hidden');
 
-    if(triangleP.innerHTML === '▶'){
+    // Fermer les frères (postits du même niveau)
+    const freres = section.parentElement.querySelectorAll(':scope > .postit');
+    freres.forEach(frere => {
+        if (frere !== section) {
+            const t = frere.querySelector(':scope > .depliable-contenu > .depliable-header .triangle p');
+            const c = frere.querySelector(':scope > .depliable-contenu > .hidden');
+            if (t) t.innerHTML = '▶';
+            if (c) c.classList.remove('active');
+        }
+    });
+
+    // Ouvrir ou fermer le postit cliqué
+    if (triangleP.innerHTML === '▶') {
         triangleP.innerHTML = '▼';
         contenu.classList.add('active');
     } else {
@@ -174,7 +196,8 @@ buttons.forEach((button, index) => {
 }
 
 /*------------------------FAQ---------------------------*/
-/*async function chargerFAQ() {
+// Fonction pour récupérer et traiter le JSON
+async function chargerFAQ() {
     try {
         const response = await fetch('../data/faq.json');
         if (!response.ok) throw new Error(`HTTP ${response.status}`);
@@ -182,18 +205,58 @@ buttons.forEach((button, index) => {
         const container = document.getElementById('faq-container');
         if (!container) return;
         container.innerHTML = '';
-        data.faq.forEach((cat, idx) => {
-            // ... construction comme dans ton script ...
+
+        data.faq.forEach((cat, catIdx) => {
+            const catId = `faq-cat-${catIdx}`;
+
+            // Catégorie = postit dépliable niveau 1
+            const catDiv = document.createElement('div');
+            catDiv.className = 'postit';
+            catDiv.id = catId;
+            catDiv.setAttribute('onclick', `triangle_FAQ('${catId}', event)`);
+            catDiv.innerHTML = `
+                <div class="depliable-contenu">
+                    <div class="depliable-header">
+                        <div class="triangle"><p>▶</p></div>
+                        <p class="title-box">${cat.category}</p>
+                    </div>
+                    <div class="hidden" id="${catId}-contenu"></div>
+                </div>`;
+            container.appendChild(catDiv);
+
+            const catContenu = document.getElementById(`${catId}-contenu`);
+
+            // Questions = postit dépliable niveau 2
+            cat.questions.forEach((item, qIdx) => {
+                const qId = `faq-q-${catIdx}-${qIdx}`;
+                const qDiv = document.createElement('div');
+                qDiv.className = 'postit';
+                qDiv.id = qId;
+                qDiv.setAttribute('onclick', `triangle_FAQ('${qId}', event)`);
+                qDiv.innerHTML = `
+                    <div class="depliable-contenu">
+                        <div class="depliable-header">
+                            <div class="triangle"><p>▶</p></div>
+                            <p class="title-box">${item.q}</p>
+                        </div>
+                        <div class="hidden">
+                            <p style="font-style:normal; padding: 0.5rem 0;">${item.a}</p>
+                        </div>
+                    </div>`;
+                catContenu.appendChild(qDiv);
+            });
         });
+
     } catch (err) {
         console.error(err);
-        document.getElementById('faq-container').innerHTML = '<p>FAQ indisponible</p>';
+        const container = document.getElementById('faq-container');
+        if (container) container.innerHTML = '<p>FAQ indisponible.</p>';
     }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
     chargerFAQ();
-});*/
+});
 
 /*-------------------Plan d'accès-----------------------*/
 function switchCampus(campusId, btn) {
