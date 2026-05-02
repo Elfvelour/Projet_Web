@@ -329,8 +329,9 @@ footer p {
 .box-temoin {
     display: flex;
     flex-direction: column;
-    width: 100%;
     box-sizing: border-box;
+    justify-content: center;
+    width: 100%;
 }
 
 .etudiant-temoin {
@@ -504,14 +505,16 @@ footer p {
   cursor: pointer;
 }
 
-.depliable-contenu{
+.contenu-depliable{
+  display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 93%;
 }
 
 .depliable-header{
   display: flex;
   align-items: center;
+  flex-direction: row;
 }
 
 .hidden{
