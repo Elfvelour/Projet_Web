@@ -486,6 +486,17 @@ footer p {
   margin-bottom: 1.5rem;
 }
 
+.campus-choisi {
+  background: var(--blanc-pur);
+  color: var(--bleu-academique);
+  border: 2px solid var(--bleu-academique);
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-family: var(--font-titres);
+  font-weight: 600;
+  font-size: 14px;
+}
+
 .campus-choisi.active {
   background: #004b8d;
   color: #fff;
