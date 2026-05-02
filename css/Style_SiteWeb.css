@@ -50,6 +50,10 @@ p {
   font-style: italic;
 }
 
+strong {
+  font-weight: 700;
+}
+
 
 /*------------------------SOULIGNAGE-DYNAMIQUE-------------------*/
 footer .propos{
@@ -495,6 +499,17 @@ footer p {
     transition: all 0.2s ease-in-out;
 }
 
+.campus-choisi {
+  background: var(--blanc-pur);
+  color: var(--bleu-academique);
+  border: 2px solid var(--bleu-academique);
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-family: var(--font-titres);
+  font-weight: 600;
+  font-size: 14px;
+}
+
 .campus-choisi.active {
     background: var(--bleu-academique);
     color: white;
@@ -547,6 +562,19 @@ footer p {
   flex-direction: column;
   left: 5%;
   right: 5%;
+}
+
+.paragraphe2 {
+  display: flex;
+  text-align: justify;
+  flex-direction: column;
+  left: 5%;
+  right: 5%;
+}
+
+.paragraphe2 p {
+  font-style: normal;
+  text-align: justify;
 }
 
 #asso-logo{
