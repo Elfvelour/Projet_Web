@@ -577,10 +577,57 @@ footer p {
   text-align: justify;
 }
 
-#asso-logo{
-  width: 70%;
+/*--------------------ASSO--------------*/
+#para-asso{
+  flex-direction: column;
+  width: 100%;
+
+}
+
+#asso-para{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.description-asso img{
+  width: 150px;
+  height: auto;
+  border: 4px solid var(--bleu-academique);
+  margin-left: 20px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.description-asso img:hover{
+  transform: scale(1.05)
+}
+
+#clubrezo{
+  width: 250px;
   height: auto;
 }
+
+#para-club{
+  margin-bottom: 30px;
+}
+
+.description-asso{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  gap: 120px;
+  background-color: var(--cyan-tech);
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
+}
+
+
+
 
 /*----------------- FAQ -------------*/
 .hidden .site {
@@ -604,3 +651,10 @@ footer p {
     padding-top: 10px;
 }
 
+
+/*-----------------Partenariat---------------*/
+#alumni-logo{
+  width:200px;
+  height: auto;
+  justify-content: center;
+}

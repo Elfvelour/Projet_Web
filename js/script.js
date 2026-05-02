@@ -276,3 +276,17 @@ function switchCampus(campusId, btn) {
     if (selectedCampus) selectedCampus.style.display = 'block';
     btn.classList.add('active');
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+    const textes = document.querySelectorAll('.timeline-content');
+
+    textes.forEach(texte => {
+        texte.addEventListener('mouseover', () => {
+            texte.closest('.container2').classList.add('active'); // ✅ sans ::after
+        });
+
+        texte.addEventListener('mouseout', () => {
+            texte.closest('.container2').classList.remove('active');
+        });
+    });
+});
