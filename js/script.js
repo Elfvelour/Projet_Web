@@ -311,3 +311,15 @@ function responsive_actu() {
 window.addEventListener('resize', responsive_actu);
 document.addEventListener('DOMContentLoaded', responsive_actu);
 
+/*-----------------Formulaire Enseignants_Recherche------------------*/
+function envoyerFormulaire() {
+            const nom = document.getElementById('nom').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const sujet = document.getElementById('sujet').value.trim();
+            const message = document.getElementById('message').value.trim();
+            if (!nom || !email || !sujet || !message) {
+                alert('Veuillez remplir tous les champs obligatoires (*).');
+                return;
+            }
+            document.getElementById('form-confirmation').style.display = 'block';
+        }
