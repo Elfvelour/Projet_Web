@@ -62,6 +62,10 @@ header h1 {
   margin: 0;
 }
 
+@media screen and (max-width: 600px) {
+
+}
+
 /*-------------------------nav------------------------*/
 nav{
     display: flex;         
