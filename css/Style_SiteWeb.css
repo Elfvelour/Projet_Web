@@ -651,7 +651,46 @@ footer p {
 .campus-choisi:hover:not(.active) {
     background: #e8f0fb;
 }
+@media screen and (max-width: 1024px) {
+    .position-maps {
+        flex-direction: column;  
+        align-items: center;
+    }
 
+    #maps iframe,
+    #plan-acces iframe {
+        min-width: unset;        
+        width: 100%;            
+        height: 300px;
+    }
+
+    .campus {
+        width: 100%;             
+    }
+
+    .campus .postit {
+        width: 100%;             
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #plan-acces iframe {
+        height: 220px;
+    }
+
+    #campus-choix {
+        flex-direction: column;  
+        align-items: center;
+        width: 100%;
+    }
+
+    .campus-choisi {
+        width: 80%;
+        text-align: center;
+        justify-content: center;
+    }
+}
 /*---------------------CONTENU DEPLIABLE--------------------*/
 .triangle{
   font-size:large;
@@ -687,6 +726,7 @@ footer p {
   display: flex;
   width: 100%;
 }
+
 
 /*------------- PARAGRAPHE ------------*/
 .paragraphe{
@@ -760,18 +800,76 @@ footer p {
   align-items: center;
   text-align: justify;
   justify-content: center;
-  gap: 100px;
+  gap: 50px;
   background-color: var(--bleu-academique);
   color: white;
   width: 100%;
   border-radius: 10px;
   padding: 10px;
-  margin: 10px;
-  margin-left: 20px;
+  margin: 10px 0;
+  box-sizing: border-box;
 }
 
 .description-asso p{
   text-decoration: none;
+}
+
+
+
+@media screen and (max-width: 1024px) {
+
+    .description-asso {
+      flex-direction: column;
+      gap: 15px;
+      margin: 5px 0;
+      text-align: left;            
+    }
+
+    .description-asso img {
+      width: 120px;
+      margin: 0 auto;          
+    }
+
+    #clubrezo {
+      width: 150px;
+    }
+
+    .etudiant-temoin {
+      flex-direction: column;  
+      gap: 15px;
+      width: 100%;
+      box-sizing: border-box;
+      margin: 5px 0;
+      text-align: left;             
+    }
+
+    .etudiant-temoin img {
+      width: 120px;
+    }
+
+    .contenu-depliable {
+      overflow: hidden;              
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .depliable-header .title-box {
+      font-size: 18px;
+      white-space: normal;     
+    }
+
+    .contenu-depliable {
+      width: 100%;              
+    }
+
+    section {
+      padding: 1rem;           
+    }
+    #depliable-clubs-assos, #depliable-temoignages{
+      width: 92%;
+    
+    }
+
 }
 
 
