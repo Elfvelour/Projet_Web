@@ -588,6 +588,12 @@ iframe{
     max-width: 600px;
 }
 
+/*--------------------------Evenement-a-venir--------------*/
+
+.actu-container-inline{
+    text-decoration: none;
+}
+
 /*-----------------footer-----------------------*/
 footer{
     background-color: var(--bleu-academique);
