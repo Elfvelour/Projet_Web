@@ -23,6 +23,10 @@ body{
     padding: 0;
     background-attachment: fixed;
 }
+
+h1{
+    color: var(--bleu-academique);
+}
 /*---------------------header---------------*/
 
 header {
@@ -491,9 +495,23 @@ section p{
 
 
 /*-----------------video----------------*/
+
+#video-campus{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#video-campus h1{
+    align-self: flex-start;
+}
+
 iframe{
     border-radius: 8px;
-}
+    display: block;        
+    margin: 0 auto;
+    padding: 15px;
+}    
 
 @media screen and (max-width: 600px) {
 
@@ -502,6 +520,72 @@ iframe{
         height: 200px;
     }
 
+}
+
+/*------------Chiffres-cles---------------------*/
+
+.stat-grille{
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin: 2rem 0;
+}
+
+.stat-ecole{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--bleu-academique);
+    padding: 30px 40px;
+    min-width: 180px;
+    flex: 1;
+    max-width: 250px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.stat-ecole:hover{
+    transform: scale(1.05);
+}
+
+.gros-nb{
+    font-family: var(--font-titres);
+    font-size: 56px;
+    font-weight: 700;
+    color: var(--cyan-tech);
+    line-height: 1;
+}
+
+.stat-label {
+    font-family: var(--font-corps);
+    font-size: 14px;
+    text-align: center;
+    margin-top: 10px;
+    opacity: 0.9;
+}
+
+@media screen and (max-width: 600px) {
+    .stat-ecole {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-card {
+        width: 80%;
+        max-width: 100%;
+    }
+
+    .gros-nb{
+        font-size: 40px;
+    }
+}
+/*----------------Graphique---------------------*/
+
+#chart_div{
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 600px;
 }
 
 /*-----------------footer-----------------------*/

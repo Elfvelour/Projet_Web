@@ -144,10 +144,10 @@ buttons.forEach((button, index) => {
     function drawChart() {
       var data = google.visualization.arrayToDataTable([
         ["Note", "Satisfaction (en %)", { role: "style" } ],
-        ["Très bien", 8.94, "#b87333"],
-        ["Bien", 10.49, "silver"],
-        ["Moyen", 19.30, "gold"],
-        ["Mécontent", 21.45, "color: #e5e4e2"]
+        ["Très bien", 80.78, "green"],
+        ["Bien", 10.31, "#7fff00"],
+        ["Moyen", 6.67, "gray"],
+        ["Mécontent", 2.24, "red"]
       ]);
 
       var view = new google.visualization.DataView(data);
