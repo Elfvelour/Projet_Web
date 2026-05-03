@@ -489,6 +489,7 @@ footer p {
     object-fit: cover;
     border-radius: 10px;
     padding: 10px;
+    border-radius: 10px;
 }
 
 .etudiant-temoin p{
@@ -754,7 +755,6 @@ footer p {
 #para-asso{
   flex-direction: column;
   width: 100%;
-
 }
 
 #asso-para{
@@ -814,6 +814,17 @@ footer p {
   text-decoration: none;
 }
 
+#para-asso{
+  justify-content: center;
+  align-items: center;
+  margin-left: 3.5%;
+}
+
+#depliable-clubs-assos .depliable-header {
+    justify-content: flex-start;
+}
+
+
 
 
 @media screen and (max-width: 1024px) {
@@ -867,10 +878,22 @@ footer p {
     }
     #depliable-clubs-assos, #depliable-temoignages{
       width: 92%;
+      box-sizing: border-box;
     
     }
 
 }
+/*-----------------PRESENTATION-CAMPUS-------------------*/
+
+#campus-pres{
+  object-fit: contain;
+}
+
+#villejuif img{
+  width: 80%;
+  height: auto;
+}
+
 
 
 /*----------------- FAQ -------------*/

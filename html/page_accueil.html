@@ -22,11 +22,6 @@
                     <h1>Département d'informatique</h1>
                     <p class="title">Façonner les ingénieurs et experts du numérique de demain</p>
                 </div>
-                <div class="hamburger" onclick="toggleNav()">  <!-- ✅ ajouté -->
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
             </div>
             <nav>
                 <a href="./Page_accueil.html">Accueil</a>
@@ -129,17 +124,36 @@
             </div>
         </section>
 
-        <section>
+        <section id="video-campus">
             <h1>Un campus moderne à Villejuif répartis sur 4 sites</h1>
             <iframe width="560" height="315" src="https://www.youtube.com/embed/N45-U0AaAPw?si=GE2N-RAUSYz46w9f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>
+                Espaces d’étude, de co-working, de détente, studio vidéo ou encore Fablab… 4 sites accueillent les étudiants dans des bâtiments neufs, modernes et à taille humaine :
+                <ul>
+                    <li><strong>La Maison</strong>, site historique de l’Efrei, est dédiée aux cours, à l’administratif, à l’innovation et aux associations.</li>
+                    <li><strong>L’Aquarium</strong> est dédié aux langues et aux Sciences Humaines.</li>
+                    <li><strong>La Factory</strong> est dédiée aux cours et aux travaux collectifs.</li>
+                    <li><strong>New Republic</strong> un campus moderne dédié aux cours et à la recherche.</li>
+                </ul>
+            </p>
         </section>
 
-        <section>
-            <h1> Le département informatique en quelques chiffres</h1>
-            <div>
-                <p>200 enseignants et chercheurs</p>
-                <p>Plus de 200 entreprises partenaires</p>
-                <p>Plus de 10 000  diplômés dans le secteur,</p>
+        <section id="chiffres">
+            <h1>Le département informatique en quelques chiffres</h1>
+            <hr />
+            <div class="stat-grille">
+                <div class="stat-ecole">
+                    <span class="gros-nb">+100</span>
+                    <span class="stat-label">Enseignants & chercheurs</span>
+                </div>
+                <div class="stat-ecole">
+                    <span class="gros-nb">+1000</span>
+                    <span class="stat-label">Entreprises partenaires</span>
+                </div>
+                <div class="stat-ecole">
+                    <span class="gros-nb">15 000</span>
+                    <span class="stat-label">Diplômés dans le secteur</span>
+                </div>
             </div>
             <div id="chart_div"></div>
         </section>
