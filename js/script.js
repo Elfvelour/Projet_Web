@@ -293,3 +293,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+/*-----------------Actualités dans la page d'accueil (responsive)------------------*/
+function responsive_actu() {
+    const container = document.querySelector('.actu-container-inline');
+    if (!container) return;
+    
+    if (window.innerWidth <= 768) {
+        container.style.flexDirection = 'column';
+        container.style.alignItems = 'center';
+    } else {
+        container.style.flexDirection = 'row';
+        container.style.alignItems = 'flex-start';
+    }
+}
+
+window.addEventListener('resize', responsive_actu);
+document.addEventListener('DOMContentLoaded', responsive_actu);
+
