@@ -116,6 +116,9 @@ const currentPage = window.location.pathname.split('/').pop();
         }
     });
 
+function toggleNav(){
+    document.querySelector('nav').classList.toggle('open');
+}
 /*-----------------Bouton copier-coller----------------------*/    
 const buttons = document.querySelectorAll('.copyBtn');
 const textElements = document.querySelectorAll('.textcopie');

@@ -79,6 +79,21 @@ footer .propos:hover::after{
   width: 100%;
 }
 
+@media screen and (max-width: 1024px) {
+    .certif-efrei {
+        gap: 30px;              
+        flex-wrap: wrap;        
+        padding: 10px;
+    }
+
+    .certif-efrei img {
+        width: 120px;           /
+    }
+
+    .certif-efrei .cti {
+        height: 70px;
+    }
+}
 
 @media screen and (max-width: 768px) {
     .certif-efrei {
@@ -110,22 +125,6 @@ footer .propos:hover::after{
     footer {
         padding: 15px 10px;   
         text-align: center;
-    }
-}
-
-@media screen and (max-width: 1024px) {
-    .certif-efrei {
-        gap: 30px;              
-        flex-wrap: wrap;        
-        padding: 10px;
-    }
-
-    .certif-efrei img {
-        width: 120px;           /
-    }
-
-    .certif-efrei .cti {
-        height: 70px;
     }
 }
 
@@ -191,6 +190,33 @@ header img {
   margin: 0;
 }
 
+@media screen and (max-width: 1024px) {
+    .header-top {
+        flex-direction: column; 
+        align-items: center;
+        padding: 10px;
+    }
+
+    .header-title {
+        position: static;  
+        transform: none;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    header img {
+        width: 200px;
+    }
+
+    .header-title h1 {
+        font-size: 28px;
+    }
+
+    .header-title p.title {
+        font-size: 14px;
+    }
+}
+
 @media screen and (max-width: 768px) {
 
     .header-top{
@@ -218,32 +244,7 @@ header img {
     }
 }
 
-@media screen and (max-width: 1024px) {
-    .header-top {
-        flex-direction: column; 
-        align-items: center;
-        padding: 10px;
-    }
 
-    .header-title {
-        position: static;  
-        transform: none;
-        text-align: center;
-        margin-top: 10px;
-    }
-
-    header img {
-        width: 200px;
-    }
-
-    .header-title h1 {
-        font-size: 28px;
-    }
-
-    .header-title p.title {
-        font-size: 14px;
-    }
-}
 
 /* ------------------- NAV --------------------- */
 nav{
@@ -282,26 +283,28 @@ nav a:hover, nav a.active{
 }
 
 
-@media screen and (max-width: 768px) {
-
+@media screen and (max-width: 1024px) {
     nav {
-        display: none;          
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        padding: 10px 0;
-        width: 100%;
-    }
-
-    nav.open {
-        display: flex;          
+        flex-wrap: wrap;       
+        gap: 5px;
+        justify-content: center;
     }
 
     nav a {
-        font-size: 16px;    
-        padding: 8px 20px;
-        width: 100%;
-        text-align: center;
+        padding: 5px 10px;
+        font-size: 13px;      
+    }
+}
+
+@media screen and (max-width: 600px) {
+    nav {
+        gap: 3px;
+    }
+
+    nav a {
+        font-size: 11px;
+        padding: 4px 6px;
+        margin-top: 5px;
     }
 }
 
@@ -394,7 +397,7 @@ footer p {
     display: flex;    
     align-items: center;
     justify-content: center;
-    gap: 400px;
+    gap: 20%;
     padding: 20px;
     width: 100%;
 }
