@@ -80,6 +80,56 @@ footer .propos:hover::after{
 }
 
 
+@media screen and (max-width: 768px) {
+    .certif-efrei {
+        flex-direction: column; 
+        align-items: center;
+        gap: 10px;
+    }
+
+    .certif-efrei img {
+        width: 100px;
+    }
+
+    .certif-efrei .cti {
+        height: 60px;
+    }
+
+    .reseaux {
+        gap: 15px;             
+    }
+
+    .reseaux img {
+        width: 50px;         
+    }
+
+    .yt-icon {
+        width: 40px;
+    }
+
+    footer {
+        padding: 15px 10px;   
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .certif-efrei {
+        gap: 30px;              
+        flex-wrap: wrap;        
+        padding: 10px;
+    }
+
+    .certif-efrei img {
+        width: 120px;           /
+    }
+
+    .certif-efrei .cti {
+        height: 70px;
+    }
+}
+
+
 /* -------------- LISTES ---------------- */
 
 ul {
@@ -141,6 +191,60 @@ header img {
   margin: 0;
 }
 
+@media screen and (max-width: 768px) {
+
+    .header-top{
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+    header img {
+        width: 150px;
+        height: auto;
+    }
+
+    .header-title h1 {
+        font-size: 22px;
+    }
+
+    .header-title {
+        position: static;
+        transform: none;
+        margin-top: 10px;
+        }
+    
+    .header-title p {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .header-top {
+        flex-direction: column; 
+        align-items: center;
+        padding: 10px;
+    }
+
+    .header-title {
+        position: static;  
+        transform: none;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    header img {
+        width: 200px;
+    }
+
+    .header-title h1 {
+        font-size: 28px;
+    }
+
+    .header-title p.title {
+        font-size: 14px;
+    }
+}
+
 /* ------------------- NAV --------------------- */
 nav{
     display: flex;         
@@ -175,6 +279,30 @@ nav a:hover::after, nav a.active::after{
 
 nav a:hover, nav a.active{
     color: var(--cyan-tech);
+}
+
+
+@media screen and (max-width: 768px) {
+
+    nav {
+        display: none;          
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    nav.open {
+        display: flex;          
+    }
+
+    nav a {
+        font-size: 16px;    
+        padding: 8px 20px;
+        width: 100%;
+        text-align: center;
+    }
 }
 
 /* ------------------ HERO BANNER ----------------------------- */
