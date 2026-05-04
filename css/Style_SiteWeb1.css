@@ -478,11 +478,10 @@ footer p {
     padding: 20px;
     gap: 10%;
     background-color: var(--bleu-academique);
-    margin: 2% 0;
+    margin: 2%;
     border-radius: 10px;
     color: white;
     width: 100%;
-    box-sizing: border-box;
 }
 
 .etudiant-temoin img {
@@ -1137,29 +1136,4 @@ footer p {
   .expertise-card h3 {
     font-size: 1rem;
   }
-}
-
-/* ---- Campus section ---- */
-#depliable-campus .hidden {
-  flex-direction: column;
-}
-
-#depliable-campus .etudiant-temoin {
-  gap: 5%;
-  align-items: center;
-}
-
-#depliable-campus .etudiant-temoin img {
-  width: 250px;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-#depliable-campus .photo-temoin {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  flex-shrink: 0;
 }
