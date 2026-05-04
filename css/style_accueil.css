@@ -587,6 +587,77 @@ iframe{
     margin: 0 auto;
     max-width: 600px;
 }
+/*----------------Cercle-graphique-----------------------*/
+
+.box-cercle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+    margin: auto;
+}
+
+.box-cercle .pourcent{
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+
+.box-cercle .pourcent svg{
+    width: 150px;
+    height: 150px;
+    transform: rotate(-90deg);
+}
+
+.box-cercle .pourcent svg circle{
+    fill: none;
+    stroke-width: 10;
+    stroke-dasharray: 440;
+    stroke-dashoffset: 440;
+    stroke: #000;
+    transform: translate(5px,5px);
+}
+
+.box-cercle .pourcent svg circle:nth-child(1){
+    stroke-dashoffset:0;
+    stroke: #f3f3f3;
+}
+
+.box-cercle .pourcent svg circle:nth-child(2){
+    stroke-dashoffset: calc(440-(440*87)/100);
+    stroke:var(--cyan-tech);
+}
+
+.box-cercle .pourcent .nombre{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--cyan-tech);
+}
+
+.box-cercle .pourcent .nombre h2{
+    margin: 0;
+    font-size: 48px;
+    color: var(--cyan-tech);
+}
+
+.box-cercle .pourcent .nombre h2 span {
+    font-size: 24px;
+}
+
+.box-cercle .texte-cercle{
+    padding: 10px;
+    color: var(--cyan-tech);
+    font-weight: 700;
+    text-align: center;
+    font-size: 14px;
+}
 
 /*--------------------------Evenement-a-venir--------------*/
 

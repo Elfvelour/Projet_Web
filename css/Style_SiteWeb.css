@@ -897,8 +897,33 @@ footer p {
   height: auto;
 }
 
-#villejuif .photo-temoin{
-  background-color: none;
+#villejuif .photo-temoin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+    flex-shrink: 0;         
+    width: 550px;           
+}
+
+
+
+#pres-campus1, #pres-campus2, #pres-campus3,#pres-campus4{
+  background-color: white;
+  color: black;
+}
+
+#pres-campus1 .photo-temoin, #pres-campus2 .photo-temoin, #pres-campus3 .photo-temoin, #pres-campus4 .photo-temoin{
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: var(--bleu-academique);
+  color: white;
+  padding-bottom: 30px;
+}
+
+#villejuif .etudiant-temoin > p {
+    text-align: left;
+    font-style: normal;   
 }
 
 
