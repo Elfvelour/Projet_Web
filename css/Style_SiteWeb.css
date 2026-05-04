@@ -728,6 +728,7 @@ footer p {
 .hidden.active{
   display: flex;
   width: 100%;
+  margin-left: 5%;
 }
 
 
@@ -894,6 +895,10 @@ footer p {
 #villejuif img{
   width: 80%;
   height: auto;
+}
+
+#villejuif .photo-temoin{
+  background-color: none;
 }
 
 

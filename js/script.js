@@ -139,35 +139,49 @@ buttons.forEach((button, index) => {
 });
 
 /*-----------------------Graphique-----------------------------*/ 
-    google.charts.load("current", {packages:['corechart']});
-    google.charts.setOnLoadCallback(drawChart);
-    function drawChart() {
-      var data = google.visualization.arrayToDataTable([
-        ["Note", "Satisfaction (en %)", { role: "style" } ],
+google.charts.load("current", {packages:['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+        ["Note", "Satisfaction (en %)", { role: "style" }],
         ["Très bien", 80.78, "green"],
         ["Bien", 10.31, "#7fff00"],
         ["Moyen", 6.67, "gray"],
         ["Mécontent", 2.24, "red"]
-      ]);
+    ]);
 
-      var view = new google.visualization.DataView(data);
-      view.setColumns([0, 1,
-                       { calc: "stringify",
-                         sourceColumn: 1,
-                         type: "string",
-                         role: "annotation" },
-                       2]);
+    var view = new google.visualization.DataView(data);
+    view.setColumns([0, 1,
+        { calc: "stringify", sourceColumn: 1, type: "string", role: "annotation" },
+        2]);
 
-      var options = {
-        title: "Satisfaction étudiante sur le département informatique",
-        width: 600,
-        height: 400,
-        bar: {groupWidth: "95%"},
-        legend: { position: "none" },
-      };
-      var chart = new google.visualization.ColumnChart(document.getElementById("chart_div"));
-      chart.draw(view, options);
-    }
+ 
+   var chartDiv = document.getElementById("chart_div");
+   var chartWidth = chartDiv.offsetWidth || 600;
+   var chartHeight;
+   if(window.innerWidth < 600){
+      chartHeight = 200;
+   } 
+   else if(window.innerWidth < 768){
+      chartHeight = 250;
+   }
+   else {
+      chartHeight = 400;
+   }
+
+   var options = {
+      title: "Satisfaction étudiante sur le département informatique",
+      width: chartWidth,
+      height: chartHeight,
+      bar: {groupWidth: "95%"},
+      legend: { position: "none" },
+   };
+
+    var chart = new google.visualization.ColumnChart(chartDiv);
+    chart.draw(view, options);
+}
+window.addEventListener('resize', drawChart);
 
 /*-------------------FAQ et plan d'accès-----------------------*/
 function triangle_FAQ(id, event) {
@@ -285,7 +299,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     textes.forEach(texte => {
         texte.addEventListener('mouseover', () => {
-            texte.closest('.container2').classList.add('active'); // ✅ sans ::after
+            texte.closest('.container2').classList.add('active');
         });
 
         texte.addEventListener('mouseout', () => {
