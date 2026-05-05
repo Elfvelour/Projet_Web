@@ -676,8 +676,20 @@ iframe{
 
 /*--------------------------Evenement-a-venir--------------*/
 
-.actu-container-inline{
+.actu-container-inline a{
     text-decoration: none;
+    color: var(--bleu-academique);
+    font-size: 20px;
+    font-family: var(--font-corps);
+    transition: transform 0.2s ease-in-out;
+}
+
+.actu-container-inline a:hover{
+    text-decoration: underline;
+}
+
+.actu-container-inline p{
+    text-align: left;
 }
 
 /*-----------------footer-----------------------*/
