@@ -594,8 +594,8 @@ iframe{
     flex-direction: column;
     align-items: center;
     width: 200px;
-    box-shadow: 0 30px 60px rgba(0,0,0,0.2);
     margin: auto;
+    transition: transform 0.2s ease-in-out;
 }
 
 .box-cercle .pourcent{
@@ -613,10 +613,9 @@ iframe{
 .box-cercle .pourcent svg circle{
     fill: none;
     stroke-width: 10;
-    stroke-dasharray: 440;
-    stroke-dashoffset: 440;
+    stroke-dasharray: 408;
+    stroke-dashoffset: 408;
     stroke: #000;
-    transform: translate(5px,5px);
 }
 
 .box-cercle .pourcent svg circle:nth-child(1){
@@ -625,8 +624,23 @@ iframe{
 }
 
 .box-cercle .pourcent svg circle:nth-child(2){
-    stroke-dashoffset: calc(440-(440*87)/100);
+    --pourcentage:53.05;
+    stroke-dashoffset: var(--pourcentage);
     stroke:var(--cyan-tech);
+}
+
+#cercle-enseignant svg circle:nth-child(2){
+    --pourcentage:40;
+    stroke-dashoffset: var(--pourcentage);
+}
+
+#cercle-meilleur svg circle:nth-child(2){
+    --pourcentage:4.08;
+    stroke-dashoffset: var(--pourcentage);
+}
+
+.box-cercle:hover{
+    transform: scale(1.05);
 }
 
 .box-cercle .pourcent .nombre{
@@ -652,11 +666,12 @@ iframe{
 }
 
 .box-cercle .texte-cercle{
-    padding: 10px;
-    color: var(--cyan-tech);
-    font-weight: 700;
+    padding: 14px;
+    color: var(--bleu-academique);
     text-align: center;
     font-size: 14px;
+    font-family: var(--font-corps);
+    opacity: 0.9;
 }
 
 /*--------------------------Evenement-a-venir--------------*/
