@@ -719,13 +719,13 @@ footer p {
 .contenu-depliable{
   display: flex;
   flex-direction: column;
-  width: 93%;
+  width: 100%;
 }
 
 .depliable-header{
   display: flex;
   align-items: center;
-  flex-direction: row;
+  gap: 10px;
 }
 
 .hidden{
@@ -735,8 +735,16 @@ footer p {
 
 .hidden.active{
   display: flex;
+  flex-direction: column;
   width: 100%;
-  margin-left: 5%;
+
+}
+
+@media screen and (max-width: 1024px) {
+    .depliable{
+      width: 100%;
+      box-sizing: border-box;
+    }
 }
 
 
@@ -828,7 +836,6 @@ footer p {
 #para-asso{
   justify-content: center;
   align-items: center;
-  margin-left: 3.5%;
 }
 
 #depliable-clubs-assos .depliable-header {
@@ -842,9 +849,9 @@ footer p {
 
     .description-asso {
       flex-direction: column;
+      text-align: center;
+      align-items: center;
       gap: 15px;
-      margin: 5px 0;
-      text-align: left;            
     }
 
     .description-asso img {
@@ -858,11 +865,12 @@ footer p {
 
     .etudiant-temoin {
       flex-direction: column;  
-      gap: 15px;
-      width: 100%;
-      box-sizing: border-box;
-      margin: 5px 0;
+      align-items: center;
       text-align: left;             
+    }
+
+    #para-asso {
+      margin-left: 0;
     }
 
     .etudiant-temoin img {
@@ -888,18 +896,12 @@ footer p {
       padding: 1rem;           
     }
     #depliable-clubs-assos, #depliable-temoignages{
-      width: 92%;
-      box-sizing: border-box;
+      width: 100%;
     
     }
 
 }
 /*-----------------PRESENTATION-CAMPUS-------------------*/
-
-#campus-pres{
-  object-fit: contain;
-}
-
 #villejuif img{
   width: 80%;
   height: auto;
@@ -911,10 +913,15 @@ footer p {
     align-items: center;
     text-align: justify;
     flex-shrink: 0;         
-    width: 550px;           
+    width: 100%;
+    max-width: 550px;          
 }
 
-
+#villejuif .etudiant-temoin {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
 
 #pres-campus1, #pres-campus2, #pres-campus3,#pres-campus4{
   background-color: white;
@@ -930,10 +937,42 @@ footer p {
 }
 
 #villejuif .etudiant-temoin > p {
-    text-align: left;
-    font-style: normal;   
+  text-align: left;
+  font-style: normal;   
 }
 
+@media screen and (max-width: 1024px) {
+
+  #villejuif .etudiant-temoin {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #villejuif .photo-temoin {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  #villejuif img {
+    width: 90%;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+
+  #villejuif .photo-temoin {
+    max-width: 100%;
+  }
+
+  #villejuif img {
+    width: 90%;
+  }
+
+  #villejuif .etudiant-temoin > p {
+    text-align: center;
+  }
+}
 
 
 /*----------------- FAQ -------------*/
