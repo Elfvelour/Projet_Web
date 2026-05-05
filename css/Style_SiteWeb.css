@@ -1004,3 +1004,26 @@ footer p {
   height: auto;
   justify-content: center;
 }
+/*-------------------Enseignant-------------------*/
+#equipe a{
+  text-decoration: none;
+  font-family: var(--font-corps);
+  color: var(--bleu-academique);
+  font-weight: 600;
+}
+
+#equipe a:hover{
+  text-decoration: underline;
+  font-weight: 800;
+}
+
+/*----------------------Lien-utile-----------------*/
+#liens a{
+  text-decoration: none;
+  font-family: var(--font-corps);
+  color: black;
+}
+
+#liens a:hover{
+  text-decoration: underline;
+}
