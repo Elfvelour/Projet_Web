@@ -54,6 +54,14 @@ strong {
   font-weight: 700;
 }
 
+@media screen and (max-width: 600px) {
+
+    section h2{
+        text-align: center;
+    }
+
+}
+
 
 /*------------------------SOULIGNAGE-DYNAMIQUE-------------------*/
 footer .propos{

@@ -184,6 +184,7 @@ nav a:hover,nav a.active{
 
 /*--------------------section-----------------------------*/
 section {
+  width: 90%;
   background: var(--blanc-pur);
   padding: 2rem 2.5rem;
   margin: 2rem auto;
@@ -204,6 +205,16 @@ section:hover{
   color:black;
   font-family: var(--font-titres);
 }
+
+
+@media screen and (max-width: 600px) {
+    section{
+        padding: 1.5rem 1rem;
+        width: 90%;
+        box-sizing: border-box;
+    }
+}
+
 
 /*-------------------------carrousel---------------------*/
 .container {
@@ -455,6 +466,53 @@ section p{
     transform: scale(1.05);
 }
 
+@media screen and (max-width: 1024px) {
+
+    .frise-chrono{
+        width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+    .frise-chrono::after {
+        left: 20px;
+    }
+
+    .container2 {
+        width: 80%;
+        left: 30px;
+        padding: 10px 15px;
+        align-items: center;
+    }
+
+    .container2::after {
+        left: 5px;
+        right: auto;
+    }
+
+    .left::before,
+    .right::before {
+        left: -10px;
+        right: auto;
+        border-width: 10px 10px 10px 0;
+        border-color: transparent white transparent transparent;
+    }
+
+    .timeline-content img {
+        width: 60%;
+        height: auto;
+    }
+
+    .timeline-content{
+        left: 50px;
+    }
+
+    .left,
+    .right {
+        left: 0;
+    }
+}
+
 @media screen and (max-width: 600px) {
 
     .frise-chrono{
@@ -491,6 +549,10 @@ section p{
         width: 60%;
         height: auto;             
     }
+    .timeline-content{
+        left: 20px;
+    }
+
 }
 
 
@@ -516,8 +578,15 @@ iframe{
 @media screen and (max-width: 600px) {
 
     iframe {
-        width: 100%;
+        width: 90%;
         height: 200px;
+    }
+    #video-campus h2{
+        text-align: center;
+    }
+
+    section h1{
+        text-align: center;
     }
 
 }
@@ -562,6 +631,22 @@ iframe{
     text-align: center;
     margin-top: 10px;
     opacity: 0.9;
+}
+
+@media screen and (max-width: 1024px) {
+    .stat-grille {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-ecole {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .gros-nb {
+        font-size: 50px;
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -691,6 +776,27 @@ iframe{
 .actu-container-inline p{
     text-align: left;
 }
+
+.actu-container-inline {
+    display: flex;
+    justify-content: center;
+}
+
+
+@media screen and (max-width: 1024px){
+    #Webinaire-IA{
+        width: 100%;
+        max-width: 100%;
+        display: block;
+    }
+    .actu-container-inline iframe{
+        width: 100%;
+    }
+    * {
+    box-sizing: border-box;
+    }
+}
+
 
 /*-----------------footer-----------------------*/
 footer{
