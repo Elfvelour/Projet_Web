@@ -456,6 +456,9 @@ section p{
   border-radius: 6px;
 }
 
+.timeline-content p{
+    text-align: left;
+}
 
 .timeline-content img{
     width: 40%;
@@ -715,12 +718,12 @@ iframe{
 }
 
 #cercle-enseignant svg circle:nth-child(2){
-    --pourcentage:40;
+    --pourcentage:57.12;
     stroke-dashoffset: var(--pourcentage);
 }
 
 #cercle-meilleur svg circle:nth-child(2){
-    --pourcentage:4.08;
+    --pourcentage:8.16;
     stroke-dashoffset: var(--pourcentage);
 }
 
