@@ -4,11 +4,10 @@
         <title>EFREI: Département d'informatique</title>
         <meta charset="UTF-8">
         <meta name="description" content="Accueil">
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" type="text/css" href="../css/style_accueil.css">
         <link rel="icon" href="../img/Logo-Efrei-CMJN.png" type="image/png">
         <script src="../js/script.js" defer></script>
-        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     </head>
 
     <body>
@@ -32,7 +31,7 @@
                 <a href="./Contact_et_Admission.html">Contact &amp; Admissions</a> 
             </nav>
         </header>
-        <section>
+        <section id="carrousel-departement">
             <div class="container">
                 <div class="carousel">
                     <div class="carousel-inner">
@@ -43,7 +42,7 @@
                             </div>    
                         </div>
                         <div class="slide">
-                            <a href="./Cours_Formations.html"></a><img src="../img/carrousel/etudiants.jpg" alt="etudiant"></a>
+                            <a href="./Cours_Formations.html"><img src="../img/carrousel/etudiants.jpg" alt="etudiant"></a>
                             <div class="carousel-txt">  
                                 <p>Des formations pour toutes et tous</p>
                             </div>  
@@ -79,8 +78,8 @@
             </div>            
         </section>
 
-        <section>
-            <a href="https://fr.wikipedia.org/wiki/EFREI_Paris" id="histoire-efrei" ><h1>Qu'est ce que l'EFREI ?</h1></a>
+        <section id="resume-efrei">
+            <a href="https://fr.wikipedia.org/wiki/EFREI_Paris" id="histoire-efrei" ><h2>Qu'est ce que l'EFREI ?</h2></a>
             <p><strong>Fondée en 1936</strong>, l’Efrei n’a eu de cesse d’évoluer au fil des avancées technologiques. Elle est devenue <strong>l’école 
                 référente dans le numérique</strong> et compte désormais plus de <strong>17 200 alumni</strong>. École composante du grand établissement 
                 Panthéon-Assas Université, nos diplômes sont reconnus <strong>en France et à l’international</strong>.
@@ -88,7 +87,7 @@
             <div class="frise-chrono">
                 <div class="container2 left">
                     <div class="timeline-content">
-                        <img src="../img/efrei1936.png">
+                        <img src="../img/efrei1936.png" alt="premier-logo-efrei">
                         <h2>1936</h2>
                         <p>L’école EFR est créée à Paris par Ernest Lavigne pour répondre aux besoins en radioélectricité. À l’époque, elle forme des spécialistes
                              des ondes radiophoniques pour la marine marchande, et s’impose dans l’information et la communication.
@@ -97,7 +96,7 @@
                 </div>
                 <div class="container2 right">
                     <div class="timeline-content">
-                        <img src="../img/cti-logo.png">
+                        <img src="../img/cti-logo.png" alt="logo-cti">
                         <h2>1957</h2>
                         <p>L’EFR est habilitée par la Commission des Titres d’Ingénieur (CTI) à délivrer le titre d’ingénieur et créé sa classe préparatoire intégrée,
                              préparant efficacement aux concours.
@@ -106,7 +105,7 @@
                 </div>
                 <div class="container2 left">
                     <div class="timeline-content">
-                        <img src="../img/Logo-Efrei1973.png">
+                        <img src="../img/Logo-Efrei1973.png" alt="deuxieme-logo-efrei">
                         <h2>1973</h2>
                         <p>L’EFRE devient l’École Française de Radioélectricité, d’Électronique et d’Informatique.
                         </p>
@@ -114,7 +113,7 @@
                 </div>
                 <div class="container2 right">
                     <div class="timeline-content">
-                        <img src="../img/Logo-Efrei-CMJN.png">
+                        <img src="../img/Logo-Efrei-CMJN.png" alt="actuel-logo-efrei">
                         <h2>2022</h2>
                         <p>L’Efrei devient établissement composante de Paris-Panthéon-Assas, aux côtés de l’ISIT, de l’IRSEM, du CFJ et de l’école W. Ce rapprochement 
                             unique entre ces établissements publics et privés réunit leurs expertises autour de thématiques clés : droit, éthique, digital et économie.
@@ -125,26 +124,24 @@
         </section>
 
         <section id="video-campus">
-            <h1>Deux campus modernes</h1>
-            <h2>Le campus de Villejuif, répartis sur 4 sites</h2>
-            <iframe width="545" height="300" src="https://www.youtube.com/embed/N45-U0AaAPw?si=GE2N-RAUSYz46w9f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-            <p>
-                Espaces d’étude, de co-working, de détente, studio vidéo ou encore Fablab… 4 sites accueillent les étudiants dans des bâtiments neufs, modernes et à taille humaine :
-                <ul>
-                    <li><strong>La Maison</strong>, site historique de l’Efrei, est dédiée aux cours, à l’administratif, à l’innovation et aux associations.</li>
-                    <li><strong>L’Aquarium</strong> est dédié aux langues et aux Sciences Humaines.</li>
-                    <li><strong>La Factory</strong> est dédiée aux cours et aux travaux collectifs.</li>
-                    <li><strong>New Republic</strong> un campus moderne dédié aux cours et à la recherche.</li>
-                </ul>
-            </p>
+            <h2>Deux campus modernes</h2>
+            <h3>Le campus de Villejuif, répartis sur 4 sites</h3>
+            <iframe width="545" height="300" src="https://www.youtube.com/embed/N45-U0AaAPw?si=GE2N-RAUSYz46w9f" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <p>Espaces d'étude, de co-working, de détente, studio vidéo ou encore Fablab… 4 sites accueillent les étudiants dans des bâtiments neufs, modernes et à taille humaine :</p>
+            <ul>
+                <li><strong>La Maison</strong>, site historique de l'Efrei, est dédiée aux cours, à l'administratif, à l'innovation et aux associations.</li>
+                <li><strong>L'Aquarium</strong> est dédié aux langues et aux Sciences Humaines.</li>
+                <li><strong>La Factory</strong> est dédiée aux cours et aux travaux collectifs.</li>
+                <li><strong>New Republic</strong>, un campus moderne dédié aux cours et à la recherche.</li>
+            </ul>
 
-            <h2>Le campus de Bordeaux</h2>
-            <iframe width="545" height="300" src="https://www.youtube.com/embed/Ylpg5p8xsok" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <h3>Le campus de Bordeaux</h3>
+            <iframe width="545" height="300" src="https://www.youtube.com/embed/Ylpg5p8xsok" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </section>
 
         <section id="chiffres">
-            <h1>Le département informatique en quelques chiffres</h1>
-            <hr />
+            <h2>Le département informatique en quelques chiffres</h2>
+            <hr>
             <div class="stat-grille">
                 <div class="stat-ecole">
                     <span class="gros-nb">50</span>
@@ -200,13 +197,13 @@
         </section>
 
         <section>
-            <h1>Actualités et Événements à venir</h1>
+            <h2>Actualités et Événements à venir</h2>
 
             <div class="actu-container-inline" style="display: flex; gap: 30px; justify-content: center; align-items: flex-start;">
                 <div style="display: flex; flex-direction: column; align-items: center;">
                     <a href="https://www.efrei.fr/evenement/journees-portes-ouvertes/"><strong>Porte ouvertes </strong></a>
                     <p>L’Efrei propose tout au long de l’année des évènements sur ses campus de Paris et de Bordeaux. L’occasion de mieux connaître l’école, visiter nos campus, rencontrer des étudiants ainsi que l’équipe pédagogique.</p>
-                    <iframe width="545" height="300" src="https://www.youtube.com/embed/IosRrUIt53I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe width="545" height="300" src="https://www.youtube.com/embed/IosRrUIt53I" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </div>
                 <div style="display: flex; flex-direction: column; align-items: center;">
                     <a href="https://www.efrei.fr/article/tech-research-xperience-au-coeur-de-linnovation-et-de-la-recherche/"><strong>Événements autour de l'impact de l'IA</strong></a>

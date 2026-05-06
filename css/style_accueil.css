@@ -27,6 +27,12 @@ body{
 h1{
     color: var(--bleu-academique);
 }
+
+h2 {
+  font-size: 48px;
+  font-weight: 600;
+  color: var(--bleu-academique);
+}
 /*---------------------header---------------*/
 
 header {
@@ -572,10 +578,11 @@ section p{
 }
 
 iframe{
-    border-radius: 8px;
+    border-radius: 10px;
     display: block;        
     margin: 0 auto;
     padding: 15px;
+    border: none;
 }    
 
 @media screen and (max-width: 600px) {
