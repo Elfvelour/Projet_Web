@@ -299,3 +299,69 @@ function envoyerFormulaire() {
         document.getElementById('form-confirmation').style.display = 'none'; 
     }, 2000);
 }
+
+
+/*-------------------Projet-etudiants--------------------*/
+
+const projets = {
+    projet1: {
+        img: "../img/projet_etudiants/favicon_color_primary.png",
+        titre: "Etu'aide",
+        but: "Favoriser la rencontre, l’entraide et le lien social entre étudiants, tout en luttant contre l’isolement et le gaspillage au quotidien.",
+        qui: "Groupe P2 : Girault, Brémand, Splinder, Lemmonier, Marques, Aubert",
+        quand: "Projet transverse P2 (2025/2026)",
+        liens: [
+            { texte: "GitHub", url: "https://github.com/matt-spdl/etuaide" },
+        ]
+    },
+    projet2: {
+        img: "../img/projets/projet2.jpg",
+        titre: "Application IA",
+        but: "Développer une application utilisant des modèles de machine learning.",
+        qui: "Groupe P2-SC2",
+        quand: "Semestre 2 — 2025/2026",
+        liens: [
+            { texte: "Voir le projet", url: "#" }
+        ]
+    },
+    projet3: {
+        img: "../img/projets/projet3.jpg",
+        titre: "Cybersécurité CTF",
+        but: "Participation au CTF InCyber avec l'association CTFrei.",
+        qui: "Association CTFrei",
+        quand: "Mars 2026",
+        liens: [
+            { texte: "CTFrei", url: "https://ctfrei.fr" },
+        ]
+    }
+};
+
+function ouvrirModal(id) {
+    const p = projets[id];
+    document.getElementById('modal-img').src = p.img;
+    document.getElementById('modal-titre').textContent = p.titre;
+    document.getElementById('modal-but').innerHTML = '<strong>But</strong> : ' + p.but;
+    document.getElementById('modal-qui').innerHTML = '<strong>Qui</strong> : ' + p.qui;
+    document.getElementById('modal-quand').innerHTML = '<strong>Quand</strong> : ' + p.quand;
+
+    const liensDiv = document.getElementById('modal-liens');
+    liensDiv.innerHTML = '';
+    p.liens.forEach(lien => {
+        const a = document.createElement('a');
+        a.href = lien.url;
+        a.textContent = lien.texte;
+        a.target = '_blank';
+        a.className = 'modal-lien';
+        liensDiv.appendChild(a);
+    });
+
+    document.getElementById('modal-overlay').classList.add('actif');
+}
+
+function fermerModal() {
+    document.getElementById('modal-overlay').classList.remove('actif');
+}
+
+document.addEventListener('keydown', (e) => {
+    if(e.key === 'Escape') fermerModal();
+});

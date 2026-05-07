@@ -175,20 +175,42 @@
             </div>    
         </div>
 
-        <div class="box-depliable" id="contenu-projets">
-            <div class="depliable" onclick="triangle('contenu-projets')">
-                <div class="contenu-depliable">
-                    <div class="depliable-header">
-                        <div class="triangle">
-                            <p>▶</p>
-                        </div>
-                        <p class="title-box">Projets Étudiants</p>
-                    </div>
-                    <div class="hidden">
-                        
+        <section id="galerie-projets">
+            <h2>Projets étudiants</h2>
+            <div class="galerie-grid">
+                <div class="galerie-carte" onclick="ouvrirModal('projet1')">
+                    <img src="../img/projet_etudiants/favicon_color_primary.png" alt="Projet 1">
+                    <div class="galerie-overlay">
+                        <p>Etu'aide</p>
                     </div>
                 </div>
-            </div>    
+                <div class="galerie-carte" onclick="ouvrirModal('projet2')">
+                    <img src="#" alt="Projet 2">
+                    <div class="galerie-overlay">
+                        <p>Open3map</p>
+                    </div>
+                </div>
+                <div class="galerie-carte" onclick="ouvrirModal('projet3')">
+                    <img src="#" alt="Projet 3">
+                    <div class="galerie-overlay">
+                        <p>Leets</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <div id="modal-overlay" onclick="fermerModal()">
+            <div id="modal-contenu" onclick="event.stopPropagation()">
+                <button id="modal-fermer" onclick="fermerModal()">✕</button>
+                <img id="modal-img" src="" alt="">
+                <div id="modal-texte">
+                    <h3 id="modal-titre"></h3>
+                    <p id="modal-but"></p>
+                    <p id="modal-qui"></p>
+                    <p id="modal-quand"></p>
+                    <div id="modal-liens"></div>
+                </div>
+            </div>
         </div>
 
         <footer>    
