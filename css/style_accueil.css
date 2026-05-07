@@ -212,12 +212,27 @@ section:hover{
   font-family: var(--font-titres);
 }
 
+.box-depliable{
+  background: var(--blanc-pur);
+  padding: 2rem 2.5rem;
+  margin: 2rem auto;
+  max-width: 1100px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
 
 @media screen and (max-width: 600px) {
     section{
-        padding: 1.5rem 1rem;
-        width: 90%;
-        box-sizing: border-box;
+       padding: 1.5rem 1rem;
+       width: 90%;
+       box-sizing: border-box;
+    }
+
+    .box-depliable{
+      padding: 1.5rem 1rem;
+      width: 90%;
+      box-sizing: border-box; 
     }
 }
 
@@ -501,7 +516,7 @@ section p{
 
     .left::before,
     .right::before {
-        left: -10px;
+        left: -11px;
         right: auto;
         border-width: 10px 10px 10px 0;
         border-color: transparent white transparent transparent;

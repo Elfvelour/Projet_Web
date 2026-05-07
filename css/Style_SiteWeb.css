@@ -747,6 +747,24 @@ footer p {
     }
 }
 
+.box-depliable{
+  background: var(--blanc-pur);
+  padding: 2rem 2.5rem;
+  margin: 2rem auto;
+  max-width: 1100px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+@media screen and (max-width: 600px) {
+
+    .box-depliable{
+      padding: 1.5rem 1rem;
+      width: 90%;
+      box-sizing: border-box; 
+    }
+}
+
 
 /*------------- PARAGRAPHE ------------*/
 .paragraphe{
@@ -896,7 +914,7 @@ footer p {
       padding: 1rem;           
     }
     #depliable-clubs-assos, #depliable-temoignages{
-      width: 100%;
+      width: 90%;
     
     }
 
