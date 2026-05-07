@@ -205,37 +205,39 @@
             <p style="font-style:normal;">Vous avez une question pour un membre de l'équipe pédagogique ou de recherche ? Remplissez ce formulaire, votre message sera transmis au bon interlocuteur.</p>
 
             <div class="form-wrapper">
-                <div class="form-group">
-                    <label for="nom">Nom complet *</label>
-                    <input type="text" id="nom" name="nom" placeholder="Nom et prénom" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Adresse e-mail *</label>
-                    <input type="email" id="email" name="email" placeholder="votre@email.com" required>
-                </div>
-                <div class="form-group">
-                    <label for="destinataire">Destinataire *</label>
-                    <select id="destinataire" name="destinataire">
-                        <option value="" disabled selected>-- Sélectionner un enseignant --</option>
-                        <option value="asma.gabis@efrei.fr">Asma Gabis – Responsable département informatique</option>
-                        <option value="boussad.aitsalem@efrei.fr">Boussad Ait Salem – Cybersécurité &amp; Réseaux</option>
-                        <option value="youssef.aitelmahjoub@efrei.fr">Youssef Ait El Mahjoub – Filière IT</option>
-                        <option value="mohamad.ghassany@efrei.fr">Mohamad Ghassany – Filière Data</option>
-                        <option value="mano.mathew@efrei.fr">Mano Joseph Mathew – Bio-informatique</option>
-                        <option value="khodor.hammoud@efrei.fr">Khodor Hammoud – Filière Data Engineering</option>
-                        <option value="autre">Autre / Je ne sais pas</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="sujet">Sujet *</label>
-                    <input type="text" id="sujet" name="sujet" placeholder="Ex : Question sur la majeure Cybersécurité" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Message *</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
-                </div>
-                <button type="button" class="btn-envoyer" onclick="envoyerFormulaire()">Envoyer le message</button>
-                <p id="form-confirmation" style="display:none; color:green; font-style:normal; margin-top:10px;">✅ Votre message a bien été envoyé !</p>
+                <form id="contact-form">
+                    <div class="form-group">
+                        <label for="nom">Nom complet *</label>
+                        <input type="text" id="nom" name="nom" placeholder="Nom et prénom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Adresse e-mail *</label>
+                        <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="destinataire">Destinataire *</label>
+                        <select id="destinataire" name="destinataire">
+                            <option value="" disabled selected>-- Sélectionner un enseignant --</option>
+                            <option value="asma.gabis@efrei.fr">Asma Gabis – Responsable département informatique</option>
+                            <option value="boussad.aitsalem@efrei.fr">Boussad Ait Salem – Cybersécurité &amp; Réseaux</option>
+                            <option value="youssef.aitelmahjoub@efrei.fr">Youssef Ait El Mahjoub – Filière IT</option>
+                            <option value="mohamad.ghassany@efrei.fr">Mohamad Ghassany – Filière Data</option>
+                            <option value="mano.mathew@efrei.fr">Mano Joseph Mathew – Bio-informatique</option>
+                            <option value="khodor.hammoud@efrei.fr">Khodor Hammoud – Filière Data Engineering</option>
+                            <option value="autre">Autre / Je ne sais pas</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="sujet">Sujet *</label>
+                        <input type="text" id="sujet" name="sujet" placeholder="Ex : Question sur la majeure Cybersécurité" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Votre message..." required></textarea>
+                    </div>
+                    <button type="button" class="btn-envoyer" onclick="envoyerFormulaire()">Envoyer le message</button>
+                    <p id="form-confirmation" style="display:none; color:green; font-style:normal; margin-top:10px;">✅ Votre message a bien été envoyé !</p>
+                </form>
             </div>
         </section>
 
