@@ -1227,3 +1227,28 @@ footer p {
 .bloc-image-texte a:hover::after {
   width: 100%;
 }
+
+#enonce-graphique, #enonce-contenu{
+  text-decoration: none;
+  color:var(--bleu-academique);
+}
+
+#enonce-graphique:hover, #enonce-contenu:hover{
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+#photo-propos p{
+  color: black;
+  font-family: var(--font-titres);
+  font-size: 24px;
+}
+
+#photo-propos{
+  text-decoration: none;
+}
+
+#photo-propos p:hover{
+  text-decoration: underline;
+  font-weight: 600;
+}
