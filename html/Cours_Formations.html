@@ -65,22 +65,7 @@
                 <h2>Présentation générale des cursus</h2>
 
                 <div class="note-intro">
-                    <p>Former des ingénieurs et experts du numérique capables d'innover, de gérer des projets complexes et de s'adapter à un marché en constante évolution — tel est l'objectif de l'Efrei.</p>
-                </div>
-
-                <div class="cursus-cards">
-                    <div class="cursus-card pge" onclick="document.getElementById('onglets').scrollIntoView({behavior:'smooth'}); switchTab('cpi')">
-                        <h4>Programme Grande École</h4>
-                        <p>Cycle préparatoire (2 ans) + Cycle ingénieur (3 ans) — diplôme CTI habilité</p>
-                    </div>
-                    <div class="cursus-card paral" onclick="document.getElementById('onglets').scrollIntoView({behavior:'smooth'}); switchTab('ingenieur')">
-                        <h4>Admission parallèle</h4>
-                        <p>Intégration directe en cycle ingénieur depuis un Bac+2 ou Bac+3 (BUT, DUT, Licence…)</p>
-                    </div>
-                    <div class="cursus-card bach" onclick="document.getElementById('onglets').scrollIntoView({behavior:'smooth'}); switchTab('bachelor')">
-                        <h4>Bachelors</h4>
-                        <p>3 ans — formations professionnalisantes en informatique, cyber, IA, réseaux, data</p>
-                    </div>
+                    <p>L'objectif de l'Efrei est de former des ingénieurs et experts du numérique capables d'innover, de gérer des projets complexes et de s'adapter à un marché en constante évolution.</p>
                 </div>
 
                 <div class="schema-cursus">
@@ -94,13 +79,13 @@
                         <div class="annee-header">Année 5</div>
 
                         <div class="cursus-label">PGE</div>
-                        <div class="cursus-bloc bloc-ingenieur span-2">
+                        <div class="cursus-bloc bloc-ingenieur span-2" onclick="document.getElementById('onglets').scrollIntoView({behavior:'smooth'}); switchTab('cpi')">
                             <strong>Cycle préparatoire intégré</strong>
-                            <span>Maths · Physique · Info (2 ans)</span>
+                            <span>Maths · Physique · Info</span>
                         </div>
-                        <div class="cursus-bloc bloc-ingenieur span-3">
+                        <div class="cursus-bloc bloc-ingenieur span-3" onclick="document.getElementById('onglets').scrollIntoView({behavior:'smooth'}); switchTab('ingenieur')">
                             <strong>Cycle ingénieur</strong>
-                            <span>Tronc commun · majeure · semestre international</span>
+                            <span>Tronc commun · Semestre international · Majeure</span>
                         </div>
 
                         <div class="cursus-label">Admission parallèle</div>
@@ -108,25 +93,20 @@
                             <strong>Bac+2 / Bac+3</strong>
                             <span>BUT, DUT, Licence…</span>
                         </div>
-                        <div class="cursus-bloc bloc-parallele span-3">
-                            <strong>Cycle ingénieur (I1 → I3)</strong>
+                        <div class="cursus-bloc bloc-parallele span-3" onclick="document.getElementById('onglets').scrollIntoView({behavior:'smooth'}); switchTab('ingenieur')">
+                            <strong>Cycle ingénieur (I1 à I3)</strong>
                             <span>Intégration en I1 ou I2</span>
                         </div>
 
                         <div class="cursus-label">Bachelor</div>
-                        <div class="cursus-bloc bloc-bachelor span-3">
-                            <strong>Bachelors (3 ans)</strong>
+                        <div class="cursus-bloc bloc-bachelor span-3" onclick="document.getElementById('onglets').scrollIntoView({behavior:'smooth'}); switchTab('bachelor')">
+                            <strong>Bachelors (L1 à L3)</strong>
                             <span>Cyber · Dev · IA · Réseaux · Data</span>
                         </div>
                         <div class="cursus-bloc bloc-bachelor span-2">
                             <strong>Mastère / Master PGE (2 ans)</strong>
                             <span>Dev · Data&amp;IA · Green IT</span>
                         </div>
-                    </div>
-                    <div class="cursus-legende">
-                        <span class="legende-dot bloc-ingenieur"></span> Programme Grande École
-                        <span class="legende-dot bloc-parallele"></span> Admission parallèle
-                        <span class="legende-dot bloc-bachelor"></span> Bachelor
                     </div>
                 </div>
             </section>
