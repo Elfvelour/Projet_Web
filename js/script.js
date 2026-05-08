@@ -380,3 +380,12 @@ function toggleAccord(id) {
     const el = document.getElementById(id);
     el.classList.toggle('open');
 }
+
+/* -------------------Contact et admission----------------------------- */
+function switchAdm(id) {
+    document.querySelectorAll('.adm-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.adm-tab').forEach(b => b.classList.remove('active'));
+    document.getElementById('adm-' + id).classList.add('active');
+    const map = { postbac: 0, cpge: 1, parallele: 2, international: 3 };
+    document.querySelectorAll('.adm-tab')[map[id]].classList.add('active');
+}

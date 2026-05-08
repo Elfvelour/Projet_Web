@@ -95,7 +95,7 @@ footer .propos:hover::after{
     }
 
     .certif-efrei img {
-        width: 120px;           /
+        width: 120px;
     }
 
     .certif-efrei .cti {
@@ -627,21 +627,9 @@ footer p {
 
 /* Bouton de choix de campus */
 #campus-choix {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 1.5rem;
-}
-
-.campus-choisi {
-    padding: 10px 20px;
-    border: 2px solid var(--bleu-academique);
-    border-radius: 8px;
-    background: white;
-    color: var(--bleu-academique);
-    font-family: var(--font-titres);
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1.5rem;
 }
 
 .campus-choisi {
@@ -656,34 +644,34 @@ footer p {
 }
 
 .campus-choisi.active {
-    background: var(--bleu-academique);
-    color: white;
+  background: var(--bleu-academique);
+  color: white;
 }
 
 .campus-choisi:hover:not(.active) {
-    background: #e8f0fb;
+  background: #e8f0fb;
 }
+
 @media screen and (max-width: 1024px) {
-    .position-maps {
-        flex-direction: column;  
-        align-items: center;
-    }
+  .position-maps {
+    flex-direction: column;  
+    align-items: center;
+  }
 
-    #maps iframe,
-    #plan-acces iframe {
-        min-width: unset;        
-        width: 100%;            
-        height: 300px;
-    }
+  #maps iframe, #plan-acces iframe {
+    min-width: unset;        
+    width: 100%;            
+    height: 300px;
+  }
 
-    .campus {
-        width: 100%;             
-    }
+  .campus {
+    width: 100%;             
+  }
 
-    .campus .postit {
-        width: 100%;             
-        box-sizing: border-box;
-    }
+  .campus .postit {
+    width: 100%;             
+    box-sizing: border-box;
+  }
 }
 
 @media screen and (max-width: 600px) {

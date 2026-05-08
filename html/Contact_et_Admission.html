@@ -6,13 +6,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Contact et Admissions">
         <link rel="stylesheet" type="text/css" href="../css/style_SiteWeb.css">
+        <link rel="stylesheet" type="text/css" href="../css/contact_admission.css">
         <link rel="icon" href="../img/Logo-Efrei-CMJN.png" type="image/png">
         <script src="https://www.gstatic.com/charts/loader.js"></script>
         <script src="../js/script.js" defer></script>
     </head>
 
     <body>
-
         <header>
             <div class="header-top">
                 <a href="https://www.efrei.fr/">
@@ -23,14 +23,13 @@
                     <p class="title">Coordonnées du département, procédure d'admission, FAQ et plan d'accès</p>
                 </div>
             </div>
-
             <nav>
                 <a href="./Page_accueil.html">Accueil</a>
                 <a href="./Cours_Formations.html">Formation</a>
                 <a href="./Enseignants_Recherche.html">Corps Enseignant &amp; Recherche</a>
                 <a href="./vie_etudiante.html">Vie étudiante</a>
                 <a href="./partenariats.html">Partenariats &amp; Professionnalisation</a>
-                <a href="./Contact_et_Admission.html">Contact &amp; Admissions</a> 
+                <a href="./Contact_et_Admission.html">Contact &amp; Admissions</a>
             </nav>
         </header>
 
@@ -38,71 +37,269 @@
             <section id="admissions">
                 <h2>Admissions</h2>
 
-                <h3>Post-bac</h3>
-                <ul>
-                    <li><strong>Parcoursup</strong> : candidature obligatoire pour toutes les formations post-bac.</li>
-                    <li><strong>Concours Puissance Alpha</strong> : selon les formations.</li>
-                </ul>
+                <div class="admission-tabs">
+                    <button class="adm-tab active" onclick="switchAdm('postbac')">Post-bac</button>
+                    <button class="adm-tab" onclick="switchAdm('cpge')">Post-CPGE</button>
+                    <button class="adm-tab" onclick="switchAdm('parallele')">Admission parallèle</button>
+                    <button class="adm-tab" onclick="switchAdm('international')">International</button>
+                </div>
 
-                <h3>Post-CPGE</h3>
-                <ul>
-                    <li><strong>Concours SCEI</strong> : MP, PC, PSI, MPI, TSI, PT.</li>
-                </ul>
+                <div class="adm-panel active" id="adm-postbac">
+                    <ul class="steps-list">
+                        <li>
+                            <span class="step-num">1</span>
+                            <div class="step-content">
+                                <strong>Parcoursup</strong>
+                                <span>Candidature obligatoire pour toutes les formations post-bac.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="step-num">2</span>
+                            <div class="step-content">
+                                <strong>Concours Puissance Alpha</strong>
+                                <span>Selon les formations, épreuves écrites et oraux.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="step-num">3</span>
+                            <div class="step-content">
+                                <strong>Réponse &amp; inscription</strong>
+                                <span>Réponse rapide, aucun frais de dossier.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
 
-                <h3>Admissions parallèles</h3>
-                <ul>
-                    <li>Ouvert aux titulaires de Bac+2 / Bac+3 scientifiques (BUT, DUT, Licence, etc.).</li>
-                    <li>Étude de dossier et entretien.</li>
-                    <li>Aucun frais de dossier, réponse rapide.</li>
-                </ul>
+                <div class="adm-panel" id="adm-cpge">
+                    <ul class="steps-list">
+                        <li>
+                            <span class="step-num">1</span>
+                            <div class="step-content">
+                                <strong>Concours SCEI</strong>
+                                <span>Filières MP, PC, PSI, MPI, TSI, PT.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="step-num">2</span>
+                            <div class="step-content">
+                                <strong>Épreuves</strong>
+                                <span>Écrits communs + oral de motivation à l'EFREI.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
 
-                <h3>Étudiants internationaux</h3>
-                <ul>
-                    <li><strong>Études en France</strong> : obligatoire pour certains pays hors UE.</li>
-                    <li><strong>DAP</strong> : pour certaines entrées en L1.</li>
-                    <li><strong>Niveau de langue</strong> : B2 recommandé en français ou anglais selon la formation.</li>
-                    <li><strong>Documents requis</strong> : passeport, relevés de notes, diplômes, CV, lettre de motivation.</li>
-                </ul>
+                <div class="adm-panel" id="adm-parallele">
+                    <ul class="steps-list">
+                        <li>
+                            <span class="step-num">1</span>
+                            <div class="step-content">
+                                <strong>Profils acceptés</strong>
+                                <span>Bac+2 / Bac+3 scientifiques : BUT, DUT, Licence, etc.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="step-num">2</span>
+                            <div class="step-content">
+                                <strong>Étude de dossier</strong>
+                                <span>Relevés de notes, CV, lettre de motivation.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="step-num">3</span>
+                            <div class="step-content">
+                                <strong>Entretien</strong>
+                                <span>Aucun frais de dossier, réponse rapide.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
 
-                <h3>Procédure d’admission</h3>
-                <p>
-                    La procédure dépend du profil du candidat (post-bac, réorientation, admission parallèle,
-                    international). Elle comprend généralement une candidature en ligne, l’étude du dossier
-                    académique et, selon les cas, des épreuves ou un entretien.
-                </p>
+                <div class="adm-panel" id="adm-international">
+                    <ul class="steps-list">
+                        <li>
+                            <span class="step-num">1</span>
+                            <div class="step-content">
+                                <strong>Études en France</strong>
+                                <span>Obligatoire pour certains pays hors UE.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="step-num">2</span>
+                            <div class="step-content">
+                                <strong>Niveau de langue</strong>
+                                <span>B2 recommandé en français ou anglais selon la formation.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="step-num">3</span>
+                            <div class="step-content">
+                                <strong>Documents requis</strong>
+                                <span>Passeport, relevés de notes, diplômes, CV, lettre de motivation.</span>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="step-num">4</span>
+                            <div class="step-content">
+                                <strong>DAP</strong>
+                                <span>Pour certaines entrées en L1.</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </section>
 
             <section id="contact-admissions">
                 <h2>Contact &amp; Informations pratiques</h2>
-                <ul>
-                    <li>
-                        <strong>Adresse :</strong>  
-                        Efrei Paris – Campus de Villejuif  
-                        30-32 Avenue de la République, 94800 Villejuif
-                    </li>
+                <div class="info-cards">
+                    <div class="info-card">
+                        <span class="ic-titre">· ADRESSE</span>
+                        <span class="ic-details"><a href="https://www.google.com/maps/place/Efrei+Paris/" target="_blank">30-32 Av. de la République,<br>94800 Villejuif<br><br></a></span>
+                        <span class="ic-titre">· ACCÈS</span>
+                        <span class="ic-details">Métro : Ligne 7 – Villejuif Louis Aragon<br>Tramway : T7 – Villejuif Louis Aragon<br>Bus : 131, 185, 162</span>
+                    </div>
+                    <div class="info-card">
+                        <span class="ic-titre">· TÉLÉPHONE</span>
+                        <span class="ic-details"><a href="tel:+33188289001">+33 1 88 28 90 01<br><br></a></span>
+                        <span class="ic-titre">· EMAIL ADMISSIONS</span>
+                        <span class="ic-details"><a href="mailto:admissions@efrei.fr">admissions@efrei.fr<br><br></a></span>
+                        <span class="ic-titre">· HORAIRES</span>
+                        <span class="ic-details">Lun – Ven : 9h00 – 18h00</span>
+                    </div>
+                </div>
+            </section>
 
-                    <li>
-                        <strong>Téléphone :</strong>  
-                        <a href="tel:+33188289001">+33 1 88 28 90 01</a>
-                    </li>
+            <section id="plan-acces">
+                <h2>Plan d'accès</h2>
+                <div id="campus-choix">
+                    <button class="campus-choisi active" onclick="switchCampus('campus-villejuif', this)">EFREI Paris – Villejuif</button>
+                    <button class="campus-choisi" onclick="switchCampus('campus-bordeaux', this)">EFREI Bordeaux</button>
+                </div>
 
-                    <li>
-                        <strong>Email admissions :</strong>  
-                        <a href="mailto:admissions@efrei.fr">admissions@efrei.fr</a>
-                    </li>
+                <div id="campus-villejuif">
+                    <h3>EFREI Paris - Villejuif</h3>
+                    <div class="position-maps">
+                        <iframe width="500" height="450" style="border:0" loading="lazy" allowfullscreen
+                            src="https://maps.google.com/maps?q=Efrei&t=&z=14&ie=UTF8&iwloc=&output=embed">
+                        </iframe>
+                        <div class="campus">
+                            <div class="postit" id="depliable-maison" onclick="triangle('depliable-maison')">
+                                <div class="depliable-header">
+                                    <div class="triangle"><p>▶</p></div>
+                                    <p class="title-box">Site La maison</p>
+                                </div>
+                                <div class="hidden">
+                                    <div class="paragraphe">
+                                        <div class="infos-site-campus">
+                                            <p>Adresse :</p>
+                                            <span><a href="https://www.google.fr/maps/place/Efrei/" class="textcopie">30-32 Av. de la République, 94800 Villejuif</a>
+                                                <button class="copyBtn" title="Copier"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>
+                                            </span>
+                                            <p><br>Horaires :</p>
+                                            <span>Lundi au vendredi : 7h30 à 20h (18h pour l'accueil)</span>
+                                            <p><br>Contact :</p>
+                                            <span>Accueil : <a href="tel:+33188289000">+33 1 88 28 90 00</a> / <a href="mailto:accueil@efrei.fr">accueil@efrei.fr</a></span>
+                                            <span>Gardien : <a href="tel:+33626096241">+33 6 26 09 62 41</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="postit" id="depliable-aquarium" onclick="triangle('depliable-aquarium')">
+                                <div class="depliable-header">
+                                    <div class="triangle"><p>▶</p></div>
+                                    <p class="title-box">Site L'aquarium</p>
+                                </div>
+                                <div class="hidden">
+                                    <div class="paragraphe">
+                                        <div class="infos-site-campus">
+                                            <p>Adresse:</p>
+                                            <span><a href="https://www.google.com/maps/place/Efrei+Paris+Panth%C3%A9on-Assas/" class="textcopie">136 bis Bd Maxime Gorki, 94800 Villejuif</a>
+                                                <button class="copyBtn" title="Copier"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>
+                                            </span>
+                                            <p><br>Horaires</p>
+                                            <span>Lundi au vendredi : 7h30 à 20h (16h30 pour l'accueil)</span>
+                                            <p><br>Contact</p>
+                                            <span>Accueil : <a href="tel:+33188289000">+33 1 88 28 90 00</a> / <a href="mailto:accueil@efrei.fr">accueil@efrei.fr</a></span>
+                                            <span>Gardien : <a href="tel:+33188289311">+33 1 88 28 93 11</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="postit" id="depliable-factory" onclick="triangle('depliable-factory')">
+                                <div class="depliable-header">
+                                    <div class="triangle"><p>▶</p></div>
+                                    <p class="title-box">Site La Factory</p>
+                                </div>
+                                <div class="hidden">
+                                    <div class="paragraphe">
+                                        <div class="infos-site-campus">
+                                            <p>Adresse:</p>
+                                            <span><a href="https://www.google.com/maps/place/Efrei+Paris+Panth%C3%A9on-Assas+Universit%C3%A9+-+Campus+Factory/" class="textcopie">147 Bd Maxime Gorki, 94800 Villejuif</a>
+                                                <button class="copyBtn" title="Copier"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>
+                                            </span>
+                                            <p><br>Horaires</p>
+                                            <span>Lundi au vendredi : 7h30 à 20h (18h pour l'accueil)</span>
+                                            <p><br>Contact</p>
+                                            <span>Accueil : <a href="tel:+33188289000">+33 1 88 28 90 00</a> / <a href="mailto:accueil@efrei.fr">accueil@efrei.fr</a></span>
+                                            <span>Gardien : <a href="tel:+33626096241">+33 6 26 09 62 41</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="postit" id="depliable-newrep" onclick="triangle('depliable-newrep')">
+                                <div class="depliable-header">
+                                    <div class="triangle"><p>▶</p></div>
+                                    <p class="title-box">Site New République</p>
+                                </div>
+                                <div class="hidden">
+                                    <div class="paragraphe">
+                                        <div class="infos-site-campus">
+                                            <p>Adresse:</p>
+                                            <span><a href="https://www.google.fr/maps/" class="textcopie">33 Av. de la République, 94800 Villejuif</a>
+                                                <button class="copyBtn" title="Copier"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>
+                                            </span>
+                                            <p><br>Horaires</p>
+                                            <span>Lundi au vendredi : 6h30 à 21h30</span>
+                                            <p><br>Contact</p>
+                                            <span>Accueil : <a href="mailto:accueil@efrei.fr">accueil@efrei.fr</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-                    <li>
-                        <strong>Horaires :</strong>  
-                        Lundi – Vendredi : 9h00 – 18h00
-                    </li>
-
-                    <li>
-                        <strong>Plan d’accès :</strong>  
-                        Métro Ligne 7 – Station Villejuif – Louis Aragon  
-                        Bus 131, 185, 162  
-                        <a href="https://www.google.com/maps/place/Efrei+Paris/" target="_blank">Voir sur Google Maps</a>
-                    </li>
-                </ul>
+                <div id="campus-bordeaux">
+                    <h3>EFREI Bordeaux</h3>
+                    <div class="position-maps">
+                        <iframe width="500" height="450" style="border:0" loading="lazy" allowfullscreen
+                            src="https://maps.google.com/maps?q=Efrei+Bordeaux&t=&z=14&ie=UTF8&iwloc=&output=embed">
+                        </iframe>
+                        <div class="campus">
+                            <div class="postit" id="depliable-bdx1" onclick="triangle('depliable-bdx1')">
+                                <div class="depliable-header">
+                                    <div class="triangle"><p>▶</p></div>
+                                    <p class="title-box">Campus Bordeaux</p>
+                                </div>
+                                <div class="hidden">
+                                    <div class="paragraphe">
+                                        <div class="infos-site-campus">
+                                            <p>Adresse:</p>
+                                            <span><a href="https://www.google.com/maps/search/Efrei+Bordeaux" class="textcopie" target="_blank">83 Rue Lucien Faure, 33000 Bordeaux</a>
+                                                <button class="copyBtn" title="Copier"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>
+                                            </span>
+                                            <p><br>Horaires</p>
+                                            <span>Lundi au vendredi : 8h00 à 20h00</span>
+                                            <p><br>Contact</p>
+                                            <span>Accueil : <a href="tel:+33554529478">+33 5 54 52 94 78</a> / <a href="mailto:accueil@efrei.fr">accueil@efrei.fr</a></span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
             <section id="FAQ">
@@ -111,226 +308,23 @@
                 <div id="faq-container"></div>
             </section>
 
-            <section id="plan-acces">
-                <h2>Plan d'accès</h2>
-
-                <div id="campus-choix">
-                    <button class="campus-choisi active" onclick="switchCampus('campus-villejuif', this)">EFREI Paris – Villejuif</button>
-                    <button class="campus-choisi" onclick="switchCampus('campus-bordeaux', this)">EFREI Bordeaux</button>
-                </div>
-
-                <div id="campus-villejuif">
-                    <h3>EFREI Paris - Villejuif</h3>
-                    
-                    <div class="position-maps">
-                        <iframe
-                            width="500"
-                            height="450"
-                            style="border:0"
-                            loading="lazy"
-                            allowFullScreen
-                            src="https://maps.google.com/maps?q=Efrei&t=&z=14&ie=UTF8&iwloc=&output=embed">
-                        </iframe>
-
-                        <div class="campus">
-
-                            <div class="postit" id="depliable-maison" onclick="triangle('depliable-maison')">
-                                <div class="depliable-header">
-                                    <div class="triangle"> <p>▶</p> </div>
-                                    <p class="title-box">Site La maison</p>
-                                </div>
-
-                                <div class="hidden">
-                                    <div class="paragraphe">
-                                        <div class="infos-site-campus">
-                                            <p>Adresse :</p>
-                                            <span>
-                                                <a href="https://www.google.fr/maps/place/Efrei/@48.7887337,2.3637327,15z/data=!4m6!3m5!1s0x47e673e24e04a9c3:0xc55cb3e676f95321!8m2!3d48.7887182!4d2.3637513!16zL20vMDVtcHk0?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D" class="textcopie">30-32 Av. de la République, 94800 Villejuif</a>
-                                                <button class="copyBtn" title="Copier">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                        <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
-                                                    </svg>
-                                                </button>
-                                            </span>
-
-                                            <p><br>Horaires :</p>
-                                            <span>Lundi au vendredi : 7h30 à 20h (18h pour l'accueil)</span>
-
-                                            <p><br>Contact :</p>
-                                            <span>Accueil :
-                                                <a href="tel:+33188289000">+33 1 88 28 90 00</a> /
-                                            <a href="mailto:accueil@efrei.fr">accueil@efrei.fr</a></span>
-                                            <span>Gardien :<a href="tel:+33626096241">+33 6 26 09 62 41</a></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="postit" id="depliable-aquarium" onclick="triangle('depliable-aquarium')">
-                                <div class="depliable-header">
-                                    <div class="triangle"> <p>▶</p> </div>
-                                    <p class="title-box">Site L'aquarium</p>
-                                </div>
-                                
-                                <div class="hidden">
-                                    <div class="paragraphe">
-                                        <div class="infos-site-campus">
-                                            <p>Adresse:</p>
-                                            <span>
-                                                <a href="https://www.google.com/maps/place/Efrei+Paris+Panth%C3%A9on-Assas+Universit%C3%A9+-+Campus+L%E2%80%99aquarium/@48.7898571,2.3685783,15z/data=!4m6!3m5!1s0x47e673d0937ba945:0x63829c5f9fb306a!8m2!3d48.7898571!4d2.3685783!16s%2Fg%2F11nxd0nvh8?entry=ttu" class="textcopie">136 bis Bd Maxime Gorki, 94800 Villejuif</a>
-                                                <button class="copyBtn" title="Copier">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                        <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
-                                                    </svg>
-                                                </button>
-                                            </span>
-                                            
-                                            <p><br>Horaires</p>
-                                            <span>Lundi au vendredi : 7h30 à 20h (16h30 pour l'accueil)</span>
-                                            
-                                            <p><br>Contact</p>
-                                            <span>Accueil :
-                                                <a href="tel:+33188289000">+33 1 88 28 90 00</a> / 
-                                                <a href="mailto:accueil@efrei.fr">accueil@efrei.fr</a></span>
-                                            <span>Gardien :<a href="tel:+33188289311">+33 1 88 28 93 11</a></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="postit" id="depliable-factory" onclick="triangle('depliable-factory')">
-                                <div class="depliable-header">
-                                    <div class="triangle"> <p>▶</p> </div>
-                                    <p class="title-box">Site La Factory</p>
-                                </div>
-
-                                <div class="hidden">
-                                    <div class="paragraphe">
-                                        <div class="infos-site-campus">
-                                            <p>Adresse:</p>
-                                            <span>
-                                                <a href="https://www.google.com/maps/place/Efrei+Paris+Panth%C3%A9on-Assas+Universit%C3%A9+-+Campus+Factory/@48.7894692,2.3682104,17z/data=!4m14!1m7!3m6!1s0x47e6730074036143:0xe183762a18baa175!2sEfrei+Paris+Panth%C3%A9on-Assas+Universit%C3%A9+-+Campus+Factory!8m2!3d48.789668!4d2.3702953!16s%2Fg%2F11lcp90c11!3m5!1s0x47e6730074036143:0xe183762a18baa175!8m2!3d48.789668!4d2.3702953!16s%2Fg%2F11lcp90c11?entry=ttu" class="textcopie">147 Bd Maxime Gorki, 94800 Villejuif</a>
-                                                <button class="copyBtn" title="Copier">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                        <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
-                                                    </svg>
-                                                </button>
-                                            </span>
-                                            
-                                            <p><br>Horaires</p>
-                                            <span>Lundi au vendredi : 7h30 à 20h (18h pour l'accueil)</span>
-                                               
-                                            <p><br>Contact</p>
-                                            <span>Accueil :
-                                                <a href="tel:+33188289000">+33 1 88 28 90 00</a> /
-                                                <a href="mailto:accueil@efrei.fr">accueil@efrei.fr</a></span>
-                                            <span>Gardien :<a href="tel:+33626096241">+33 6 26 09 62 41</a></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                                            
-                            <div class="postit" id="depliable-newrep" onclick="triangle('depliable-newrep')">
-                                <div class="depliable-header">
-                                    <div class="triangle"> <p>▶</p> </div>
-                                    <p class="title-box">Site New République</p>
-                                </div>
-
-                                <div class="hidden">
-                                    <div class="paragraphe">
-                                        <div class="infos-site-campus">
-                                            <p>Adresse:</p>
-                                            <span>
-                                                <a href="https://www.google.fr/maps/place/48%C2%B047'18.3%22N+2%C2%B021'46.7%22E/@48.7882291,2.360668,17z/data=!4m4!3m3!8m2!3d48.78842!4d2.362964?entry=ttu&g_ep=EgoyMDI2MDQyNy4wIKXMDSoASAFQAw%3D%3D" class="textcopie">33 Av. de la République, 94800 Villejuif</a>
-                                                <button class="copyBtn" title="Copier">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                        <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
-                                                    </svg>
-                                                </button>
-                                            </span>
-                                            
-                                            <p><br>Horaires</p>
-                                            <span>Lundi au vendredi : 6h30 à 21h30</span>
-                                            
-                                            <p><br>Contact</p>
-                                                <span>Accueil :<a href="mailto:accueil@efrei.fr">accueil@efrei.fr</a></span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        
-                        </div>
-                    </div>
-                </div>
-                
-                <div id="campus-bordeaux">
-                    <h3>EFREI Bordeaux</h3>
-                
-                    <div class="position-maps">
-                        <iframe
-                            width="500"
-                            height="450"
-                            style="border:0"
-                            loading="lazy"
-                            allowFullScreen
-                            src="https://maps.google.com/maps?q=Efrei+Bordeaux&t=&z=14&ie=UTF8&iwloc=&output=embed">
-                        </iframe>
-
-                        <div class="campus">
-                            <div class="postit" id="depliable-bdx1" onclick="triangle('depliable-bdx1')">
-                                <div class="depliable-header">
-                                    <div class="triangle"> <p>▶</p> </div>
-                                    <p class="title-box">Campus Bordeaux</p>
-                                </div>
-                                
-                                <div class="hidden">
-                                    <div class="paragraphe">
-                                        <div class="infos-site-campus">
-                                            <p>Adresse:</p>
-                                            <span>
-                                                <a href="https://www.google.com/maps/search/Efrei+Bordeaux" class="textcopie" target="_blank">83 Rue Lucien Faure, 33000 Bordeaux</a>
-                                                <button class="copyBtn" title="Copier">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                                                        <rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
-                                                    </svg>
-                                                </button>
-                                            </span>
-                                            
-                                            <p><br>Horaires</p>
-                                            <span>Lundi au vendredi : 8h00 à 20h00</span>
-                                            
-                                            <p><br>Contact</p>
-                                            <span>Accueil :
-                                                <a href="tel:+33188289000">+33 5 54 52 94 78</a> /
-                                                <a href="mailto:accueil@efrei.fr">accueil@efrei.fr</a>
-                                            </span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
             <section id="liens">
                 <h2>Liens utiles</h2>
-                <ul>
-                    <li><a href="https://www.efrei.fr" target="_blank">Site officiel de l’EFREI</a></li>
-                    <li><a href="https://www.parcoursup.gouv.fr" target="_blank">Plateforme Parcoursup</a></li>
-                    <li><a href="https://www.campusfrance.org" target="_blank">Campus France</a></li>
-                    <li><a href="https://www.puissance-alpha.fr" target="_blank">Concours Puissance Alpha</a></li>
-                    <li><a href="https://www.scei-concours.fr" target="_blank">Concours SCEI</a></li>
-                </ul>
+                <div class="liens-utiles">
+                    <a class="lien-card" href="https://www.efrei.fr" target="_blank">Site officiel de l'EFREI</a>
+                    <a class="lien-card" href="https://www.parcoursup.gouv.fr" target="_blank">Parcoursup (Post-bac)</a>
+                    <a class="lien-card" href="https://www.puissance-alpha.fr" target="_blank">Concours Puissance Alpha (Post-bac)</a>
+                    <a class="lien-card" href="https://www.scei-concours.fr" target="_blank">Concours SCEI (Post-CPGE)</a>
+                    <a class="lien-card" href="https://www.campusfrance.org" target="_blank">Campus France (International)</a>
+                </div>
             </section>
         </main>
 
-
-        <footer>    
+        <footer>
             <div class="certif-efrei">
-                    <a href="https://www.cti-commission.fr"><img class="cti" src="../img/cti-logo.png" alt="logo-cti"></a>
-                    <a href="https://www.assas-universite.fr/fr"><img class="logo-u" src="../img/Logo_Panthéon-Assas.png" alt="logo-universite"></a>
-                    <a href="https://www.enseignementsup-recherche.gouv.fr/fr/la-qualification-d-etablissement-d-enseignement-superieur-prive-d-interet-general-eespig-46277"><img class="eespig" src="../img/logo-eespig.png" alt="logo-eespig"></a>
+                <a href="https://www.cti-commission.fr"><img class="cti" src="../img/cti-logo.png" alt="logo-cti"></a>
+                <a href="https://www.assas-universite.fr/fr"><img class="logo-u" src="../img/Logo_Panthéon-Assas.png" alt="logo-universite"></a>
+                <a href="https://www.enseignementsup-recherche.gouv.fr/fr/la-qualification-d-etablissement-d-enseignement-superieur-prive-d-interet-general-eespig-46277"><img class="eespig" src="../img/logo-eespig.png" alt="logo-eespig"></a>
             </div>
             <p>©️2026 P2-SC1 Girault Brémand</p>
             <p>Tous droits réservés.</p>
@@ -339,11 +333,11 @@
                 <a href="https://github.com/Elfvelour/Projet_Web"><img class="image1" src="../img/reseaux/Github-Logo-Transparent.png" alt="Github"></a>
                 <a href="https://www.linkedin.com/school/efrei/posts/?feedView=all"><img class="image1" src="../img/reseaux/logo-linkedin.png" alt="LinkedIn"></a>
                 <a href="https://www.youtube.com/@efrei">
-                    <svg  class="yt-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="yt-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <title>YouTube</title>
                         <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                     </svg>
-                </a>    
+                </a>
             </div>
         </footer>
 
