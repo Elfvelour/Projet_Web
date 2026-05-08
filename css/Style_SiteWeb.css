@@ -527,7 +527,8 @@ footer p {
 }
 
 .postit{
-  background: var(--blanc-pur);
+  background: #f0f4fb;
+  border-left: 4px solid var(--bleu-academique);
   padding: 5%;
   margin: 1% 0;
   border-radius: 8px;

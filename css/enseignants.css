@@ -63,6 +63,30 @@
     text-decoration: underline;
 }
 
+/* -------------- Colonne photo ------------- */
+.col-photo {
+    width: 60px;
+    padding: 6px 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.col-photo img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+    border: 2px solid var(--bleu-academique);
+}
+
+@media screen and (max-width: 768px) {
+    .table-enseignants tbody td.col-photo, .table-enseignants thead th.col-photo {
+        display: none;
+    }
+}
+
 /* ----------- GRILLE EXPERTISE ----------- */
 
 .expertise-grid {
