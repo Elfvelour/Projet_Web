@@ -984,10 +984,10 @@ footer p {
 
 /*----------------- FAQ -------------*/
 .hidden .site {
-    max-width: 100%;
-    width: 100%;
-    margin: 0.5rem 0;       
-    box-sizing: border-box;
+  max-width: 100%;
+  width: 100%;
+  margin: 0.5rem 0;       
+  box-sizing: border-box;
 }
 
 #FAQ .hidden{
@@ -997,11 +997,11 @@ footer p {
 }
 
 #FAQ .hidden.active {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    gap: 10px;
-    padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+  padding-top: 10px;
 }
 
 

@@ -327,7 +327,7 @@ const projets = {
     projet3: {
         img: "../img/projets/projet3.jpg",
         titre: "Cybersécurité CTF",
-        but: "Participation au CTF InCyber avec l'association CTFrei.",
+        but: "Participation aux CTF InCyber avec l'association CTFrei.",
         qui: "Association CTFrei",
         quand: "Mars 2026",
         liens: [
