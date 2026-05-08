@@ -28,7 +28,7 @@
                 <a href="./Enseignants_Recherche.html">Corps Enseignant &amp; Recherche</a>
                 <a href="./vie_etudiante.html">Vie étudiante</a>
                 <a href="./partenariats.html">Partenariats &amp; Professionnalisation</a>
-                <a href="./Contact_et_Admission.html">Contact &amp; Admissions</a> 
+                <a href="./Contact_et_Admission.html">Contact &amp; Admissions</a>
             </nav>
         </header>
 
@@ -71,9 +71,9 @@
 
                 <h3>Courte description :</h3>
 
-                Le projet consiste à créer un site vitrine Web du département d’Informatique de l’Efrei, et comporte :
+                Le projet consiste à créer un site vitrine Web du département d'Informatique de l'Efrei, et comporte :
                 <ul>
-                    <li>Une page d’accueil permettant d’avoir une idée du site et de naviguer vers les autres pages du site</li>
+                    <li>Une page d'accueil permettant d'avoir une idée du site et de naviguer vers les autres pages du site</li>
                     <li>Une page de type « à propos », qui contient les contacts des étudiants membres du projet, une courte présentation du projet ainsi que le détail de la répartition du travail.</li>
                     <li>Un contenu principal, composé de diverses sections et/ou articles sur le sujet, répartis sur plusieurs pages. Voici un exemple de contenu proposé :
                     <a href="https://moodle.myefrei.fr/pluginfile.php/669754/mod_folder/content/0/Contenu_Site_D%C3%A9partement_Informatique.pdf" title="Voir le contenu du Projet" id="enonce-contenu">
@@ -89,8 +89,8 @@
 
                 Toutes les pages respectent la charte graphique de l'EFREI :
                 <a href="https://moodle.myefrei.fr/pluginfile.php/669924/mod_folder/content/0/Charte%20Graphique%20Web%20-%20De%CC%81partement%20Informatique%20Efrei.pdf" title="Voir la charte graphique du Projet" id="enonce-graphique">
-                        <em>Enoncé - Charte graphique du Projet</em>
-                    </a>
+                    <em>Enoncé - Charte graphique du Projet</em>
+                </a>
 
                 <a href="https://moodle.myefrei.fr/pluginfile.php/669924/mod_folder/content/0/Charte%20Graphique%20Web%20-%20De%CC%81partement%20Informatique%20Efrei.pdf" title="Voir la charte graphique du Projet">
                     <img class="bandeau" src="../img/a_propos/PP_CharteGraphique.png" alt="Photo_CharteGraphique">
@@ -99,15 +99,131 @@
 
             <section>
                 <h2>Répartition des tâches</h2>
-                <img class="diagramme" src="../img/a_propos/RépartitionTâches.jpg" alt="Diagramme_RépartitionTâches">
+
+                <div style="display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-bottom:10px;font-size:13px;font-style:normal;">
+                    <span style="font-weight:700;color:#0A316C;">Timothée Girault</span>
+                    <span style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
+                        <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#0C447C;display:inline-block;"></span>Page d'accueil</span>
+                        <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#185FA5;display:inline-block;"></span>Header / Footer</span>
+                        <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#378ADD;display:inline-block;"></span>Vie étudiante</span>
+                        <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#85B7EB;display:inline-block;"></span>Responsive</span>
+                        <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#B5D4F4;display:inline-block;"></span>W3C</span>
+                    </span>
+                </div>
+                <div style="display:flex;flex-wrap:wrap;gap:20px;justify-content:center;margin-bottom:16px;font-size:13px;font-style:normal;">
+                    <span style="font-weight:700;color:#3B6D11;">Flavie Brémand</span>
+                    <span style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;">
+                        <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#3B6D11;display:inline-block;"></span>Formation</span>
+                        <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#639922;display:inline-block;"></span>Corps enseignant</span>
+                        <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#97C459;display:inline-block;"></span>Partenariats</span>
+                        <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;background:#C0DD97;display:inline-block;"></span>Contact & Admission</span>
+                        <span style="display:flex;align-items:center;gap:4px;"><span style="width:10px;height:10px;border-radius:2px;border:1px solid #97C459;background:#EAF3DE;display:inline-block;"></span>À propos</span>
+                    </span>
+                </div>
+
+                <div id="repartition-donut" style="width:100%;max-width:600px;margin:0 auto;">
+                    <div style="position:relative;width:100%;height:380px;">
+                        <canvas id="donutChart" role="img"
+                            aria-label="Anneau imbriqué : 50% Timothée Girault (page d'accueil, header/footer, vie étudiante, responsive, W3C), 50% Flavie Brémand (formation, corps enseignant, partenariats, contact, à propos).">
+                            Répartition égale 50/50.
+                        </canvas>
+                    </div>
+                    <div id="detail-box" style="margin-top:1rem;padding:0.75rem 1rem;border-radius:8px;background:#f5f7fb;border:1px solid #e0e7f5;font-size:14px;font-style:normal;min-height:40px;text-align:center;color:#222;">
+                        <span style="color:#888;font-size:13px;">Survolez une section pour voir le détail</span>
+                    </div>
+                </div>
+
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+                <script>
+                    const box = document.getElementById('detail-box');
+
+                    const innerLabels = ['Flavie Brémand', 'Timothée Girault'];
+                    const innerColors = ['#185FA5', '#639922'];
+
+                    const outerLabels = [
+                        "Page d'accueil", 'Header / footer', 'Vie étudiante', 'Responsive design', 'Vérifications W3C',
+                        'Formation', 'Corps enseignant & Recherche', 'Partenariats & Professionnalisation', 'Contact & Admission', 'À propos'
+                    ];
+                    const outerColors = [
+                        '#0C447C','#185FA5','#378ADD','#85B7EB','#B5D4F4',
+                        '#3B6D11','#639922','#97C459','#C0DD97','#EAF3DE'
+                    ];
+                    const outerBorders = [
+                        '#0C447C','#185FA5','#378ADD','#85B7EB','#B5D4F4',
+                        '#3B6D11','#639922','#97C459','#97C459','#97C459'
+                    ];
+                    const ownerOf = [
+                        'Flavie Brémand','Flavie Brémand','Flavie Brémand','Flavie Brémand','Flavie Brémand',
+                        'Timothée Girault','Timothée Girault','Timothée Girault','Timothée Girault','Timothée Girault'
+                    ];
+                    const ownerColor = [
+                        '#0C447C','#0C447C','#0C447C','#0C447C','#0C447C',
+                        '#3B6D11','#3B6D11','#3B6D11','#3B6D11','#3B6D11'
+                    ];
+
+                    new Chart(document.getElementById('donutChart'), {
+                        type: 'doughnut',
+                        data: {
+                            datasets: [
+                                {
+                                    label: 'Contributeur',
+                                    data: [50, 50],
+                                    backgroundColor: innerColors,
+                                    borderColor: ['#fff','#fff'],
+                                    borderWidth: 3,
+                                    hoverOffset: 6,
+                                },
+                                {
+                                    label: 'Tâche',
+                                    data: [10, 10, 10, 10, 10, 10, 10, 10, 10, 10],
+                                    backgroundColor: outerColors,
+                                    borderColor: outerBorders,
+                                    borderWidth: 1.5,
+                                    hoverOffset: 8,
+                                }
+                            ]
+                        },
+                        options: {
+                            responsive: true,
+                            maintainAspectRatio: false,
+                            cutout: '40%',
+                            plugins: {
+                                legend: { display: false },
+                                tooltip: {
+                                    enabled: false,
+                                    external: function(ctx) {
+                                        const tooltip = ctx.tooltip;
+                                        if (!tooltip.dataPoints || tooltip.opacity === 0) {
+                                            box.innerHTML = '<span style="color:#888;font-size:13px;">Survolez une section pour voir le détail</span>';
+                                            return;
+                                        }
+                                        const dp = tooltip.dataPoints[0];
+                                        const dsIdx = dp.datasetIndex;
+                                        const idx = dp.dataIndex;
+                                        if (dsIdx === 0) {
+                                            const name = innerLabels[idx];
+                                            const color = innerColors[idx];
+                                            box.innerHTML = `<p style="margin:0;font-weight:600;font-style:normal;color:${color};">${name} — 50 %</p>`;
+                                        } else {
+                                            const task = outerLabels[idx];
+                                            const owner = ownerOf[idx];
+                                            const color = ownerColor[idx];
+                                            box.innerHTML = `<p style="margin:0 0 2px;font-weight:600;font-style:normal;color:${color};">${task}</p><p style="margin:0;font-size:12px;font-style:normal;color:#666;">${owner}</p>`;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    });
+                </script>
             </section>
         </main>
 
-        <footer>    
+        <footer>
             <div class="certif-efrei">
-                    <a href="https://www.cti-commission.fr"><img class="cti" src="../img/cti-logo.png" alt="logo-cti"></a>
-                    <a href="https://www.assas-universite.fr/fr"><img class="logo-u" src="../img/Logo_Panthéon-Assas.png" alt="logo-universite"></a>
-                    <a href="https://www.enseignementsup-recherche.gouv.fr/fr/la-qualification-d-etablissement-d-enseignement-superieur-prive-d-interet-general-eespig-46277"><img class="eespig" src="../img/logo-eespig.png" alt="logo-eespig"></a>
+                <a href="https://www.cti-commission.fr"><img class="cti" src="../img/cti-logo.png" alt="logo-cti"></a>
+                <a href="https://www.assas-universite.fr/fr"><img class="logo-u" src="../img/Logo_Panthéon-Assas.png" alt="logo-universite"></a>
+                <a href="https://www.enseignementsup-recherche.gouv.fr/fr/la-qualification-d-etablissement-d-enseignement-superieur-prive-d-interet-general-eespig-46277"><img class="eespig" src="../img/logo-eespig.png" alt="logo-eespig"></a>
             </div>
             <p>©️2026 P2-SC1 Girault Brémand</p>
             <p>Tous droits réservés.</p>
@@ -116,11 +232,11 @@
                 <a href="https://github.com/Elfvelour/Projet_Web"><img class="image1" src="../img/reseaux/Github-Logo-Transparent.png" alt="Github"></a>
                 <a href="https://www.linkedin.com/school/efrei/posts/?feedView=all"><img class="image1" src="../img/reseaux/logo-linkedin.png" alt="LinkedIn"></a>
                 <a href="https://www.youtube.com/@efrei">
-                    <svg  class="yt-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="yt-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <title>YouTube</title>
                         <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                     </svg>
-                </a>    
+                </a>
             </div>
         </footer>
 
