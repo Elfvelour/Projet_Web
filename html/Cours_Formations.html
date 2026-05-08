@@ -133,9 +133,9 @@
 
             <section id="onglets">
                 <div class="tabs-nav">
-                    <button class="tab-btn active" onclick="switchTab('cpi')">🎓 Cycle Préparatoire</button>
-                    <button class="tab-btn" onclick="switchTab('ingenieur')">⚙️ Cycle Ingénieur</button>
-                    <button class="tab-btn" onclick="switchTab('bachelor')">💡 Bachelors</button>
+                    <button class="tab-btn active" onclick="switchTab('cpi')">Cycle Préparatoire</button>
+                    <button class="tab-btn" onclick="switchTab('ingenieur')">Cycle Ingénieur</button>
+                    <button class="tab-btn" onclick="switchTab('bachelor')">Bachelors</button>
                 </div>
 
                 <div class="tab-panel active" id="tab-cpi">
@@ -362,24 +362,6 @@
                 </a>
             </div>
         </footer>
-
-        <script>
-            /* ── Onglets ── */
-            function switchTab(id) {
-                document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-                document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-                document.getElementById('tab-' + id).classList.add('active');
-                const btns = document.querySelectorAll('.tab-btn');
-                const map = { cpi: 0, ingenieur: 1, bachelor: 2 };
-                btns[map[id]].classList.add('active');
-            }
-
-            /* ── Accordéons internes ── */
-            function toggleAccord(id) {
-                const el = document.getElementById(id);
-                el.classList.toggle('open');
-            }
-        </script>
 
     </body>
 </html>
