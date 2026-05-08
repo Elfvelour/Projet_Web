@@ -1,0 +1,287 @@
+/* ------------ Chiffres clés ----------------- */
+.stats-banner {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+    background: var(--cyan-tech);
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    margin: 2rem auto;
+    max-width: 1100px;
+}
+
+.stat-item {
+    text-align: center;
+    color: var(--bleu-academique);
+    min-width: 120px;
+}
+
+.stat-number {
+    font-family: var(--font-titres);
+    font-size: 2.6rem;
+    font-weight: 800;
+    color: var(--bleu-academique);
+    display: block;
+    line-height: 1;
+    font-style: normal;
+}
+
+.stat-label {
+    font-size: 0.82rem;
+    opacity: 0.85;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-style: normal;
+}
+
+.stat-sep {
+    width: 1px;
+    background: rgba(255,255,255,0.2);
+    align-self: stretch;
+}
+
+@media (max-width: 600px) {
+    .stat-sep { display: none; }
+}
+
+
+/* ---------------- Onglets cursus -------------- */
+.tabs-nav {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+    border-bottom: 3px solid #e0e7f5;
+    padding-bottom: 0;
+}
+
+.tab-btn {
+    background: none;
+    border: none;
+    font-family: var(--font-titres);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #888;
+    padding: 0.75rem 1.4rem;
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    margin-bottom: -3px;
+    transition: color 0.2s, border-color 0.2s;
+    border-radius: 6px 6px 0 0;
+}
+
+.tab-btn:hover {
+    color: var(--bleu-academique);
+}
+
+.tab-btn.active {
+    color: var(--bleu-academique);
+    border-bottom-color: var(--bleu-academique);
+    background: #f0f4fb;
+}
+
+.tab-panel {
+    display: none;
+    padding-top: 1.8rem;
+}
+
+.tab-panel.active {
+    display: block;
+}
+
+
+/* ----------- Cartes cursus (présentation) ----------------------- */
+.cursus-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.2rem;
+    margin: 2rem 0 1rem;
+}
+
+.cursus-card {
+    border-radius: 12px;
+    padding: 1.5rem 1.2rem;
+    cursor: pointer;
+    transition: transform 0.18s, box-shadow 0.18s;
+    border: 2px solid transparent;
+    position: relative;
+    overflow: hidden;
+}
+
+.cursus-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(10,49,108,0.14);
+}
+
+.cursus-card.pge  {
+    background: #e8edf5;
+    border-color: var(--bleu-academique);
+}
+
+.cursus-card.paral{
+    background: #e0fafa;
+    border-color: var(--cyan-tech);
+}
+
+.cursus-card.bach {
+    background: #fef7e0;
+    border-color: var(--jaune-electrique);
+}
+
+.cursus-card .card-icon {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    display:block;
+}
+
+.cursus-card h4 {
+    font-family: var(--font-titres);
+    font-size: 1rem;
+    color: var(--bleu-academique);
+    margin: 0 0 0.3rem;
+}
+
+.cursus-card p {
+    font-size: 0.83rem;
+    font-style: normal;
+    color: #444;
+    margin: 0;
+    letter-spacing: 0.5px;
+    line-height: 1.5;
+}
+
+
+/* ------------------- Pills --------------------------- */
+.pill {
+    display: inline-block;
+    background: #e8edf5;
+    color: var(--bleu-academique);
+    border: 1.5px solid var(--bleu-academique);
+    border-radius: 20px;
+    padding: 4px 14px;
+    font-size: 0.82rem;
+    font-family: var(--font-titres);
+    font-weight: 600;
+    margin: 4px 3px;
+    font-style: normal;
+}
+
+.pill-group {
+    margin: 0.6rem 0 1rem;
+}
+
+
+/* --------------- Accordéons internes ----------------------- */
+.accord {
+    border: 1.5px solid #dde4f0;
+    border-radius: 8px;
+    margin: 0.6rem 0;
+    overflow: hidden;
+}
+
+.accord-header {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    padding: 0.8rem 1rem;
+    cursor: pointer;
+    background: #f6f8fd;
+    user-select: none;
+    transition: background 0.15s;
+}
+
+.accord-header:hover {
+    background: #eaf0fb;
+}
+
+.accord-arrow {
+    font-size: 0.75rem;
+    color: var(--bleu-academique);
+    transition: transform 0.2s;
+    flex-shrink: 0;
+}
+
+.accord.open .accord-arrow {
+    transform: rotate(90deg);
+}
+
+.accord-title {
+    font-family: var(--font-titres);
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--bleu-academique);
+    margin: 0;
+    font-style: normal;
+}
+
+.accord-body {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding: 0 1rem;
+    background: white;
+}
+
+.accord.open .accord-body {
+    max-height: 600px;
+    padding: 0.8rem 1rem 1rem;
+}
+
+.accord-body ul {
+    margin: 0;
+}
+
+.accord-body p {
+    font-style: normal;
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+
+/* --------------- Grille débouchés ------------------ */
+.debouches-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 0.5rem 0;
+}
+
+.debouche-tag {
+    background: var(--bleu-academique);
+    color: white;
+    border-radius: 6px;
+    padding: 5px 13px;
+    font-size: 0.8rem;
+    font-family: var(--font-titres);
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+/* ------------------ Note intro ----------------------------- */
+.note-intro {
+    border-left: 4px solid var(--cyan-tech);
+    background: #f0fafa;
+    padding: 0.8rem 1.2rem;
+    border-radius: 0 8px 8px 0;
+    margin-bottom: 1.2rem;
+    font-style: normal !important;
+    font-size: 0.92rem;
+    color: var(--bleu-academique);
+}
+
+.note-intro p {
+    font-style: normal;
+    margin: 0;
+    letter-spacing: 0.5px;
+}
+
+@media (max-width: 600px) {
+    .stats-banner {
+        gap: 1rem;
+    }
+    .cursus-cards {
+        grid-template-columns: 1fr;
+    }
+}
