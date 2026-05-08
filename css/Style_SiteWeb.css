@@ -565,6 +565,14 @@ footer p {
     letter-spacing: 0.5px;
 }
 
+#FAQ #faq-container > .postit {
+    margin: 0.6rem 0;
+}
+
+#FAQ #faq-container > .postit > .depliable-contenu > .hidden > .postit {
+    margin: 3px 0;
+}
+
 #maps iframe{
   min-width: 500px;
 }

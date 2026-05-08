@@ -1,7 +1,7 @@
 {
   "faq": [
     {
-        "category": "📌 Admissions",
+        "category": "Admissions",
         "questions": [
             {
                 "q": "Comment candidater en post‑bac ?",
@@ -18,7 +18,7 @@
         ]
     },
     {
-        "category": "🎓 Programmes & Formations",
+        "category": "Programmes & Formations",
         "questions": [
             {
                 "q": "Quelles sont les spécialisations possibles en cycle ingénieur ?",
@@ -31,7 +31,7 @@
         ]
     },
     {
-        "category": "💰 Frais de scolarité & Financement",
+        "category": "Frais de scolarité & Financement",
         "questions": [
             {
                 "q": "Combien coûte la formation en cycle ingénieur ?",
@@ -48,7 +48,7 @@
         ]
     },
     {
-        "category": "🏠 Vie étudiante",
+        "category": "Vie étudiante",
         "questions": [
             {
                 "q": "Comment se passe la vie associative sur les campus ?",
@@ -65,7 +65,7 @@
         ]
     },
     {
-        "category": "💼 Stages & Alternance",
+        "category": "Stages & Alternance",
         "questions": [
             {
                 "q": "Les stages sont-ils obligatoires en cycle ingénieur ?",
