@@ -1,11 +1,6 @@
-:root {
-    --bleu-academique: #0A316C;
-    --cyan-tech: #81ECEC;
-    --jaune-electrique: #FDCB6E;
-    --blanc-pur: #FFFFFF;
-    --font-titres: 'Montserrat', 'Poppins', sans-serif;
-    --font-corps: 'Open Sans', 'Roboto', sans-serif;
-}
+/* ============================================================
+   CONTACT_ADMISSION.CSS — Styles spécifiques à la page Contact & Admissions
+   ============================================================ */
 
 /* --------- Admissions --------------- */
 .admission-tabs {
