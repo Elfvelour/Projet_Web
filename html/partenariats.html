@@ -6,6 +6,7 @@
         <meta name="description" content="Partenariats &amp; Professionnalisation">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" type="text/css" href="../css/style_SiteWeb.css">
+        <link rel="stylesheet" type="text/css" href="../css/partenariats.css">
         <link rel="icon" href="../img/Logo-Efrei-CMJN.png" type="image/png">
         <script src="../js/script.js" defer></script>
     </head>
@@ -18,9 +19,9 @@
                     <img alt="efrei_logo" src="../img/Logo-Efrei-Blanc.png">
                 </a>
                 <div class="header-title">
-                        <h1>Partenariats &amp; Professionnalisation</h1>
-                        <p class="title">Relations entreprises, stages, alternances, carrières et débouchés</p>
-                    </div>
+                    <h1>Partenariats &amp; Professionnalisation</h1>
+                    <p class="title">Relations entreprises, stages, alternances, carrières et débouchés</p>
+                </div>
             </div>
             <nav>
                 <a href="./Page_accueil.html">Accueil</a>
@@ -28,53 +29,90 @@
                 <a href="./Enseignants_Recherche.html">Corps Enseignant &amp; Recherche</a>
                 <a href="./vie_etudiante.html">Vie étudiante</a>
                 <a href="./partenariats.html">Partenariats &amp; Professionnalisation</a>
-                <a href="./Contact_et_Admission.html">Contact &amp; Admissions</a> 
+                <a href="./Contact_et_Admission.html">Contact &amp; Admissions</a>
             </nav>
         </header>
-        
+
 
         <section id="relations-entreprises">
             <h2>Relations Entreprises</h2>
 
-            <div class="postit" id="depliable-reseau" onclick="triangle('depliable-reseau')">
+            <!-- Bandeau de chiffres clés -->
+            <div class="stats-banner fade-in">
+                <div class="stat-card">
+                    <span class="stat-number" data-target="2000" data-suffix="+">0</span>
+                    <span class="stat-label">Entreprises partenaires</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" data-target="6" data-suffix=" niveaux">0</span>
+                    <span class="stat-label">De partenariat disponibles</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number" data-target="16000" data-suffix="+">0</span>
+                    <span class="stat-label">Alumni dans le réseau</span>
+                </div>
+            </div>
+
+            <div class="postit fade-in" id="depliable-reseau" onclick="triangle('depliable-reseau')">
                 <div class="depliable-header">
-                    <div class="triangle"> <p>▶</p> </div>
+                    <div class="triangle"><p>▶</p></div>
                     <p class="title-box">Un réseau de plus de 2 000 entreprises partenaires</p>
                 </div>
 
                 <div class="hidden">
                     <div class="paragraphe2">
                         <p>L'EFREI collabore avec un réseau de plus de 2 000 entreprises partenaires issues de secteurs très variés :</p>
-                        <ul>
-                            <li><strong>Technologies & numérique</strong> : éditeurs de logiciels, ESN, startups tech, cloud providers.</li>
-                            <li><strong>Cybersécurité</strong> : acteurs de la sécurité des systèmes d'information et des réseaux.</li>
-                            <li><strong>Finance & assurance</strong> : banques, cabinets d'audit, assureurs (ex : BNP Paribas, Société Générale).</li>
-                            <li><strong>Conseil & services informatiques</strong> : grands cabinets de conseil en transformation digitale.</li>
-                            <li><strong>Industrie & aéronautique</strong> : constructeurs, équipementiers, industries 4.0.</li>
-                            <li><strong>Grandes entreprises internationales</strong> : groupes du CAC 40 et multinationales tech.</li>
-                        </ul>
+
+                        <div class="secteurs-grid">
+                            <span class="secteur-tag">Technologies &amp; numérique</span>
+                            <span class="secteur-tag">Cybersécurité</span>
+                            <span class="secteur-tag">Finance &amp; assurance</span>
+                            <span class="secteur-tag">Conseil &amp; services IT</span>
+                            <span class="secteur-tag">Industrie &amp; aéronautique</span>
+                            <span class="secteur-tag">Grands groupes internationaux</span>
+                        </div>
+
                         <p>Ces partenariats se déclinent en 6 niveaux offrant des avantages spécifiques : projets tuteurés, conférences d'experts, chaires d'enseignement, visites de sites, événements de recrutement exclusifs.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="postit" id="depliable-evenements-pro" onclick="triangle('depliable-evenements-pro')">
+            <div class="postit fade-in" id="depliable-evenements-pro" onclick="triangle('depliable-evenements-pro')">
                 <div class="depliable-header">
-                    <div class="triangle"> <p>▶</p> </div>
+                    <div class="triangle"><p>▶</p></div>
                     <p class="title-box">Événements de recrutement</p>
                 </div>
 
                 <div class="hidden">
                     <div class="paragraphe2">
                         <p>Tout au long de l'année, l'EFREI organise des événements pour rapprocher étudiants et entreprises :</p>
-                        <ul>
-                            <li><strong>Forum entreprises</strong> : rencontre annuelle avec des dizaines de recruteurs venus proposer stages, alternances et premiers emplois.</li>
-                            <li><strong>Talent Day</strong> : journée dédiée au recrutement des profils spécialisés (data, cyber, embarqué...).</li>
-                            <li><strong>Job datings</strong> : sessions courtes et dynamiques pour échanger directement avec des professionnels RH.</li>
-                            <li><strong>Tech Day</strong> : présentation des projets étudiants devant un jury de professionnels (7ᵉ édition en juin 2026).</li>
-                            <li><strong>Booste ton stage / Booste ton alternance</strong> : événements dédiés à la recherche de contrats avec les entreprises partenaires.</li>
-                            <li><strong>Program'Her</strong> : événement dédié à la mixité et aux femmes dans le numérique.</li>
-                        </ul>
+
+                        <div class="events-grid">
+                            <div class="event-card">
+                                <p class="event-name">Forum entreprises</p>
+                                <p class="event-desc">Rencontre annuelle avec des dizaines de recruteurs venus proposer stages, alternances et premiers emplois.</p>
+                            </div>
+                            <div class="event-card">
+                                <p class="event-name">Talent Day</p>
+                                <p class="event-desc">Journée dédiée au recrutement des profils spécialisés (data, cyber, embarqué...).</p>
+                            </div>
+                            <div class="event-card">
+                                <p class="event-name">Job datings</p>
+                                <p class="event-desc">Sessions courtes et dynamiques pour échanger directement avec des professionnels RH.</p>
+                            </div>
+                            <div class="event-card">
+                                <p class="event-name">Tech Day</p>
+                                <p class="event-desc">Présentation des projets étudiants devant un jury de professionnels (7ᵉ édition en juin 2026).</p>
+                            </div>
+                            <div class="event-card">
+                                <p class="event-name">Booste ton stage / alternance</p>
+                                <p class="event-desc">Événements dédiés à la recherche de contrats avec les entreprises partenaires.</p>
+                            </div>
+                            <div class="event-card">
+                                <p class="event-name">Program'Her</p>
+                                <p class="event-desc">Événement dédié à la mixité et aux femmes dans le numérique.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -84,9 +122,9 @@
         <section id="stages-alternance">
             <h2>Stages et Alternance</h2>
 
-            <div class="postit" id="depliable-career-center" onclick="triangle('depliable-career-center')">
+            <div class="postit fade-in" id="depliable-career-center" onclick="triangle('depliable-career-center')">
                 <div class="depliable-header">
-                    <div class="triangle"> <p>▶</p> </div>
+                    <div class="triangle"><p>▶</p></div>
                     <p class="title-box">Le Career Center</p>
                 </div>
 
@@ -95,7 +133,7 @@
                         <p>Le Career Center est un service dédié à l'accompagnement des étudiants dans leur recherche de stage, d'alternance ou d'emploi. Il propose :</p>
                         <ul>
                             <li><strong>La plateforme iziA</strong> : centralise toutes les offres de stages et alternances des entreprises partenaires, avec des conseils et un suivi personnalisé.</li>
-                            <li><strong>Ateliers CV & lettres de motivation</strong> : coaching pour optimiser les candidatures.</li>
+                            <li><strong>Ateliers CV &amp; lettres de motivation</strong> : coaching pour optimiser les candidatures.</li>
                             <li><strong>Coaching présence en ligne</strong> : aide à construire un profil LinkedIn attractif.</li>
                             <li><strong>Simulations d'entretiens</strong> : préparation aux entretiens avec des professionnels RH partenaires.</li>
                             <li><strong>Réseau alumni</strong> : accès au réseau de plus de 16 000 anciens élèves répartis sur 5 continents pour faciliter le réseautage.</li>
@@ -104,22 +142,43 @@
                 </div>
             </div>
 
-            <div class="postit" id="depliable-stages-info" onclick="triangle('depliable-stages-info')">
+            <div class="postit fade-in" id="depliable-stages-info" onclick="triangle('depliable-stages-info')">
                 <div class="depliable-header">
-                    <div class="triangle"> <p>▶</p> </div>
+                    <div class="triangle"><p>▶</p></div>
                     <p class="title-box">Informations pratiques sur les stages</p>
                 </div>
                 <div class="hidden">
                     <div class="paragraphe2">
                         <p>Le cursus ingénieur EFREI inclut plusieurs stages obligatoires représentant au total 12 à 13 mois d'expérience en entreprise :</p>
-                        <ul>
-                            <li><strong>Stage ouvrier (1ʳᵉ année)</strong> : 1 mois en été, découverte du monde professionnel (hors ingénieurie).</li>
-                            <li><strong>Stage commercial (2ᵉ année)</strong> : 1 mois en janvier, découverte des techniques de vente et service/conseil client.</li>
-                            <!-- <li><strong>Mobilité internationale (3ᵉ année, pour les non-alternants)</strong> : 4 mois, 11 écoles partenaires dans 10 pays à travers le monde.</li> -->
-                            <li><strong>Stage technique (4ᵉ année)</strong> : 4 mois, application des compétences acquises.</li>
-                            <li><strong>Stage de fin d'études (5ᵉ année)</strong> : 5-6 mois, l'élève est souvent pris en CDI à la fin du stage.</li>
-                            <li><strong>Stage, job ou mission humanitaire "SWIM" (durant les 5 années)</strong> : 1 mois (pour la période Prépa) ou 3 mois (pour la période Master), à l'étranger.</li>
-                        </ul>
+
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <span class="timeline-annee">1ʳᵉ année</span>
+                                <span class="timeline-titre"> Stage ouvrier</span>
+                                <div class="timeline-detail">1 mois en été — découverte du monde professionnel (hors ingénierie).</div>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-annee">2ᵉ année</span>
+                                <span class="timeline-titre"> Stage commercial</span>
+                                <div class="timeline-detail">1 mois en janvier — découverte des techniques de vente et service client.</div>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-annee">4ᵉ année</span>
+                                <span class="timeline-titre"> Stage technique</span>
+                                <div class="timeline-detail">5 mois — application des compétences acquises.</div>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-annee">5ᵉ année</span>
+                                <span class="timeline-titre"> Stage de fin d'études</span>
+                                <div class="timeline-detail">6 mois — souvent converti en CDI à l'issue du stage.</div>
+                            </div>
+                            <div class="timeline-item">
+                                <span class="timeline-annee">Toutes années</span>
+                                <span class="timeline-titre"> Stage SWIM</span>
+                                <div class="timeline-detail">1 à 3 mois à l'étranger — stage, job ou mission humanitaire.</div>
+                            </div>
+                        </div>
+
                         <p>L'alternance est possible dès la 3ᵉ année du cycle ingénieur, avec un rythme généralement d'1 semaine école / 1 semaine entreprise. Les frais de scolarité en alternance (14 800 €) sont intégralement pris en charge par l'entreprise.</p>
                         <p>Tous les stages de plus de 2 mois consécutifs sont rémunérés (minimum légal d'environ 4,35 €/h en 2025).</p>
                     </div>
@@ -129,21 +188,34 @@
 
 
         <section id="carrieres">
-            <h2>Carrières & Débouchés</h2>
+            <h2>Carrières &amp; Débouchés</h2>
 
-            <div class="postit" id="depliable-insertion" onclick="triangle('depliable-insertion')">
+            <div class="postit fade-in" id="depliable-insertion" onclick="triangle('depliable-insertion')">
                 <div class="depliable-header">
-                    <div class="triangle"> <p>▶</p> </div>
+                    <div class="triangle"><p>▶</p></div>
                     <p class="title-box">Chiffres clés d'insertion</p>
                 </div>
 
                 <div class="hidden">
                     <div class="paragraphe2">
                         <p>Les diplômés EFREI bénéficient d'une insertion professionnelle parmi les meilleures des écoles d'ingénieurs :</p>
+
+                        <div class="stats-banner">
+                            <div class="stat-card">
+                                <span class="stat-number" data-target="98" data-suffix="%">0</span>
+                                <span class="stat-label">Taux d'insertion professionnelle</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-number" data-target="90" data-suffix="%">0</span>
+                                <span class="stat-label">Signent un contrat avant le diplôme</span>
+                            </div>
+                            <div class="stat-card">
+                                <span class="stat-number" data-target="42" data-suffix=" k€">0</span>
+                                <span class="stat-label">Salaire brut moyen à la sortie</span>
+                            </div>
+                        </div>
+
                         <ul>
-                            <li><strong>98 %</strong> de taux d'insertion professionnelle (dont 5 % en création d'entreprise).</li>
-                            <li><strong>90 %</strong> des étudiants signent un contrat avant même leur remise de diplôme.</li>
-                            <li><strong>~42 000 €</strong> de salaire brut moyen à la sortie de l'école.</li>
                             <li><strong>58 000 €</strong> de salaire médian entre 30 et 39 ans.</li>
                             <li><strong>20 %</strong> des alumni sont en poste à l'étranger après 5 ans (Canada, États-Unis, Allemagne, Royaume-Uni, Chine...).</li>
                             <li><strong>2ᵉ</strong> école privée d'ingénieurs en informatique (palmarès Le Figaro 2025).</li>
@@ -152,38 +224,40 @@
                 </div>
             </div>
 
-            <div class="postit" id="depliable-metiers" onclick="triangle('depliable-metiers')">
+            <div class="postit fade-in" id="depliable-metiers" onclick="triangle('depliable-metiers')">
                 <div class="depliable-header">
-                    <div class="triangle"> <p>▶</p> </div>
+                    <div class="triangle"><p>▶</p></div>
                     <p class="title-box">Métiers occupés par les diplômés</p>
                 </div>
 
                 <div class="hidden">
                     <div class="paragraphe2">
                         <p>Les diplômés EFREI s'insèrent dans des métiers très variés du numérique, notamment :</p>
-                        <ul>
-                            <li><strong>Ingénieur DevOps / Cloud</strong> : déploiement, infrastructure, automatisation.</li>
-                            <li><strong>Data Scientist / Data Engineer</strong> : analyse de données, machine learning, pipelines de données.</li>
-                            <li><strong>Ingénieur Cybersécurité</strong> : pentest, SOC, architecture sécurisée.</li>
-                            <li><strong>Scrum Master / Chef de projet IT</strong> : gestion de projets agiles.</li>
-                            <li><strong>Développeur Full Stack</strong> : conception et développement d'applications web et mobile.</li>
-                            <li><strong>Architecte systèmes & réseaux</strong> : conception d'infrastructures informatiques.</li>
-                            <li><strong>Consultant en transformation digitale</strong> : conseil aux entreprises dans leur transition numérique.</li>
-                        </ul>
+
+                        <div class="metiers-grid">
+                            <span class="metier-pill">Ingénieur DevOps / Cloud</span>
+                            <span class="metier-pill">Data Scientist / Data Engineer</span>
+                            <span class="metier-pill">Ingénieur Cybersécurité</span>
+                            <span class="metier-pill">Scrum Master / Chef de projet IT</span>
+                            <span class="metier-pill">Développeur Full Stack</span>
+                            <span class="metier-pill">Architecte systèmes &amp; réseaux</span>
+                            <span class="metier-pill">Consultant transformation digitale</span>
+                        </div>
+
                         <p>Certains diplômés créent leur propre startup dès la sortie de l'école, soutenus par le réseau Efrei Business Angels.</p>
                     </div>
                 </div>
             </div>
 
-            <div class="postit" id="depliable-alumni" onclick="triangle('depliable-alumni')">
+            <div class="postit fade-in" id="depliable-alumni" onclick="triangle('depliable-alumni')">
                 <div class="depliable-header">
-                    <div class="triangle"> <p>▶</p> </div>
+                    <div class="triangle"><p>▶</p></div>
                     <p class="title-box">Le réseau Alumni</p>
                 </div>
 
                 <div class="hidden">
                     <div class="paragraphe2">
-                        <a href="https://www.efrei-alumni.org/"><img src="../img/efrei-alumni-logo.png" id="alumni-logo"></a>
+                        <a href="https://www.efrei-alumni.org/"><img src="../img/efrei-alumni-logo.png" id="alumni-logo" alt="Logo Efrei Alumni"></a>
                         <p>Efrei Alumni regroupe tous les diplômés et étudiants ayant plus d'un an d'ancienneté. Avec plus de 16 000 anciens élèves actifs répartis sur les 5 continents, ce réseau dynamique :</p>
                         <ul>
                             <li>Facilite les rencontres professionnelles en France et à l'international.</li>
@@ -198,11 +272,11 @@
         </section>
 
 
-        <footer>    
+        <footer>
             <div class="certif-efrei">
-                    <a href="https://www.cti-commission.fr"><img class="cti" src="../img/cti-logo.png" alt="logo-cti"></a>
-                    <a href="https://www.assas-universite.fr/fr"><img class="logo-u" src="../img/Logo_Panthéon-Assas.png" alt="logo-universite"></a>
-                    <a href="https://www.enseignementsup-recherche.gouv.fr/fr/la-qualification-d-etablissement-d-enseignement-superieur-prive-d-interet-general-eespig-46277"><img class="eespig" src="../img/logo-eespig.png" alt="logo-eespig"></a>
+                <a href="https://www.cti-commission.fr"><img class="cti" src="../img/cti-logo.png" alt="logo-cti"></a>
+                <a href="https://www.assas-universite.fr/fr"><img class="logo-u" src="../img/Logo_Panthéon-Assas.png" alt="logo-universite"></a>
+                <a href="https://www.enseignementsup-recherche.gouv.fr/fr/la-qualification-d-etablissement-d-enseignement-superieur-prive-d-interet-general-eespig-46277"><img class="eespig" src="../img/logo-eespig.png" alt="logo-eespig"></a>
             </div>
             <p>©️2026 P2-SC1 Girault Brémand</p>
             <p>Tous droits réservés.</p>
@@ -211,13 +285,47 @@
                 <a href="https://github.com/Elfvelour/Projet_Web"><img class="image1" src="../img/reseaux/Github-Logo-Transparent.png" alt="Github"></a>
                 <a href="https://www.linkedin.com/school/efrei/posts/?feedView=all"><img class="image1" src="../img/reseaux/logo-linkedin.png" alt="LinkedIn"></a>
                 <a href="https://www.youtube.com/@efrei">
-                    <svg  class="yt-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <svg class="yt-icon" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <title>YouTube</title>
                         <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
                     </svg>
-                </a>    
+                </a>
             </div>
         </footer>
-        
+
+        <script>
+            /* --- Compteurs animés --- */
+            function animateCounter(el) {
+                const target = parseInt(el.dataset.target, 10);
+                const suffix = el.dataset.suffix || "";
+                const duration = 1200;
+                const stepMs = 16;
+                let current = 0;
+                const increment = target / (duration / stepMs);
+                const timer = setInterval(() => {
+                    current = Math.min(current + increment, target);
+                    el.textContent = Math.floor(current).toLocaleString("fr-FR") + suffix;
+                    if (current >= target) clearInterval(timer);
+                }, stepMs);
+            }
+
+            /* --- Intersection Observer : fade-in + déclenchement des compteurs --- */
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("visible");
+                        entry.target.querySelectorAll(".stat-number[data-target]").forEach(el => {
+                            if (!el.dataset.animated) {
+                                el.dataset.animated = "1";
+                                animateCounter(el);
+                            }
+                        });
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            document.querySelectorAll(".fade-in, .stats-banner").forEach(el => observer.observe(el));
+        </script>
+
     </body>
 </html>
