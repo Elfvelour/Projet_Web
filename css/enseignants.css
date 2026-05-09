@@ -1,5 +1,10 @@
 /* ------------------- Enseignant ------------------- */
 
+#equipe p, #recherche p {
+    font-style: normal;
+    text-align: justify
+}
+
 #equipe a{
   text-decoration: none;
   font-family: var(--font-corps);
@@ -75,7 +80,7 @@
     text-decoration: underline;
 }
 
-/* -------------- Colonne photo ------------- */
+/* Colonne photo */
 
 .col-photo {
     width: 60px;
@@ -164,7 +169,7 @@
     transform: translateY(-1px);
 }
 
-/* ----------- RESPONSIVE ----------- */
+/* Responsive design */
 
 @media screen and (max-width: 768px) {
     .table-enseignants thead {
