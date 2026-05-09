@@ -1420,3 +1420,81 @@ footer p {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* ----------- Bandeau de chiffres clés ----------- */
+
+.stats-banner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0 1rem;
+}
+
+.stat-card {
+  background: var(--bleu-academique);
+  color: var(--blanc-pur);
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.stat-card::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: rgba(129, 236, 236, 0.15);
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(10, 49, 108, 0.25);
+}
+
+.stat-number {
+  font-family: var(--font-titres);
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--cyan-tech);
+  line-height: 1;
+  display: block;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  opacity: 0.88;
+  margin-top: 0.4rem;
+  font-style: normal;
+  letter-spacing: 0.5px;
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .stats-banner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .secteurs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .stats-banner {
+    grid-template-columns: 1fr;
+  }
+
+  .secteurs-grid {
+    grid-template-columns: 1fr;
+  }
+}
