@@ -1,95 +1,96 @@
 /* ------------------- Admissions -------------------------- */
+
 .admission-tabs {
-    display: flex;
-    gap: 0.4rem;
-    flex-wrap: wrap;
-    border-bottom: 2px solid #e0e7f5;
-    margin-bottom: 1.5rem;
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+  border-bottom: 2px solid #e0e7f5;
+  margin-bottom: 1.5rem;
 }
 
 .adm-tab {
-    background: none;
-    border: none;
-    font-family: var(--font-titres);
-    font-size: 0.88rem;
-    font-weight: 600;
-    color: #999;
-    padding: 0.65rem 1.1rem;
-    cursor: pointer;
-    border-bottom: 2px solid transparent;
-    margin-bottom: -2px;
-    transition: color 0.2s, border-color 0.2s;
+  background: none;
+  border: none;
+  font-family: var(--font-titres);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: #999;
+  padding: 0.65rem 1.1rem;
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  transition: color 0.2s, border-color 0.2s;
 }
 
 .adm-tab:hover {
-    color: var(--bleu-academique);
+  color: var(--bleu-academique);
 }
 
 .adm-tab.active {
-    color: var(--bleu-academique);
-    border-bottom-color: var(--bleu-academique);
+  color: var(--bleu-academique);
+  border-bottom-color: var(--bleu-academique);
 }
 
 .adm-panel {
-    display: none;
+  display: none;
 }
 
 .adm-panel.active {
-    display: block;
+  display: block;
 }
 
 /* Étapes numérotées */
 
 .steps-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .steps-list li {
-    display: flex;
-    gap: 1rem;
-    align-items: flex-start;
-    padding: 0.8rem 0;
-    border-bottom: 1px solid #eef1f8;
-    font-size: 0.92rem;
-    font-style: normal;
-    letter-spacing: 0.4px;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  padding: 0.8rem 0;
+  border-bottom: 1px solid #eef1f8;
+  font-size: 0.92rem;
+  font-style: normal;
+  letter-spacing: 0.4px;
 }
 
 .steps-list li:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .steps-list li::before {
-    display: none;
+  display: none;
 }
 
 .step-num {
-    flex-shrink: 0;
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    background: var(--bleu-academique);
-    color: white;
-    font-family: var(--font-titres);
-    font-size: 0.8rem;
-    font-weight: 700;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 1px;
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--bleu-academique);
+  color: white;
+  font-family: var(--font-titres);
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
 }
 
 .step-content strong {
-    color: var(--bleu-academique);
-    display: block;
-    margin-bottom: 2px;
+  color: var(--bleu-academique);
+  display: block;
+  margin-bottom: 2px;
 }
 
 .step-content span {
-    color: #555;
-    font-size: 0.85rem;
+  color: #555;
+  font-size: 0.85rem;
 }
 
 
@@ -308,32 +309,32 @@
 /* ----------------- Liens utiles ------------------- */
 
 .liens-utiles {
-    display: flex;
-    gap: 0.8rem;
-    margin-top: 0.5rem;
+  display: flex;
+  gap: 0.8rem;
+  margin-top: 0.5rem;
 }
 
 .liens-utiles .lien-card {
-    align-items: center;
-    background: white;
-    border-radius: 8px;
-    padding: 0.9rem 1rem;
-    border: 1.5px solid var(--bleu-academique);
-    font-family: var(--font-corps);
-    font-size: 0.85rem;
-    font-weight: 600;
-    font-style: italic;
-    text-align: center;
+  align-items: center;
+  background: white;
+  border-radius: 8px;
+  padding: 0.9rem 1rem;
+  border: 1.5px solid var(--bleu-academique);
+  font-family: var(--font-corps);
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-style: italic;
+  text-align: center;
 }
 
 .lien-card:hover {
-    background: #f0f4fb;
-    transform: translateY(-2px);
+  background: #f0f4fb;
+  transform: translateY(-2px);
 }
 
 .lien-card .lc-icon {
-    font-size: 1.2rem;
-    flex-shrink: 0;
+  font-size: 1.2rem;
+  flex-shrink: 0;
 }
 
 @media (max-width: 600px) {
@@ -347,7 +348,7 @@
   }
 
   .liens-utiles .lien-card {
-        width: 100%;
-        box-sizing: border-box;
-    }
+    width: 100%;
+    box-sizing: border-box;
+  }
 }

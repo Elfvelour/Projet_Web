@@ -246,6 +246,28 @@ ul li::before {
 }
 
 
+.paragraphe{
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  left: 5%;
+  right: 5%;
+}
+
+.paragraphe2 {
+  display: flex;
+  text-align: justify;
+  flex-direction: column;
+  left: 5%;
+  right: 5%;
+}
+
+.paragraphe2 p, p.paragraphe2 {
+  font-style: normal;
+  text-align: justify;
+}
+
+
 /* ---------------------- SECTIONS --------------------------- */
 
 main {
@@ -295,6 +317,230 @@ section img, .diagramme {
 
 .bandeau {
   width: 100%;
+}
+
+
+/* --------------------- CONTENU DEPLIABLE -------------------- */
+
+.postit{
+  background: #f0f4fb;
+  border-left: 4px solid var(--bleu-academique);
+  padding: 5%;
+  margin: 1% 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+.title-box{
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--bleu-academique);
+  font-family: var(--font-titres);
+}
+
+.triangle{
+  font-size:large;
+  margin: 0;
+  padding-right: 3%;
+  flex-shrink: 0;
+}
+
+.depliable{
+  display: flex;
+  width: 100%;
+  cursor: pointer;
+}
+
+.contenu-depliable{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.depliable-header{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.hidden{
+  display: none;
+  width: 100%;
+}
+
+.hidden.active{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+}
+
+@media screen and (max-width: 1024px) {
+  .depliable{
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+.box-depliable{
+  background: var(--blanc-pur);
+  padding: 2rem 2.5rem;
+  margin: 2rem auto;
+  max-width: 1100px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+}
+
+@media screen and (max-width: 600px) {
+  .box-depliable{
+    padding: 1.5rem 1rem;
+    width: 90%;
+    box-sizing: border-box; 
+  }
+}
+
+
+/* ----------- GRILLE NOTE ----------- */
+
+.note-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 1.5rem;
+}
+
+.note-card {
+  background: #f0f4fb;
+  border-left: 4px solid var(--bleu-academique);
+  border-radius: 8px;
+  padding: 1.2rem 1.5rem;
+}
+
+.note-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.note-card p {
+  font-style: normal;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  margin: 0;
+}
+
+.note-card:hover {
+  border-color: var(--cyan-tech);
+  background: #e8f8f8;
+  transform: translateX(4px);
+}
+
+@media screen and (max-width: 1024px) {
+  .note-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .note-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .note-card h3 {
+    font-size: 1rem;
+  }
+}
+
+
+/* ----------------------- LIENS ------------------- */
+
+#liens a{
+  text-decoration: none;
+  font-family: var(--font-corps);
+  color: black;
+}
+
+#liens a:hover{
+  text-decoration: underline;
+}
+
+
+/* ----------- Bandeau de chiffres clés ----------- */
+
+.stats-banner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  margin: 2rem 0 1rem;
+}
+
+.stat-card {
+  background: var(--bleu-academique);
+  color: var(--blanc-pur);
+  border-radius: 12px;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.stat-card::before {
+  content: "";
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  background: rgba(129, 236, 236, 0.15);
+}
+
+.stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(10, 49, 108, 0.25);
+}
+
+.stat-number {
+  font-family: var(--font-titres);
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--cyan-tech);
+  line-height: 1;
+  display: block;
+}
+
+.stat-label {
+  font-size: 0.8rem;
+  opacity: 0.88;
+  margin-top: 0.4rem;
+  font-style: normal;
+  letter-spacing: 0.5px;
+  display: block;
+}
+
+@media screen and (max-width: 768px) {
+  .stats-banner {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .secteurs-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .events-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .stats-banner {
+    grid-template-columns: 1fr;
+  }
+
+  .secteurs-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 
@@ -390,7 +636,7 @@ footer p {
 }
 
 
-/* ------------------------- LABEL EFREI --------------------- */
+/* Label Efrei */
 
 .certif-efrei {
   display: flex;    
@@ -417,7 +663,7 @@ footer p {
 }
 
 
-/* ------------------- RÉSEAUX -------------------- */
+/* Réseaux */
 
 .reseaux {
   display: flex;
@@ -441,7 +687,7 @@ footer p {
 }
 
 
-/* ------------------- YOUTUBE ICON ------------------------ */
+/* Youtube icon */
 
 .yt-icon {
   width: 60px;
@@ -451,252 +697,4 @@ footer p {
 
 .yt-icon:hover{
   filter: brightness(0);
-}
-
-
-/* --------------------- CONTENU DEPLIABLE -------------------- */
-
-.postit{
-  background: #f0f4fb;
-  border-left: 4px solid var(--bleu-academique);
-  padding: 5%;
-  margin: 1% 0;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-}
-
-.title-box{
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--bleu-academique);
-  font-family: var(--font-titres);
-}
-
-.triangle{
-  font-size:large;
-  margin: 0;
-  padding-right: 3%;
-  flex-shrink: 0;
-}
-
-.depliable{
-  display: flex;
-  width: 100%;
-  cursor: pointer;
-}
-
-.contenu-depliable{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-}
-
-.depliable-header{
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.hidden{
-  display: none;
-  width: 100%;
-}
-
-.hidden.active{
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-
-}
-
-@media screen and (max-width: 1024px) {
-  .depliable{
-    width: 100%;
-    box-sizing: border-box;
-  }
-}
-
-.box-depliable{
-  background: var(--blanc-pur);
-  padding: 2rem 2.5rem;
-  margin: 2rem auto;
-  max-width: 1100px;
-  border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-}
-
-@media screen and (max-width: 600px) {
-  .box-depliable{
-    padding: 1.5rem 1rem;
-    width: 90%;
-    box-sizing: border-box; 
-  }
-}
-
-
-/* ------------- PARAGRAPHE ------------ */
-
-.paragraphe{
-  display: flex;
-  text-align: center;
-  flex-direction: column;
-  left: 5%;
-  right: 5%;
-}
-
-.paragraphe2 {
-  display: flex;
-  text-align: justify;
-  flex-direction: column;
-  left: 5%;
-  right: 5%;
-}
-
-.paragraphe2 p, p.paragraphe2 {
-  font-style: normal;
-  text-align: justify;
-}
-
-
-/* ----------------------- LIENS ------------------- */
-
-#liens a{
-  text-decoration: none;
-  font-family: var(--font-corps);
-  color: black;
-}
-
-#liens a:hover{
-  text-decoration: underline;
-}
-
-
-/* ----------- Bandeau de chiffres clés ----------- */
-
-.stats-banner {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-  margin: 2rem 0 1rem;
-}
-
-.stat-card {
-  background: var(--bleu-academique);
-  color: var(--blanc-pur);
-  border-radius: 12px;
-  padding: 1.5rem 1rem;
-  text-align: center;
-  position: relative;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.stat-card::before {
-  content: "";
-  position: absolute;
-  top: -30px;
-  right: -30px;
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  background: rgba(129, 236, 236, 0.15);
-}
-
-.stat-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(10, 49, 108, 0.25);
-}
-
-.stat-number {
-  font-family: var(--font-titres);
-  font-size: 2.4rem;
-  font-weight: 800;
-  color: var(--cyan-tech);
-  line-height: 1;
-  display: block;
-}
-
-.stat-label {
-  font-size: 0.8rem;
-  opacity: 0.88;
-  margin-top: 0.4rem;
-  font-style: normal;
-  letter-spacing: 0.5px;
-  display: block;
-}
-
-@media screen and (max-width: 768px) {
-  .stats-banner {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .secteurs-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .events-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .stats-banner {
-    grid-template-columns: 1fr;
-  }
-
-  .secteurs-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-
-/* ----------- GRILLE NOTE ----------- */
-
-.note-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  margin-top: 1.5rem;
-}
-
-.note-card {
-  background: #f0f4fb;
-  border-left: 4px solid var(--bleu-academique);
-  border-radius: 8px;
-  padding: 1.2rem 1.5rem;
-}
-
-.note-card h3 {
-  margin-bottom: 0.5rem;
-  font-size: 1.1rem;
-}
-
-.note-card p {
-  font-style: normal;
-  font-size: 14px;
-  letter-spacing: 0.3px;
-  margin: 0;
-}
-
-.note-card:hover {
-  border-color: var(--cyan-tech);
-  background: #e8f8f8;
-  transform: translateX(4px);
-}
-
-@media screen and (max-width: 1024px) {
-  .note-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .note-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .note-card h3 {
-    font-size: 1rem;
-  }
 }

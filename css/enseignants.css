@@ -1,6 +1,6 @@
 /* ------------------- Enseignant ------------------- */
 
-#equipe p, #recherche p {
+#equipe p, #recherche p, #contact-equipe p {
     font-style: normal;
     text-align: justify
 }
@@ -167,6 +167,13 @@
 .btn-envoyer:hover {
     background-color: #0d3d85;
     transform: translateY(-1px);
+}
+
+#contact-form #form-confirmation {
+    display: none;
+    color: green;
+    font-style: normal;
+    margin-top: 10px;
 }
 
 /* Responsive design */
