@@ -37,23 +37,22 @@
         <section id="relations-entreprises">
             <h2>Relations Entreprises</h2>
 
-            <!-- Bandeau de chiffres clés -->
             <div class="stats-banner fade-in">
                 <div class="stat-card">
-                    <span class="stat-number" data-target="2000" data-suffix="+">0</span>
+                    <span class="stat-number">2 000</span>
                     <span class="stat-label">Entreprises partenaires</span>
                 </div>
                 <div class="stat-card">
-                    <span class="stat-number" data-target="6" data-suffix=" niveaux">0</span>
+                    <span class="stat-number">6</span>
                     <span class="stat-label">De partenariat disponibles</span>
                 </div>
                 <div class="stat-card">
-                    <span class="stat-number" data-target="16000" data-suffix="+">0</span>
+                    <span class="stat-number">16 000</span>
                     <span class="stat-label">Alumni dans le réseau</span>
                 </div>
             </div>
 
-            <div class="postit fade-in" id="depliable-reseau" onclick="triangle('depliable-reseau')">
+            <div class="postit" id="depliable-reseau" onclick="triangle('depliable-reseau')">
                 <div class="depliable-header">
                     <div class="triangle"><p>▶</p></div>
                     <p class="title-box">Un réseau de plus de 2 000 entreprises partenaires</p>
@@ -77,7 +76,7 @@
                 </div>
             </div>
 
-            <div class="postit fade-in" id="depliable-evenements-pro" onclick="triangle('depliable-evenements-pro')">
+            <div class="postit" id="depliable-evenements-pro" onclick="triangle('depliable-evenements-pro')">
                 <div class="depliable-header">
                     <div class="triangle"><p>▶</p></div>
                     <p class="title-box">Événements de recrutement</p>
@@ -122,7 +121,7 @@
         <section id="stages-alternance">
             <h2>Stages et Alternance</h2>
 
-            <div class="postit fade-in" id="depliable-career-center" onclick="triangle('depliable-career-center')">
+            <div class="postit" id="depliable-career-center" onclick="triangle('depliable-career-center')">
                 <div class="depliable-header">
                     <div class="triangle"><p>▶</p></div>
                     <p class="title-box">Le Career Center</p>
@@ -142,7 +141,7 @@
                 </div>
             </div>
 
-            <div class="postit fade-in" id="depliable-stages-info" onclick="triangle('depliable-stages-info')">
+            <div class="postit" id="depliable-stages-info" onclick="triangle('depliable-stages-info')">
                 <div class="depliable-header">
                     <div class="triangle"><p>▶</p></div>
                     <p class="title-box">Informations pratiques sur les stages</p>
@@ -190,7 +189,7 @@
         <section id="carrieres">
             <h2>Carrières &amp; Débouchés</h2>
 
-            <div class="postit fade-in" id="depliable-insertion" onclick="triangle('depliable-insertion')">
+            <div class="postit" id="depliable-insertion" onclick="triangle('depliable-insertion')">
                 <div class="depliable-header">
                     <div class="triangle"><p>▶</p></div>
                     <p class="title-box">Chiffres clés d'insertion</p>
@@ -202,15 +201,15 @@
 
                         <div class="stats-banner">
                             <div class="stat-card">
-                                <span class="stat-number" data-target="98" data-suffix="%">0</span>
+                                <span class="stat-number">98 %</span>
                                 <span class="stat-label">Taux d'insertion professionnelle</span>
                             </div>
                             <div class="stat-card">
-                                <span class="stat-number" data-target="90" data-suffix="%">0</span>
+                                <span class="stat-number">90 %</span>
                                 <span class="stat-label">Signent un contrat avant le diplôme</span>
                             </div>
                             <div class="stat-card">
-                                <span class="stat-number" data-target="42" data-suffix=" k€">0</span>
+                                <span class="stat-number">42 k€</span>
                                 <span class="stat-label">Salaire brut moyen à la sortie</span>
                             </div>
                         </div>
@@ -224,7 +223,7 @@
                 </div>
             </div>
 
-            <div class="postit fade-in" id="depliable-metiers" onclick="triangle('depliable-metiers')">
+            <div class="postit" id="depliable-metiers" onclick="triangle('depliable-metiers')">
                 <div class="depliable-header">
                     <div class="triangle"><p>▶</p></div>
                     <p class="title-box">Métiers occupés par les diplômés</p>
@@ -249,7 +248,7 @@
                 </div>
             </div>
 
-            <div class="postit fade-in" id="depliable-alumni" onclick="triangle('depliable-alumni')">
+            <div class="postit" id="depliable-alumni" onclick="triangle('depliable-alumni')">
                 <div class="depliable-header">
                     <div class="triangle"><p>▶</p></div>
                     <p class="title-box">Le réseau Alumni</p>
@@ -292,40 +291,6 @@
                 </a>
             </div>
         </footer>
-
-        <script>
-            /* --- Compteurs animés --- */
-            function animateCounter(el) {
-                const target = parseInt(el.dataset.target, 10);
-                const suffix = el.dataset.suffix || "";
-                const duration = 1200;
-                const stepMs = 16;
-                let current = 0;
-                const increment = target / (duration / stepMs);
-                const timer = setInterval(() => {
-                    current = Math.min(current + increment, target);
-                    el.textContent = Math.floor(current).toLocaleString("fr-FR") + suffix;
-                    if (current >= target) clearInterval(timer);
-                }, stepMs);
-            }
-
-            /* --- Intersection Observer : fade-in + déclenchement des compteurs --- */
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add("visible");
-                        entry.target.querySelectorAll(".stat-number[data-target]").forEach(el => {
-                            if (!el.dataset.animated) {
-                                el.dataset.animated = "1";
-                                animateCounter(el);
-                            }
-                        });
-                    }
-                });
-            }, { threshold: 0.15 });
-
-            document.querySelectorAll(".fade-in, .stats-banner").forEach(el => observer.observe(el));
-        </script>
 
     </body>
 </html>

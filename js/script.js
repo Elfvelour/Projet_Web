@@ -99,6 +99,13 @@ function triangle(id) {
     if (triangleP.innerHTML === '▶') {
         triangleP.innerHTML = '▼';
         contenu.classList.add('active');
+        /* Déclencher les compteurs dans le dépliable qui vient d'ouvrir */
+        contenu.querySelectorAll('.stat-number[data-target]').forEach(el => {
+            if (!el.dataset.animated) {
+                el.dataset.animated = '1';
+                animateCounter(el);
+            }
+        });
     } else {
         triangleP.innerHTML = '▶';
         contenu.classList.remove('active');
@@ -162,6 +169,13 @@ function triangle_FAQ(id, event) {
     if (triangleP.innerHTML === '▶') {
         triangleP.innerHTML = '▼';
         contenu.classList.add('active');
+        /* Déclencher les compteurs dans le dépliable qui vient d'ouvrir */
+        contenu.querySelectorAll('.stat-number[data-target]').forEach(el => {
+            if (!el.dataset.animated) {
+                el.dataset.animated = '1';
+                animateCounter(el);
+            }
+        });
     } else {
         triangleP.innerHTML = '▶';
         contenu.classList.remove('active');
