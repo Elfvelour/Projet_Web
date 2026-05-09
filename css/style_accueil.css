@@ -1,8 +1,14 @@
+/* -------------- Section accueil -------------- */
+
+section p {
+    text-align: center;
+}
+
 p {
     font-style: normal;
 }
 
-/* ----------- Carrousel ----------- */
+/* ----------------- Carrousel ----------------- */
 
 .container {
     overflow: hidden;
@@ -88,8 +94,13 @@ p {
     cursor: pointer;
 }
 
-.carousel-dots .active  { border: 10px solid white; }
-.carousel-dots .inactive { border: 10px solid var(--bleu-academique); }
+.carousel-dots .active  {
+    border: 10px solid white;
+}
+
+.carousel-dots .inactive {
+    border: 10px solid var(--bleu-academique);
+}
 
 .carousel-txt {
     position: absolute;
@@ -103,26 +114,26 @@ p {
     transition: opacity 0.5s ease-in-out;
 }
 
-.carousel-txt.visible { opacity: 1; }
+.carousel-txt.visible {
+    opacity: 1;
+}
 
 @media screen and (max-width: 600px) {
-    .carousel-inner { height: 50vh; }
-    .carousel-controls button { font-size: 40px; }
-    .carousel-txt { font-size: 20px; }
+    .carousel-inner {
+        height: 50vh;
+    }
+
+    .carousel-controls button {
+        font-size: 40px;
+    }
+
+    .carousel-txt {
+        font-size: 20px;
+    }
 }
 
 
-/* ----------- Titre h2 spécifique accueil ----------- */
-/*
-h2 { font-size: 48px; }
-*/
-
-/* ----------- Section accueil : texte centré ----------- */
-
-section p { text-align: center; }
-
-
-/* ----------- Histoire EFREI ----------- */
+/* ------------------- Histoire EFREI ------------------ */
 
 #histoire-efrei {
     text-align: center;
@@ -132,7 +143,7 @@ section p { text-align: center; }
 }
 
 
-/* ----------- Frise chronologique ----------- */
+/* ----------------- Frise chronologique ---------------- */
 
 .frise-chrono {
     position: relative;
@@ -176,10 +187,17 @@ section p { text-align: center; }
     z-index: 1;
 }
 
-.container2.active { --cercle-couleur: #ff43b8; }
+.container2.active {
+    --cercle-couleur: #ff43b8;
+}
 
-.left  { left: 12.7%; }
-.right { left: 50%; }
+.left  {
+    left: 12.7%;
+}
+
+.right {
+    left: 50%;
+}
 
 .left::before {
     content: '';
@@ -207,7 +225,9 @@ section p { text-align: center; }
     border-color: transparent white transparent transparent;
 }
 
-.right::after { left: -16px; }
+.right::after {
+    left: -16px;
+}
 
 .timeline-content {
     padding: 20px 30px;
@@ -216,41 +236,101 @@ section p { text-align: center; }
     border-radius: 6px;
 }
 
-.timeline-content p   { text-align: left; }
-.timeline-content img { width: 40%; height: auto; }
-.timeline-content:hover { transform: scale(1.05); }
+.timeline-content p {
+    text-align: justify;
+}
+
+.timeline-content img {
+    width: 40%;
+    height: auto;
+}
+
+.timeline-content:hover {
+    transform: scale(1.05);
+}
 
 @media screen and (max-width: 1024px) {
-    .frise-chrono { width: 100%; margin: 0 auto; box-sizing: border-box; }
-    .frise-chrono::after { left: 20px; }
-    .container2 { width: 80%; left: 30px; padding: 10px 15px; }
-    .container2::after { left: 5px; right: auto; }
+    .frise-chrono {
+        width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+    .frise-chrono::after {
+        left: 20px;
+    }
+
+    .container2 {
+        width: 80%;
+        left: 30px;
+        padding: 10px 15px;
+    }
+
+    .container2::after {
+        left: 5px;
+        right: auto;
+    }
+
     .left::before, .right::before {
         left: -11px; right: auto;
         border-width: 10px 10px 10px 0;
         border-color: transparent white transparent transparent;
     }
-    .timeline-content img { width: 60%; height: auto; }
-    .timeline-content { left: 50px; }
-    .left, .right { left: 0; }
+
+    .timeline-content img {
+        width: 60%;
+        height: auto;
+    }
+
+    .timeline-content {
+        left: 50px;
+    }
+
+    .left, .right {
+        left: 0;
+    }
 }
 
 @media screen and (max-width: 600px) {
-    .frise-chrono { width: 100%; margin: 0 auto; box-sizing: border-box; }
-    .frise-chrono::after { left: 20px; }
-    .container2 { width: 80%; left: 30px; padding: 10px 15px; }
-    .container2::after { left: -28px; right: auto; }
+    .frise-chrono {
+        width: 100%;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+    .frise-chrono::after {
+        left: 20px;
+    }
+
+    .container2 {
+        width: 80%;
+        left: 30px;
+        padding: 10px 15px;
+    }
+
+    .container2::after {
+        left: -28px;
+        right: auto;
+    }
+
     .left::before, .right::before {
         left: -10px; right: auto;
         border-width: 10px 10px 10px 0;
         border-color: transparent white transparent transparent;
     }
-    .timeline-content img { width: 60%; height: auto; }
-    .timeline-content { left: 20px; }
+
+    .timeline-content img {
+        width: 60%;
+        height: auto;
+    }
+
+    .timeline-content {
+        left: 20px;
+    }
 }
 
 
-/* ----------- Vidéo campus ----------- */
+/* --------------------- Vidéos campus --------------------- */
 
 #video-campus {
     display: flex;
@@ -258,7 +338,9 @@ section p { text-align: center; }
     align-items: center;
 }
 
-#video-campus h1 { align-self: flex-start; }
+#video-campus h1 {
+    align-self: flex-start;
+}
 
 iframe {
     border-radius: 10px;
@@ -268,14 +350,45 @@ iframe {
     border: none;
 }
 
+#Webinaire-IA {
+    width: 545px;
+    height: 300px;
+    object-fit: cover;
+}
+
 @media screen and (max-width: 600px) {
-    iframe { width: 90%; height: 200px; }
-    #video-campus h2 { text-align: center; }
-    section h1 { text-align: center; }
+    iframe {
+        width: 90%;
+        height: 200px;
+    }
+
+    #video-campus h2 {
+        text-align: center;
+    }
+
+    section h1 {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .actu-container-inline {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .actu-container-inline iframe, #Webinaire-IA {
+        width: 100%;
+        height: auto;
+    }
+
+    .actu-container-inline a {
+        text-align: center;
+    }
 }
 
 
-/* ----------- Chiffres clés ----------- */
+/* ------------------ Chiffres clés ------------------ */
 
 .stat-grille {
     display: flex;
@@ -297,7 +410,9 @@ iframe {
     transition: transform 0.2s ease-in-out;
 }
 
-.stat-ecole:hover { transform: scale(1.05); }
+.stat-ecole:hover {
+    transform: scale(1.05);
+}
 
 .gros-nb {
     font-family: var(--font-titres);
@@ -308,18 +423,34 @@ iframe {
 }
 
 @media screen and (max-width: 1024px) {
-    .stat-grille { flex-direction: column; align-items: center; }
-    .stat-ecole { width: 100%; max-width: 400px; }
-    .gros-nb { font-size: 50px; }
+    .stat-grille {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .stat-ecole {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .gros-nb {
+        font-size: 50px;
+    }
 }
 
 @media screen and (max-width: 600px) {
-    .stat-ecole { flex-direction: column; align-items: center; }
-    .gros-nb { font-size: 40px; }
+    .stat-ecole {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .gros-nb {
+        font-size: 40px;
+    }
 }
 
 
-/* ----------- Graphique camembert ----------- */
+/* ---------------- Graphiques camembert ---------------- */
 
 #chart_div {
     display: flex;
@@ -368,10 +499,19 @@ iframe {
     stroke: var(--cyan-tech);
 }
 
-#cercle-enseignant svg circle:nth-child(2) { --pourcentage: 57.12; stroke-dashoffset: var(--pourcentage); }
-#cercle-meilleur    svg circle:nth-child(2) { --pourcentage: 8.16;  stroke-dashoffset: var(--pourcentage); }
+#cercle-enseignant svg circle:nth-child(2) {
+    --pourcentage: 57.12;
+    stroke-dashoffset: var(--pourcentage);
+}
 
-.box-cercle:hover { transform: scale(1.05); }
+#cercle-meilleur svg circle:nth-child(2) {
+    --pourcentage: 8.16;
+    stroke-dashoffset: var(--pourcentage);
+}
+
+.box-cercle:hover {
+    transform: scale(1.05);
+}
 
 .box-cercle .pourcent .nombre {
     position: absolute;
@@ -383,8 +523,15 @@ iframe {
     color: var(--cyan-tech);
 }
 
-.box-cercle .pourcent .nombre h2 { margin: 0; font-size: 48px; color: var(--cyan-tech); }
-.box-cercle .pourcent .nombre h2 span { font-size: 24px; }
+.box-cercle .pourcent .nombre h2 {
+    margin: 0;
+    font-size: 48px;
+    color: var(--cyan-tech);
+}
+
+.box-cercle .pourcent .nombre h2 span {
+    font-size: 24px;
+}
 
 .box-cercle .texte-cercle {
     padding: 14px;
@@ -396,11 +543,23 @@ iframe {
 }
 
 
-/* ----------- Événements à venir ----------- */
+/* --------------------- Événements à venir --------------------- */
 
 .actu-container-inline {
     display: flex;
+    gap: 30px;
     justify-content: center;
+    align-items: flex-start;
+}
+
+.actu-container-inline-contenu {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section .actu-container-inline p {
+    text-align: justify;
 }
 
 .actu-container-inline a {
@@ -411,12 +570,25 @@ iframe {
     transition: transform 0.2s ease-in-out;
 }
 
-.actu-container-inline a:hover { text-decoration: underline; }
+.actu-container-inline a:hover {
+    text-decoration: underline;
+}
 
-.actu-container-inline p { text-align: left; }
+.actu-container-inline p {
+    text-align: left;
+}
 
 @media screen and (max-width: 1024px) {
-    #Webinaire-IA { width: 100%; max-width: 100%; display: block; }
-    .actu-container-inline iframe { width: 100%; }
-    * { box-sizing: border-box; }
+    #Webinaire-IA {
+        width: 100%;
+        max-width: 100%;
+        display: block;
+    }
+    .actu-container-inline iframe {
+        width: 100%;
+    }
+
+    * {
+        box-sizing: border-box;
+    }
 }
