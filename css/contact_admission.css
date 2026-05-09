@@ -273,6 +273,11 @@
     text-align: center;
     justify-content: center;
   }
+
+  .infos-site-campus span {
+    flex-wrap: wrap;
+    align-items: flex-start;
+  }
 }
 
 
@@ -332,10 +337,17 @@
 }
 
 @media (max-width: 600px) {
-    .info-cards {
-        grid-template-columns: 1fr 1fr;
-    }
-    .liens-utiles {
-        grid-template-columns: 1fr;
+  .info-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .liens-utiles {
+    grid-template-columns: 1fr;
+    flex-direction: column;
+  }
+
+  .liens-utiles .lien-card {
+        width: 100%;
+        box-sizing: border-box;
     }
 }
