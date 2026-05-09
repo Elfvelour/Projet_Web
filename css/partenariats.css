@@ -1,5 +1,3 @@
-
-
 /* ----------- Grille de secteurs ----------- */
 
 .secteurs-grid {
@@ -38,49 +36,6 @@
 .secteur-icon {
     font-size: 1.1rem;
     flex-shrink: 0;
-}
-
-
-/* ----------- Cartes d'événements ----------- */
-
-.events-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-    margin: 1.2rem 0 0.5rem;
-}
-
-.event-card {
-    border-radius: 10px;
-    padding: 1rem 1.2rem;
-    border-left: 4px solid var(--bleu-academique);
-    background: #f5f8ff;
-    transition: border-color 0.2s ease, background 0.2s ease, transform 0.2s ease;
-    font-style: normal;
-}
-
-.event-card:hover {
-    border-color: var(--cyan-tech);
-    background: #e8f8f8;
-    transform: translateX(4px);
-}
-
-.event-name {
-    font-family: var(--font-titres);
-    font-size: 14px;
-    font-weight: 700;
-    color: var(--bleu-academique);
-    margin: 0 0 0.3rem;
-    font-style: normal;
-}
-
-.event-desc {
-    font-size: 13px;
-    color: #444;
-    margin: 0;
-    font-style: normal;
-    letter-spacing: 0.3px;
-    line-height: 1.4;
 }
 
 
@@ -175,5 +130,3 @@
     color: white;
     transform: scale(1.04);
 }
-
-

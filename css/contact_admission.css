@@ -1,7 +1,3 @@
-/* ============================================================
-   CONTACT_ADMISSION.CSS — Styles spécifiques à la page Contact & Admissions
-   ============================================================ */
-
 /* --------- Admissions --------------- */
 .admission-tabs {
     display: flex;
@@ -43,6 +39,7 @@
 }
 
 /* Étapes numérotées */
+
 .steps-list {
     list-style: none;
     padding: 0;
@@ -95,50 +92,9 @@
     font-size: 0.85rem;
 }
 
-/* ------------------ Contact et infos pratiques ------------------ */
-.info-cards {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.info-card {
-    background: #f4f7fc;
-    border-radius: 10px;
-    padding: 1.1rem 1rem;
-    border-left: 3px solid var(--bleu-academique);
-    font-style: normal;
-}
-
-.info-card .ic-icon {
-    font-size: 1.4rem;
-    margin-bottom: 0.4rem;
-    display: block;
-}
-
-.info-card .ic-titre {
-    font-family: var(--font-titres);
-    color: var(--bleu-academique);
-    font-weight: 600;
-    display: block;
-}
-
-.info-card .ic-details {
-    font-family: var(--font-titres);
-    color: var(--bleu-academique);
-}
-
-.info-card a {
-    text-decoration: none;
-    color: var(--bleu-academique);
-}
-
-.info-card a:hover {
-    text-decoration: underline;
-}
 
 /* ----------------- Liens utiles ------------------- */
+
 .liens-utiles {
     display: flex;
     gap: 0.8rem;

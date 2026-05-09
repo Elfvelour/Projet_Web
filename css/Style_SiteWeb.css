@@ -274,6 +274,23 @@ footer .propos:hover::after{
   width: 100%;
 }
 
+footer {
+  background-color: var(--bleu-academique);
+  padding: 20px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer a {
+  color: white;
+}
+
+footer p {
+  margin: 2px 0;
+}
+
 @media screen and (max-width: 1024px) {
   .certif-efrei {
     gap: 30px;              
@@ -373,26 +390,6 @@ section img, .diagramme {
 
 .bandeau {
   width: 100%;
-}
-
-
-/* ------------------------- FOOTER ------------------------- */
-
-footer {
-  background-color: var(--bleu-academique);
-  padding: 20px;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-footer a {
-  color: white;
-}
-
-footer p {
-  margin: 2px 0;
 }
 
 
@@ -1496,5 +1493,58 @@ footer p {
 
   .secteurs-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+
+/* ----------- GRILLE NOTE ----------- */
+
+.note-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 1.5rem;
+}
+
+.note-card {
+  background: #f0f4fb;
+  border-left: 4px solid var(--bleu-academique);
+  border-radius: 8px;
+  padding: 1.2rem 1.5rem;
+}
+
+.note-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.note-card p {
+  font-style: normal;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+  margin: 0;
+}
+
+.note-card:hover {
+  border-color: var(--cyan-tech);
+  background: #e8f8f8;
+  transform: translateX(4px);
+}
+
+@media screen and (max-width: 1024px) {
+  .note-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .note-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .note-card h3 {
+    font-size: 1rem;
   }
 }

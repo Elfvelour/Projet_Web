@@ -1,7 +1,3 @@
-/* ============================================
-   ENSEIGNANTS & RECHERCHE — CSS spécifique
-   ============================================ */
-
 /* ----------- TABLEAU ENSEIGNANTS ----------- */
 
 .table-wrapper {
@@ -64,6 +60,7 @@
 }
 
 /* -------------- Colonne photo ------------- */
+
 .col-photo {
     width: 60px;
     padding: 6px 10px;
@@ -87,39 +84,6 @@
     }
 }
 
-/* ----------- GRILLE EXPERTISE ----------- */
-
-.expertise-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    margin-top: 1.5rem;
-}
-
-.expertise-card {
-    background: #f0f4fb;
-    border-left: 4px solid var(--bleu-academique);
-    border-radius: 8px;
-    padding: 1.2rem 1.5rem;
-}
-
-.expertise-card h3 {
-    margin-bottom: 0.5rem;
-    font-size: 1.1rem;
-}
-
-.expertise-card p {
-    font-style: normal;
-    font-size: 14px;
-    letter-spacing: 0.3px;
-    margin: 0;
-}
-
-.expertise-card:hover {
-    border-color: var(--cyan-tech);
-    background: #e8f8f8;
-    transform: translateX(4px);
-}
 
 /* ----------- FORMULAIRE ----------- */
 
@@ -144,9 +108,7 @@
     color: var(--bleu-academique);
 }
 
-.form-group input,
-.form-group select,
-.form-group textarea {
+.form-group input, .form-group select, .form-group textarea {
     padding: 10px 14px;
     border: 2px solid #c8d6ea;
     border-radius: 6px;
@@ -158,9 +120,7 @@
     outline: none;
 }
 
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
+.form-group input:focus, .form-group select:focus, .form-group textarea:focus {
     border-color: var(--bleu-academique);
     background: #fff;
 }
@@ -190,18 +150,7 @@
 
 /* ----------- RESPONSIVE ----------- */
 
-@media screen and (max-width: 1024px) {
-    .expertise-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
 @media screen and (max-width: 768px) {
-    .expertise-grid {
-        grid-template-columns: 1fr;
-    }
-
-    /* Tableau → cartes sur mobile */
     .table-enseignants thead {
         display: none;
     }
@@ -245,11 +194,5 @@
     .btn-envoyer {
         width: 100%;
         text-align: center;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .expertise-card h3 {
-        font-size: 1rem;
     }
 }
