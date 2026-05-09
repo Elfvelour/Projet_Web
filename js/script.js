@@ -1,4 +1,77 @@
-/*------------------------Caroussel----------------------*/
+/* ---------------------------- Contenu dépliable ----------------------------- */
+
+function triangle(id) {
+    const section = document.getElementById(id);
+    const triangleP = section.querySelector('.triangle p');
+    const contenu = section.querySelector('.hidden');
+
+    const freres = section.parentElement.querySelectorAll(':scope > .postit');
+    freres.forEach(frere => {
+        if (frere !== section) {
+            const t = frere.querySelector('.triangle p');
+            const c = frere.querySelector('.hidden');
+            if (t) t.innerHTML = '▶';
+            if (c) c.classList.remove('active');
+        }
+    });
+
+    if (triangleP.innerHTML === '▶') {
+        triangleP.innerHTML = '▼';
+        contenu.classList.add('active');
+        /* Déclencher les compteurs dans le dépliable qui vient d'ouvrir */
+        contenu.querySelectorAll('.stat-number[data-target]').forEach(el => {
+            if (!el.dataset.animated) {
+                el.dataset.animated = '1';
+                animateCounter(el);
+            }
+        });
+    } else {
+        triangleP.innerHTML = '▶';
+        contenu.classList.remove('active');
+    }
+}
+
+
+/* -------------------- Suivi navigation-bar ------------------- */
+
+const navLinks = document.querySelectorAll('nav a');
+const currentPage = window.location.pathname.split('/').pop();
+
+    navLinks.forEach(link => {
+        const linkPage = link.getAttribute('href').split('/').pop();
+        if(linkPage === currentPage && linkPage !== '#'){
+            link.classList.add('active');
+        }
+    });
+
+function toggleNav(){
+    document.querySelector('nav').classList.toggle('open');
+}
+
+
+/* ----------------- Bouton copier-coller ---------------------- */
+
+const buttons = document.querySelectorAll('.copyBtn');
+const textElements = document.querySelectorAll('.textcopie');
+
+buttons.forEach((button, index) => {
+    button.addEventListener('click', (event) => {
+        event.stopPropagation()
+        const text = textElements[index].innerText.trim();
+
+        navigator.clipboard.writeText(text)
+            .then(() => {
+                button.innerHTML = `copié`;
+                setTimeout(() => {
+                    button.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>`;
+                }, 2000);
+            });
+    });
+});
+
+
+/* ------------------------ Page d'accueil - Caroussel ---------------------- */
+
 (function(){
     "use strict";
 
@@ -80,208 +153,9 @@
 
 })();
 
-/*----------------------------Contenu depliable-----------------*/
-function triangle(id) {
-    const section = document.getElementById(id);
-    const triangleP = section.querySelector('.triangle p');
-    const contenu = section.querySelector('.hidden');
 
-    const freres = section.parentElement.querySelectorAll(':scope > .postit');
-    freres.forEach(frere => {
-        if (frere !== section) {
-            const t = frere.querySelector('.triangle p');
-            const c = frere.querySelector('.hidden');
-            if (t) t.innerHTML = '▶';
-            if (c) c.classList.remove('active');
-        }
-    });
+/* ----------------- Page d'accueil - Actualités responsive -------------------- */
 
-    if (triangleP.innerHTML === '▶') {
-        triangleP.innerHTML = '▼';
-        contenu.classList.add('active');
-        /* Déclencher les compteurs dans le dépliable qui vient d'ouvrir */
-        contenu.querySelectorAll('.stat-number[data-target]').forEach(el => {
-            if (!el.dataset.animated) {
-                el.dataset.animated = '1';
-                animateCounter(el);
-            }
-        });
-    } else {
-        triangleP.innerHTML = '▶';
-        contenu.classList.remove('active');
-    }
-}
-
-/*--------------------Suivi navigation-bar-------------------*/
-const navLinks = document.querySelectorAll('nav a');
-const currentPage = window.location.pathname.split('/').pop();
-
-    navLinks.forEach(link => {
-        const linkPage = link.getAttribute('href').split('/').pop();
-        if(linkPage === currentPage && linkPage !== '#'){
-            link.classList.add('active');
-        }
-    });
-
-function toggleNav(){
-    document.querySelector('nav').classList.toggle('open');
-}
-/*-----------------Bouton copier-coller----------------------*/    
-const buttons = document.querySelectorAll('.copyBtn');
-const textElements = document.querySelectorAll('.textcopie');
-
-buttons.forEach((button, index) => {
-    button.addEventListener('click', (event) => {
-        event.stopPropagation()
-        const text = textElements[index].innerText.trim();
-
-        navigator.clipboard.writeText(text)
-            .then(() => {
-                button.innerHTML = `copié`;
-                setTimeout(() => {
-                    button.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>`;
-                }, 2000);
-            });
-    });
-});
-
-
-/*-------------------FAQ et plan d'accès-----------------------*/
-function triangle_FAQ(id, event) {
-    event.stopPropagation();
-
-    const section = document.getElementById(id);
-    const triangleP = section.querySelector(':scope > .depliable-contenu > .depliable-header .triangle p');
-    const contenu = section.querySelector(':scope > .depliable-contenu > .hidden');
-
-    // Fermer les frères (postits du même niveau)
-    const freres = section.parentElement.querySelectorAll(':scope > .postit');
-    freres.forEach(frere => {
-        if (frere !== section) {
-            const t = frere.querySelector(':scope > .depliable-contenu > .depliable-header .triangle p');
-            const c = frere.querySelector(':scope > .depliable-contenu > .hidden');
-            if (t) t.innerHTML = '▶';
-            if (c) c.classList.remove('active');
-        }
-    });
-
-    // Ouvrir ou fermer le postit cliqué
-    if (triangleP.innerHTML === '▶') {
-        triangleP.innerHTML = '▼';
-        contenu.classList.add('active');
-        /* Déclencher les compteurs dans le dépliable qui vient d'ouvrir */
-        contenu.querySelectorAll('.stat-number[data-target]').forEach(el => {
-            if (!el.dataset.animated) {
-                el.dataset.animated = '1';
-                animateCounter(el);
-            }
-        });
-    } else {
-        triangleP.innerHTML = '▶';
-        contenu.classList.remove('active');
-    }
-}
-
-/*------------------------FAQ---------------------------*/
-// Fonction pour récupérer et traiter le JSON
-async function chargerFAQ() {
-    try {
-        const response = await fetch('../data/faq.json');
-        if (!response.ok) throw new Error(`HTTP ${response.status}`);
-        const data = await response.json();
-        const container = document.getElementById('faq-container');
-        if (!container) return;
-        container.innerHTML = '';
-
-        data.faq.forEach((cat, catIdx) => {
-            const catId = `faq-cat-${catIdx}`;
-
-            // Catégorie = postit dépliable niveau 1
-            const catDiv = document.createElement('div');
-            catDiv.className = 'postit';
-            catDiv.id = catId;
-            catDiv.setAttribute('onclick', `triangle_FAQ('${catId}', event)`);
-            catDiv.innerHTML = `
-                <div class="depliable-contenu">
-                    <div class="depliable-header">
-                        <div class="triangle"><p>▶</p></div>
-                        <p class="title-box">${cat.category}</p>
-                    </div>
-                    <div class="hidden" id="${catId}-contenu"></div>
-                </div>`;
-            container.appendChild(catDiv);
-
-            const catContenu = document.getElementById(`${catId}-contenu`);
-
-            // Questions = postit dépliable niveau 2
-            cat.questions.forEach((item, qIdx) => {
-                const qId = `faq-q-${catIdx}-${qIdx}`;
-                const qDiv = document.createElement('div');
-                qDiv.className = 'postit';
-                qDiv.id = qId;
-                qDiv.setAttribute('onclick', `triangle_FAQ('${qId}', event)`);
-                qDiv.innerHTML = `
-                    <div class="depliable-contenu">
-                        <div class="depliable-header">
-                            <div class="triangle"><p>▶</p></div>
-                            <p class="title-box">${item.q}</p>
-                        </div>
-                        <div class="hidden">
-                            <p style="font-style:normal; padding: 0.5rem 0;">${item.a}</p>
-                        </div>
-                    </div>`;
-                catContenu.appendChild(qDiv);
-            });
-        });
-
-    } catch (err) {
-        console.error(err);
-        const container = document.getElementById('faq-container');
-        if (container) container.innerHTML = '<p>FAQ indisponible.</p>';
-    }
-}
-
-
-/*-------------------Plan d'accès-----------------------*/
-function switchCampus(campusId, btn) {
-    // Masquer les deux conteneurs de campus
-    const villejuif = document.getElementById('campus-villejuif');
-    const bordeaux = document.getElementById('campus-bordeaux');
-    if (villejuif) villejuif.style.display = 'none';
-    if (bordeaux) bordeaux.style.display = 'none';
-    
-    // Retirer la classe 'active' de tous les boutons
-    document.querySelectorAll('.campus-choisi').forEach(button => {
-        button.classList.remove('active');
-    });
-    
-    // Afficher le campus sélectionné et activer le bouton
-    const selectedCampus = document.getElementById(campusId);
-    if (selectedCampus) selectedCampus.style.display = 'block';
-    btn.classList.add('active');
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-
-    chargerFAQ();
-
-    const textes = document.querySelectorAll('.timeline-content');
-
-    textes.forEach(texte => {
-        texte.addEventListener('mouseover', () => {
-            texte.closest('.container2').classList.add('active');
-        });
-
-        texte.addEventListener('mouseout', () => {
-            texte.closest('.container2').classList.remove('active');
-        });
-    });
-
-    responsive_actu();
-
-});
-
-/*-----------------Actualités dans la page d'accueil (responsive)------------------*/
 function responsive_actu() {
     const container = document.querySelector('.actu-container-inline');
     if (!container) return;
@@ -297,7 +171,26 @@ function responsive_actu() {
 
 window.addEventListener('resize', responsive_actu);
 
-/*-----------------Formulaire Enseignants_Recherche------------------*/
+
+/* --------------------- Cours et Formations ------------------------------- */
+
+function switchTab(id) {
+    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+    document.getElementById('tab-' + id).classList.add('active');
+    const btns = document.querySelectorAll('.tab-btn');
+    const map = { cpi: 0, ingenieur: 1, bachelor: 2 };
+    btns[map[id]].classList.add('active');
+}
+
+function toggleAccord(id) {
+    const el = document.getElementById(id);
+    el.classList.toggle('open');
+}
+
+
+/* ----------------- Corps Enseignant et Recherche - Formulaire ------------------------- */
+
 function envoyerFormulaire() {
     const nom = document.getElementById('nom').value.trim();
     const email = document.getElementById('email').value.trim();
@@ -315,7 +208,7 @@ function envoyerFormulaire() {
 }
 
 
-/*-------------------Projet-etudiants--------------------*/
+/* ------------------- Vie étudiante - Projet étudiants -------------------- */
 
 const projets = {
     projet1: {
@@ -380,22 +273,124 @@ document.addEventListener('keydown', (e) => {
     if(e.key === 'Escape') fermerModal();
 });
 
-/* ---------------------Cours et Formations------------------------------- */
-function switchTab(id) {
-    document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
-    document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-    document.getElementById('tab-' + id).classList.add('active');
-    const btns = document.querySelectorAll('.tab-btn');
-    const map = { cpi: 0, ingenieur: 1, bachelor: 2 };
-    btns[map[id]].classList.add('active');
+
+/* ------------------- Contact et Admission - FAQ et plan d'accès ----------------------- */
+
+function triangle_FAQ(id, event) {
+    event.stopPropagation();
+    const section = document.getElementById(id);
+    const triangleP = section.querySelector(':scope > .depliable-contenu > .depliable-header .triangle p');
+    const contenu = section.querySelector(':scope > .depliable-contenu > .hidden');
+    const freres = section.parentElement.querySelectorAll(':scope > .postit');
+    freres.forEach(frere => {
+        if (frere !== section) {
+            const t = frere.querySelector(':scope > .depliable-contenu > .depliable-header .triangle p');
+            const c = frere.querySelector(':scope > .depliable-contenu > .hidden');
+            if (t) t.innerHTML = '▶';
+            if (c) c.classList.remove('active');
+        }
+    });
+    if (triangleP.innerHTML === '▶') {
+        triangleP.innerHTML = '▼';
+        contenu.classList.add('active');
+        contenu.querySelectorAll('.stat-number[data-target]').forEach(el => {
+            if (!el.dataset.animated) {
+                el.dataset.animated = '1';
+                animateCounter(el);
+            }
+        });
+    } else {
+        triangleP.innerHTML = '▶';
+        contenu.classList.remove('active');
+    }
 }
 
-function toggleAccord(id) {
-    const el = document.getElementById(id);
-    el.classList.toggle('open');
+
+/* FAQ */
+
+async function chargerFAQ() {
+    try {
+        const response = await fetch('../data/faq.json');
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const data = await response.json();
+        const container = document.getElementById('faq-container');
+        if (!container) return;
+        container.innerHTML = '';
+
+        data.faq.forEach((cat, catIdx) => {
+            const catId = `faq-cat-${catIdx}`;
+            const catDiv = document.createElement('div');
+            catDiv.className = 'postit';
+            catDiv.id = catId;
+            catDiv.setAttribute('onclick', `triangle_FAQ('${catId}', event)`);
+            catDiv.innerHTML = `
+                <div class="depliable-contenu">
+                    <div class="depliable-header">
+                        <div class="triangle"><p>▶</p></div>
+                        <p class="title-box">${cat.category}</p>
+                    </div>
+                    <div class="hidden" id="${catId}-contenu"></div>
+                </div>`;
+            container.appendChild(catDiv);
+            const catContenu = document.getElementById(`${catId}-contenu`);
+            cat.questions.forEach((item, qIdx) => {
+                const qId = `faq-q-${catIdx}-${qIdx}`;
+                const qDiv = document.createElement('div');
+                qDiv.className = 'postit';
+                qDiv.id = qId;
+                qDiv.setAttribute('onclick', `triangle_FAQ('${qId}', event)`);
+                qDiv.innerHTML = `
+                    <div class="depliable-contenu">
+                        <div class="depliable-header">
+                            <div class="triangle"><p>▶</p></div>
+                            <p class="title-box">${item.q}</p>
+                        </div>
+                        <div class="hidden">
+                            <p style="font-style:normal; padding: 0.5rem 0;">${item.a}</p>
+                        </div>
+                    </div>`;
+                catContenu.appendChild(qDiv);
+            });
+        });
+    } catch (err) {
+        console.error(err);
+        const container = document.getElementById('faq-container');
+        if (container) container.innerHTML = '<p>FAQ indisponible.</p>';
+    }
 }
 
-/* -------------------Contact et admission----------------------------- */
+/* Plan d'accès */
+
+function switchCampus(campusId, btn) {
+    const villejuif = document.getElementById('campus-villejuif');
+    const bordeaux = document.getElementById('campus-bordeaux');
+    if (villejuif) villejuif.style.display = 'none';
+    if (bordeaux) bordeaux.style.display = 'none';
+    document.querySelectorAll('.campus-choisi').forEach(button => {
+        button.classList.remove('active');
+    });
+    const selectedCampus = document.getElementById(campusId);
+    if (selectedCampus) selectedCampus.style.display = 'block';
+    btn.classList.add('active');
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    chargerFAQ();
+    const textes = document.querySelectorAll('.timeline-content');
+    textes.forEach(texte => {
+        texte.addEventListener('mouseover', () => {
+            texte.closest('.container2').classList.add('active');
+        });
+        texte.addEventListener('mouseout', () => {
+            texte.closest('.container2').classList.remove('active');
+        });
+    });
+    responsive_actu();
+});
+
+
+/* ------------------- Contact et admission ----------------------------- */
+
 function switchAdm(id) {
     document.querySelectorAll('.adm-panel').forEach(p => p.classList.remove('active'));
     document.querySelectorAll('.adm-tab').forEach(b => b.classList.remove('active'));
@@ -404,26 +399,21 @@ function switchAdm(id) {
     document.querySelectorAll('.adm-tab')[map[id]].classList.add('active');
 }
 
-/* ---------------------------Camembert----------------------------------*/
+/* --------------------------- A propos - Camembert ---------------------------------- */
+
 const box = document.getElementById('detail-box');
 const innerLabels = ['Flavie Brémand', 'Timothée Girault'];
 const innerColors = ['#0A316C', '#00838F'];
-
 const outerLabels = ['Formation', 'Corps enseignant & Recherche', 'Partenariats & Professionnalisation', 'Contact & Admission', 'À propos',
-                        "Page d'accueil", 'Header / footer', 'Vie étudiante', 'Responsive design', 'Vérifications W3C'
-                    ];
+                        "Page d'accueil", 'Header / footer', 'Vie étudiante', 'Responsive design', 'Vérifications W3C'];
 const outerColors = ['#0A316C', '#1A4D8F', '#2E6DB4', '#5B97D5', '#A8C8EE',
-                    '#00838F', '#26A69A', '#4DB6AC', '#80CBC4', '#B2DFDB'
-                    ];
+                    '#00838F', '#26A69A', '#4DB6AC', '#80CBC4', '#B2DFDB'];
 const outerBorders = ['#0A316C', '#1A4D8F', '#2E6DB4', '#5B97D5', '#5B97D5',
-                    '#00838F', '#26A69A', '#4DB6AC', '#4DB6AC', '#4DB6AC'
-                    ];
+                    '#00838F', '#26A69A', '#4DB6AC', '#4DB6AC', '#4DB6AC'];
 const ownerOf = ['Flavie Brémand','Flavie Brémand','Flavie Brémand','Flavie Brémand','Flavie Brémand',
-                'Timothée Girault','Timothée Girault','Timothée Girault','Timothée Girault','Timothée Girault'
-                ];
+                'Timothée Girault','Timothée Girault','Timothée Girault','Timothée Girault','Timothée Girault'];
 const ownerColor = ['#0A316C','#0A316C','#0A316C','#0A316C','#0A316C',
-                    '#00838F','#00838F','#00838F','#00838F','#00838F'
-                    ];
+                    '#00838F','#00838F','#00838F','#00838F','#00838F'];
 
 new Chart(document.getElementById('donutChart'), {
     type: 'doughnut',
