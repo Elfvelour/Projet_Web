@@ -1,0 +1,412 @@
+/* ------------------------- TEMOIGNAGES ------------------------ */
+
+.box-temoin {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  justify-content: center;
+  width: 100%;
+}
+
+.etudiant-temoin {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  padding: 20px;
+  gap: 10%;
+  background-color: var(--bleu-academique);
+  margin: 2%;
+  border-radius: 10px;
+  color: white;
+  width: 90%;
+}
+
+.etudiant-temoin img {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.etudiant-temoin p{
+  font-family: var(--font-corps);
+  font-style: italic;
+  text-align: center;
+}
+
+.photo-temoin{
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+/* -------------------- ASSO ---------------- */
+
+#para-asso{
+  flex-direction: column;
+  width: 100%;
+}
+
+#asso-para{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.description-asso img{
+  width: 150px;
+  height: auto;
+  margin: 20px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.description-asso img:hover{
+  transform: scale(1.05)
+}
+
+#clubrezo{
+  width: 250px;
+  height: auto;
+}
+
+#para-club{
+  margin-bottom: 30px;
+}
+
+#info-asso{
+  text-decoration: none;
+  color: var(--bleu-academique);
+  font-size: 16px;
+}
+
+#info-asso:hover{
+  text-decoration: underline;
+}
+
+.description-asso{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: justify;
+  justify-content: center;
+  gap: 50px;
+  background-color: var(--bleu-academique);
+  color: white;
+  width: 100%;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+}
+
+.description-asso p{
+  text-decoration: none;
+}
+
+#para-asso{
+  justify-content: center;
+  align-items: center;
+}
+
+#depliable-clubs-assos .depliable-header {
+    justify-content: flex-start;
+}
+
+@media screen and (max-width: 1024px) {
+  .description-asso {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .description-asso img {
+    width: 120px;
+    margin: 0 auto;          
+  }
+
+  #clubrezo {
+    width: 150px;
+  }
+
+  .etudiant-temoin {
+    flex-direction: column;  
+    align-items: center;
+    text-align: left;             
+  }
+
+  #para-asso {
+    margin-left: 0;
+  }
+
+  .etudiant-temoin img {
+    width: 120px;
+  }
+
+  .contenu-depliable {
+    overflow: hidden;              
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .depliable-header .title-box {
+    font-size: 18px;
+    white-space: normal;     
+  }
+
+  .contenu-depliable {
+    width: 100%;              
+  }
+
+  section {
+    padding: 1rem;           
+  }
+  
+  #depliable-clubs-assos, #depliable-temoignages{
+    width: 90%;
+  }
+}
+
+
+
+/* ----------------- PRESENTATION CAMPUS ------------------- */
+
+#villejuif img{
+  width: 80%;
+  height: auto;
+}
+
+#villejuif .photo-temoin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+  flex-shrink: 0;         
+  width: 100%;
+  max-width: 550px;          
+}
+
+#villejuif .etudiant-temoin {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+#pres-campus1, #pres-campus2, #pres-campus3,#pres-campus4{
+  background-color: white;
+  color: black;
+}
+
+#pres-campus1 .photo-temoin, #pres-campus2 .photo-temoin, #pres-campus3 .photo-temoin, #pres-campus4 .photo-temoin{
+  border: 2px solid black;
+  border-radius: 10px;
+  background-color: var(--bleu-academique);
+  color: white;
+  padding-bottom: 30px;
+}
+
+#villejuif .etudiant-temoin > p {
+  text-align: left;
+  font-style: normal;   
+}
+
+@media screen and (max-width: 1024px) {
+  #villejuif .etudiant-temoin {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  #villejuif .photo-temoin {
+    width: 100%;
+    max-width: 400px;
+  }
+
+  #villejuif img {
+    width: 90%;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  #villejuif .photo-temoin {
+    max-width: 100%;
+  }
+
+  #villejuif img {
+    width: 90%;
+  }
+
+  #villejuif .etudiant-temoin > p {
+    text-align: center;
+  }
+}
+
+
+
+/* ---------------------- Projet étudiants ----------------- */
+
+.galerie-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 1.5rem;
+  margin-top: 50px;
+}
+
+.galerie-carte {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  aspect-ratio: 4/3;
+}
+
+.galerie-carte img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+  display: block;
+  margin: 0;
+  border-radius: 10px;
+}
+
+.galerie-carte:hover img {
+  transform: scale(1.05);
+}
+
+.galerie-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, var(--bleu-academique));
+  color: white;
+  padding: 20px 15px 10px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.galerie-carte:hover .galerie-overlay {
+  opacity: 1;
+}
+
+.galerie-overlay p {
+  margin: 0;
+  font-style: normal;
+  font-weight: 600;
+  text-align: left;
+  color: white;
+}
+
+#modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+}
+
+#modal-overlay.actif {
+  display: flex;
+}
+
+#modal-contenu {
+  background: white;
+  border-radius: 12px;
+  max-width: 700px;
+  width: 90%;
+  max-height: 85vh;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+#modal-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px 12px 0 0;
+  display: block;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+#modal-texte {
+  padding: 20px 25px;
+  font-size: var(--font-corps);
+}
+
+#modal-texte h3 {
+  color: var(--bleu-academique);
+  font-family: var(--font-titres);
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+#modal-texte p {
+  font-style: normal;
+  text-align: left;
+  margin: 8px 0;
+  color: black;
+}
+
+#modal-fermer {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  font-size: 16px;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+#modal-liens {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 15px;
+}
+
+.modal-lien {
+  background: var(--bleu-academique);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 14px;
+  font-style: normal;
+  transition: background 0.2s;
+}
+
+.modal-lien:hover {
+  background: var(--cyan-tech);
+}
+
+@media screen and (max-width: 768px) {
+  .galerie-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .galerie-grid {
+    grid-template-columns: 1fr;
+  }
+}

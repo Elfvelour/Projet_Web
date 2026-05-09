@@ -1,3 +1,19 @@
+/* ------------------- Enseignant ------------------- */
+
+#equipe a{
+  text-decoration: none;
+  font-family: var(--font-corps);
+  color: var(--bleu-academique);
+  font-weight: 600;
+  transition: color 0.3s ease-in-out;;
+}
+
+#equipe a:hover{
+  text-decoration: underline;
+  font-weight: 800;
+}
+
+
 /* ----------- TABLEAU ENSEIGNANTS ----------- */
 
 .table-wrapper {

@@ -1,4 +1,4 @@
-/* --------- Admissions --------------- */
+/* ------------------- Admissions -------------------------- */
 .admission-tabs {
     display: flex;
     gap: 0.4rem;
@@ -90,6 +90,213 @@
 .step-content span {
     color: #555;
     font-size: 0.85rem;
+}
+
+
+/* ----------------- PLAN D'ACCES ------------------- */
+
+#maps{
+  display: flex;
+  flex-direction: column;
+  object-fit: contain;
+  font-size: 15px;
+}
+
+.campus{
+  display: flex;
+  flex-direction: column;
+}
+
+.campus .postit{
+  width: 425px;
+}
+
+#FAQ .postit {
+  padding: 2%;
+  margin: 4px 0;
+}
+
+#plan-acces .postit {
+  padding: 4%;
+  margin: 6px 0;
+}
+
+#FAQ .triangle p, #FAQ .title-box, #plan-acces .triangle p, #plan-acces .title-box {
+  margin: 0;
+  padding: 0;
+}
+
+#FAQ .title-box {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+#FAQ p {
+  font-size: 14px;
+  font-style: normal;
+  letter-spacing: 0.5px;
+}
+
+#FAQ #faq-container > .postit {
+  margin: 0.6rem 0;
+}
+
+#FAQ #faq-container > .postit > .depliable-contenu > .hidden > .postit {
+  margin: 3px 0;
+}
+
+#maps iframe{
+  min-width: 500px;
+}
+
+#maps .title-box{
+  font-size: 20px;
+}
+
+.infos-site-campus{
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 5px;
+  flex:1;
+}
+
+.infos-site-campus a{
+  text-decoration: none;
+  color: #222;
+}
+
+.infos-site-campus p {
+  color: var(--bleu-academique);
+  font-weight: bold;
+  margin: 0;              
+}
+
+.infos-site-campus span {
+  display: flex;
+  align-items: center;
+  gap: 5px;               
+  color: #222;
+}
+
+.infos-site-campus a:hover{
+  text-decoration:underline;
+}
+
+#campus-bordeaux {
+  display: none;
+}
+
+.position-maps{
+  display: flex;
+  flex-direction: row;
+  gap: 5%;
+}
+
+.copyBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--bleu-academique);
+  padding: 4px;
+  vertical-align: middle;
+  border-radius: 10px;
+}
+
+.copyBtn:hover {
+  background-color: rgb(244, 244, 244);
+}
+
+/* Bouton de choix de campus */
+
+#campus-choix {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+.campus-choisi {
+  background: var(--blanc-pur);
+  color: var(--bleu-academique);
+  border: 2px solid var(--bleu-academique);
+  padding: 8px 20px;
+  border-radius: 6px;
+  font-family: var(--font-titres);
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.campus-choisi.active {
+  background: var(--bleu-academique);
+  color: white;
+}
+
+.campus-choisi:hover:not(.active) {
+  background: #e8f0fb;
+}
+
+@media screen and (max-width: 1024px) {
+  .position-maps {
+    flex-direction: column;  
+    align-items: center;
+  }
+
+  #maps iframe, #plan-acces iframe {
+    min-width: unset;        
+    width: 100%;            
+    height: 300px;
+  }
+
+  .campus {
+    width: 100%;             
+  }
+
+  .campus .postit {
+    width: 100%;             
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #plan-acces iframe {
+    height: 220px;
+  }
+
+  #campus-choix {
+    flex-direction: column;  
+    align-items: center;
+    width: 100%;
+  }
+
+  .campus-choisi {
+    width: 80%;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+
+/* ------------------------- FAQ --------------------------- */
+
+.hidden .site {
+  max-width: 100%;
+  width: 100%;
+  margin: 0.5rem 0;       
+  box-sizing: border-box;
+}
+
+#FAQ .hidden{
+  display: none;
+  flex-direction: column;
+  width: 100%;
+}
+
+#FAQ .hidden.active {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 10px;
+  padding-top: 10px;
 }
 
 

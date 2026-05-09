@@ -46,6 +46,149 @@
     .stats-banner { gap: 1rem; }
 }
 
+/* ---------------------- Parcours ------------------- */
+
+.schema-cursus{
+  font-family: var(--font-corps);
+  margin: 2rem 0;
+}
+
+.schema-cursus h3{
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--bleu-academique);
+}
+
+.cursus-grid{
+  display: grid;
+  grid-template-columns: 70px repeat(5, 1fr);
+  gap: 6px;
+  align-items: stretch;
+}
+
+.annee-header{
+  text-align: center;
+  font-size: 13px;
+  color: var(--bleu-academique);
+  font-weight: 600;
+  padding: 6px 0;
+  border-bottom: 2px solid var(--bleu-academique);
+}
+
+.cursus-label{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--bleu-academique);
+  padding: 4px;
+}
+
+.cursus-bloc{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.cursus-bloc:hover{
+  transform: scale(1.02);
+}
+
+.cursus-bloc strong{
+  font-size: 14px;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 3px;
+  font-style: normal;
+}
+
+.cursus-bloc span{
+  font-size: 12px;
+  font-style: normal;
+  opacity: 0.85;
+}
+
+.cursus-bloc.bloc-ingenieur{
+  background-color: #e8edf5;
+  color: var(--bleu-academique);
+  border: 1px solid var(--bleu-academique);
+}
+
+.cursus-bloc.bloc-parallele{
+  background-color: #e0fafa;
+  color:var(--bleu-academique);
+  border: 1px solid var(--cyan-tech);
+}
+
+.cursus-bloc.bloc-bachelor{
+  background-color: #fef7e0;
+  color: var(--bleu-academique);
+  border: 1px solid var(--jaune-electrique);
+}
+
+.span-2{ 
+  grid-column: span 2; 
+}
+
+.span-3{ 
+  grid-column: span 3; 
+}
+
+.cursus-legende{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 1rem;
+  font-size: 13px;
+  color: var(--bleu-academique);
+}
+
+.legende-dot{
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 3px;
+  margin-right: 4px;
+}
+
+.legende-dot.bloc-ingenieur{ 
+  background-color: var(--bleu-academique); 
+}
+
+.legende-dot.bloc-parallele{ 
+  background-color: var(--cyan-tech); 
+}
+
+.legende-dot.bloc-bachelor{ 
+  background-color: var(--jaune-electrique); 
+}
+
+@media screen and (max-width: 768px) {
+  .cursus-grid {
+    grid-template-columns: 55px repeat(5, 1fr);
+    gap: 4px;
+  }
+
+  .cursus-bloc strong {
+    font-size: 12px;
+  }
+
+  .cursus-bloc span {
+    display: none;
+  }
+
+  .annee-header {
+    font-size: 11px;
+  }
+}
+
 
 /* ---------------- Onglets cursus -------------- */
 .tabs-nav {
