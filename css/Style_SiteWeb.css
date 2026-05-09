@@ -179,6 +179,7 @@ header img {
 
 
 /* ------------------- NAV --------------------- */
+
 nav{
   display: flex;         
   justify-content: center;
@@ -191,7 +192,6 @@ nav a{
   color: white;
   padding: 5px 20px;
 }
-
 
 nav a::after{
   content: "";
@@ -212,7 +212,6 @@ nav a:hover::after, nav a.active::after{
 nav a:hover, nav a.active{
   color: var(--cyan-tech);
 }
-
 
 @media screen and (max-width: 1024px) {
   nav {
@@ -786,7 +785,7 @@ footer p {
   right: 5%;
 }
 
-.paragraphe2 p {
+.paragraphe2 p, p.paragraphe2 {
   font-style: normal;
   text-align: justify;
 }
