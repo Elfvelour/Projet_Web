@@ -1,4 +1,4 @@
-/* ------------ CHARTE GRAPHIQUE --------------------- */
+/* --------------- CHARTE GRAPHIQUE --------------------- */
 
 :root {
   --bleu-academique: #0A316C;
@@ -8,6 +8,7 @@
   --font-titres: 'Montserrat', 'Poppins', sans-serif;
   --font-corps: 'Open Sans', 'Roboto', sans-serif;
 }
+
 
 /* ------------------ GLOBAL -------------------------- */
 
@@ -55,85 +56,9 @@ strong {
 }
 
 @media screen and (max-width: 600px) {
-
-    section h2{
-        text-align: center;
-    }
-
-}
-
-
-/*------------------------SOULIGNAGE-DYNAMIQUE-------------------*/
-footer .propos{
-  position: relative;
-  display: inline-block;
-  color: white;
-  text-decoration: none;
-  padding: 5px;
-}
-
-footer .propos::after{
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 3px;
-  background-color: white;
-  transition: width 0.3s ease-in-out;
-}
-
-footer .propos:hover::after{
-  width: 100%;
-}
-
-@media screen and (max-width: 1024px) {
-    .certif-efrei {
-        gap: 30px;              
-        flex-wrap: wrap;        
-        padding: 10px;
-    }
-
-    .certif-efrei img {
-        width: 120px;
-    }
-
-    .certif-efrei .cti {
-        height: 70px;
-    }
-}
-
-@media screen and (max-width: 768px) {
-    .certif-efrei {
-        flex-direction: column; 
-        align-items: center;
-        gap: 10px;
-    }
-
-    .certif-efrei img {
-        width: 100px;
-    }
-
-    .certif-efrei .cti {
-        height: 60px;
-    }
-
-    .reseaux {
-        gap: 15px;             
-    }
-
-    .reseaux img {
-        width: 50px;         
-    }
-
-    .yt-icon {
-        width: 40px;
-    }
-
-    footer {
-        padding: 15px 10px;   
-        text-align: center;
-    }
+  section h2{
+    text-align: center;
+  }
 }
 
 
@@ -165,6 +90,7 @@ ul li::before {
   border-left: 10px solid var(--bleu-academique);
 }
 
+
 /* ---------------------- HEADER ------------------------ */
 
 header {
@@ -193,128 +119,126 @@ header img {
   text-align: center;
 }
 
-.header-title h1,
-.header-title h2 {
+.header-title h1, .header-title h2 {
   margin: 0;
 }
 
 @media screen and (max-width: 1024px) {
-    .header-top {
-        flex-direction: column; 
-        align-items: center;
-        padding: 10px;
-    }
+  .header-top {
+    flex-direction: column; 
+    align-items: center;
+    padding: 10px;
+  }
 
-    .header-title {
-        position: static;  
-        transform: none;
-        text-align: center;
-        margin-top: 10px;
-    }
+  .header-title {
+    position: static;  
+    transform: none;
+    text-align: center;
+    margin-top: 10px;
+  }
 
-    header img {
-        width: 200px;
-    }
+  .header img {
+    width: 200px;
+  }
 
-    .header-title h1 {
-        font-size: 28px;
-    }
+  .header-title h1 {
+    font-size: 28px;
+  }
 
-    .header-title p.title {
-        font-size: 14px;
-    }
+  .header-title p.title {
+    font-size: 14px;
+  }
 }
 
 @media screen and (max-width: 768px) {
+  .header-top{
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .header img {
+    width: 150px;
+    height: auto;
+  }
 
-    .header-top{
-        flex-direction: column;
-        align-items: center;
-        padding: 10px;
-    }
-    header img {
-        width: 150px;
-        height: auto;
-    }
+  .header-title h1 {
+    font-size: 22px;
+  }
 
-    .header-title h1 {
-        font-size: 22px;
-    }
-
-    .header-title {
-        position: static;
-        transform: none;
-        margin-top: 10px;
-        }
+  .header-title {
+    position: static;
+    transform: none;
+    margin-top: 10px;
+  }
     
-    .header-title p {
-        font-size: 12px;
-    }
+  .header-title p {
+    font-size: 12px;
+  }
 }
-
 
 
 /* ------------------- NAV --------------------- */
 nav{
-    display: flex;         
-    justify-content: center;
-    gap: 20px; 
+  display: flex;         
+  justify-content: center;
+  gap: 20px; 
 }
 
 nav a{
-    position: relative;
-    text-decoration: none;
-    color: white;
-    padding: 5px 20px;
+  position: relative;
+  text-decoration: none;
+  color: white;
+  padding: 5px 20px;
 }
 
 
 nav a::after{
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 0;
-    height: 3px;
-    background-color: var(--cyan-tech);
-    transition: width 0.3s ease-in-out;
-
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: var(--cyan-tech);
+  transition: width 0.3s ease-in-out;
 }
 
 nav a:hover::after, nav a.active::after{
-    width: 100%;
+  width: 100%;
 }
 
 
 nav a:hover, nav a.active{
-    color: var(--cyan-tech);
+  color: var(--cyan-tech);
 }
 
 
 @media screen and (max-width: 1024px) {
-    nav {
-        flex-wrap: wrap;       
-        gap: 5px;
-        justify-content: center;
-    }
+  nav {
+    flex-wrap: wrap;       
+    gap: 5px;
+    justify-content: center;
+  }
 
-    nav a {
-        padding: 5px 10px;
-        font-size: 13px;      
-    }
+  nav a {
+    padding: 5px 10px;
+    font-size: 13px;      
+  }
 }
 
 @media screen and (max-width: 600px) {
-    nav {
-        gap: 3px;
-    }
+  nav {
+    gap: 3px;
+  }
 
-    nav a {
-        font-size: 11px;
-        padding: 4px 6px;
-        margin-top: 5px;
-    }
+  nav a {
+    font-size: 11px;
+    padding: 4px 6px;
+    margin-top: 5px;
+  }
 }
+
 
 /* ------------------ HERO BANNER ----------------------------- */
 
@@ -324,6 +248,82 @@ nav a:hover, nav a.active{
   padding: 5rem 3rem;
   clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
 }
+
+
+/* ------------------------ FOOTER ----------------------- */
+
+footer .propos{
+  position: relative;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: 5px;
+}
+
+footer .propos::after{
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 3px;
+  background-color: white;
+  transition: width 0.3s ease-in-out;
+}
+
+footer .propos:hover::after{
+  width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .certif-efrei {
+    gap: 30px;              
+    flex-wrap: wrap;        
+    padding: 10px;
+  }
+
+  .certif-efrei img {
+    width: 120px;
+  }
+
+  .certif-efrei .cti {
+    height: 70px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .certif-efrei {
+    flex-direction: column; 
+    align-items: center;
+    gap: 10px;
+  }
+
+  .certif-efrei img {
+    width: 100px;
+  }
+
+  .certif-efrei .cti {
+    height: 60px;
+  }
+
+  .reseaux {
+    gap: 15px;             
+  }
+
+  .reseaux img {
+    width: 50px;         
+  }
+
+  .yt-icon {
+    width: 40px;
+  }
+
+  .footer {
+    padding: 15px 10px;   
+    text-align: center;
+  }
+}
+
 
 /* ---------------------- SECTIONS --------------------------- */
 
@@ -362,16 +362,13 @@ section:hover{
 
 /* Images */
 
-section img,
-.bandeau,
-.diagramme {
+section img, .bandeau, .diagramme {
   display: block;
   margin: 10px auto;
   border-radius: 10px;
 }
 
-section img,
-.diagramme {
+section img, .diagramme {
   width: 50%;
 }
 
@@ -403,28 +400,29 @@ footer p {
 /* ------------------------- LABEL EFREI --------------------- */
 
 .certif-efrei {
-    display: flex;    
-    align-items: center;
-    justify-content: center;
-    gap: 20%;
-    padding: 20px;
-    width: 100%;
+  display: flex;    
+  align-items: center;
+  justify-content: center;
+  gap: 20%;
+  padding: 20px;
+  width: 100%;
 }
 
 .certif-efrei .logo-u {
-    filter: brightness(0) invert(1);
+  filter: brightness(0) invert(1);
 }
 
 .certif-efrei img{
-    width: 200px;
-    height: auto;
-    object-fit: contain;
+  width: 200px;
+  height: auto;
+  object-fit: contain;
 }
 
 .certif-efrei .cti{
-    height: 100px;
-    object-fit: contain;
+  height: 100px;
+  object-fit: contain;
 }
+
 
 /* ------------------- RÉSEAUX -------------------- */
 
@@ -446,8 +444,9 @@ footer p {
 }
 
 .reseaux .image1:hover{
-    filter: brightness(0);
+  filter: brightness(0);
 }
+
 
 /* ------------------- YOUTUBE ICON ------------------------ */
 
@@ -458,10 +457,11 @@ footer p {
 }
 
 .yt-icon:hover{
-    filter: brightness(0);
+  filter: brightness(0);
 }
 
-/*------------------------- TEMOIGNAGES------------------------*/
+
+/* ------------------------- TEMOIGNAGES ------------------------ */
 
 .title-box{
   font-size: 22px;
@@ -471,34 +471,34 @@ footer p {
 }
 
 .box-temoin {
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    justify-content: center;
-    width: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  justify-content: center;
+  width: 100%;
 }
 
 .etudiant-temoin {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: justify;
-    padding: 20px;
-    gap: 10%;
-    background-color: var(--bleu-academique);
-    margin: 2%;
-    border-radius: 10px;
-    color: white;
-    width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  padding: 20px;
+  gap: 10%;
+  background-color: var(--bleu-academique);
+  margin: 2%;
+  border-radius: 10px;
+  color: white;
+  width: 90%;
 }
 
 .etudiant-temoin img {
-    width: 200px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 10px;
-    padding: 10px;
-    border-radius: 10px;
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 .etudiant-temoin p{
@@ -514,13 +514,15 @@ footer p {
 }
 
 
-/*-----------------PLAN D'ACCES-------------------*/
+/* ----------------- PLAN D'ACCES ------------------- */
+
 #maps{
   display: flex;
   flex-direction: column;
   object-fit: contain;
   font-size: 15px;
 }
+
 .campus{
   display: flex;
   flex-direction: column;
@@ -540,37 +542,37 @@ footer p {
 }
 
 #FAQ .postit {
-    padding: 2%;
-    margin: 4px 0;
+  padding: 2%;
+  margin: 4px 0;
 }
 
 #plan-acces .postit {
-    padding: 4%;
-    margin: 6px 0;
+  padding: 4%;
+  margin: 6px 0;
 }
 
 #FAQ .triangle p, #FAQ .title-box, #plan-acces .triangle p, #plan-acces .title-box {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 #FAQ .title-box {
-    font-size: 16px;
-    font-weight: 600;
+  font-size: 16px;
+  font-weight: 600;
 }
 
 #FAQ p {
-    font-size: 14px;
-    font-style: normal;
-    letter-spacing: 0.5px;
+  font-size: 14px;
+  font-style: normal;
+  letter-spacing: 0.5px;
 }
 
 #FAQ #faq-container > .postit {
-    margin: 0.6rem 0;
+  margin: 0.6rem 0;
 }
 
 #FAQ #faq-container > .postit > .depliable-contenu > .hidden > .postit {
-    margin: 3px 0;
+  margin: 3px 0;
 }
 
 #maps iframe{
@@ -594,15 +596,15 @@ footer p {
   color: #222;
 }
 .infos-site-campus p {
-    color: var(--bleu-academique);
-    font-weight: bold;
-    margin: 0;              
+  color: var(--bleu-academique);
+  font-weight: bold;
+  margin: 0;              
 }
 .infos-site-campus span {
-    display: flex;
-    align-items: center;
-    gap: 5px;               
-    color: #222;
+  display: flex;
+  align-items: center;
+  gap: 5px;               
+  color: #222;
 }
 
 .infos-site-campus a:hover{
@@ -610,7 +612,7 @@ footer p {
 }
 
 #campus-bordeaux {
-    display: none;
+  display: none;
 }
 
 .position-maps{
@@ -620,20 +622,21 @@ footer p {
 }
 
 .copyBtn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: var(--bleu-academique);
-    padding: 4px;
-    vertical-align: middle;
-    border-radius: 10px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--bleu-academique);
+  padding: 4px;
+  vertical-align: middle;
+  border-radius: 10px;
 }
 
 .copyBtn:hover {
-    background-color: rgb(244, 244, 244);
+  background-color: rgb(244, 244, 244);
 }
 
 /* Bouton de choix de campus */
+
 #campus-choix {
   display: flex;
   gap: 10px;
@@ -683,23 +686,26 @@ footer p {
 }
 
 @media screen and (max-width: 600px) {
-    #plan-acces iframe {
-        height: 220px;
-    }
+  #plan-acces iframe {
+    height: 220px;
+  }
 
-    #campus-choix {
-        flex-direction: column;  
-        align-items: center;
-        width: 100%;
-    }
+  #campus-choix {
+    flex-direction: column;  
+    align-items: center;
+    width: 100%;
+  }
 
-    .campus-choisi {
-        width: 80%;
-        text-align: center;
-        justify-content: center;
-    }
+  .campus-choisi {
+    width: 80%;
+    text-align: center;
+    justify-content: center;
+  }
 }
-/*---------------------CONTENU DEPLIABLE--------------------*/
+
+
+/* --------------------- CONTENU DEPLIABLE -------------------- */
+
 .triangle{
   font-size:large;
   margin: 0;
@@ -738,10 +744,10 @@ footer p {
 }
 
 @media screen and (max-width: 1024px) {
-    .depliable{
-      width: 100%;
-      box-sizing: border-box;
-    }
+  .depliable{
+    width: 100%;
+    box-sizing: border-box;
+  }
 }
 
 .box-depliable{
@@ -754,16 +760,16 @@ footer p {
 }
 
 @media screen and (max-width: 600px) {
-
-    .box-depliable{
-      padding: 1.5rem 1rem;
-      width: 90%;
-      box-sizing: border-box; 
-    }
+  .box-depliable{
+    padding: 1.5rem 1rem;
+    width: 90%;
+    box-sizing: border-box; 
+  }
 }
 
 
-/*------------- PARAGRAPHE ------------*/
+/* ------------- PARAGRAPHE ------------ */
+
 .paragraphe{
   display: flex;
   text-align: center;
@@ -785,7 +791,9 @@ footer p {
   text-align: justify;
 }
 
-/*--------------------ASSO--------------*/
+
+/* -------------------- ASSO ---------------- */
+
 #para-asso{
   flex-direction: column;
   width: 100%;
@@ -857,85 +865,83 @@ footer p {
     justify-content: flex-start;
 }
 
-
-
-
 @media screen and (max-width: 1024px) {
+  .description-asso {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 15px;
+  }
 
-    .description-asso {
-      flex-direction: column;
-      text-align: center;
-      align-items: center;
-      gap: 15px;
-    }
+  .description-asso img {
+    width: 120px;
+    margin: 0 auto;          
+  }
 
-    .description-asso img {
-      width: 120px;
-      margin: 0 auto;          
-    }
+  #clubrezo {
+    width: 150px;
+  }
 
-    #clubrezo {
-      width: 150px;
-    }
+  .etudiant-temoin {
+    flex-direction: column;  
+    align-items: center;
+    text-align: left;             
+  }
 
-    .etudiant-temoin {
-      flex-direction: column;  
-      align-items: center;
-      text-align: left;             
-    }
+  #para-asso {
+    margin-left: 0;
+  }
 
-    #para-asso {
-      margin-left: 0;
-    }
+  .etudiant-temoin img {
+    width: 120px;
+  }
 
-    .etudiant-temoin img {
-      width: 120px;
-    }
-
-    .contenu-depliable {
-      overflow: hidden;              
-    }
+  .contenu-depliable {
+    overflow: hidden;              
+  }
 }
 
 @media screen and (max-width: 600px) {
-    .depliable-header .title-box {
-      font-size: 18px;
-      white-space: normal;     
-    }
+  .depliable-header .title-box {
+    font-size: 18px;
+    white-space: normal;     
+  }
 
-    .contenu-depliable {
-      width: 100%;              
-    }
+  .contenu-depliable {
+    width: 100%;              
+  }
 
-    section {
-      padding: 1rem;           
-    }
-    #depliable-clubs-assos, #depliable-temoignages{
-      width: 90%;
-    
-    }
-
+  section {
+    padding: 1rem;           
+  }
+  
+  #depliable-clubs-assos, #depliable-temoignages{
+    width: 90%;
+  }
 }
-/*-----------------PRESENTATION-CAMPUS-------------------*/
+
+
+/* ----------------- PRESENTATION CAMPUS ------------------- */
+
 #villejuif img{
   width: 80%;
   height: auto;
 }
 
 #villejuif .photo-temoin {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: justify;
-    flex-shrink: 0;         
-    width: 100%;
-    max-width: 550px;          
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: justify;
+  flex-shrink: 0;         
+  width: 100%;
+  max-width: 550px;          
 }
 
 #villejuif .etudiant-temoin {
-    display: flex;
-    align-items: center;
-    gap: 30px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
 }
 
 #pres-campus1, #pres-campus2, #pres-campus3,#pres-campus4{
@@ -957,7 +963,6 @@ footer p {
 }
 
 @media screen and (max-width: 1024px) {
-
   #villejuif .etudiant-temoin {
     flex-direction: column;
     text-align: center;
@@ -975,7 +980,6 @@ footer p {
 
 
 @media screen and (max-width: 600px) {
-
   #villejuif .photo-temoin {
     max-width: 100%;
   }
@@ -990,7 +994,8 @@ footer p {
 }
 
 
-/*----------------- FAQ -------------*/
+/* ----------------- FAQ ----------------------- */
+
 .hidden .site {
   max-width: 100%;
   width: 100%;
@@ -1013,13 +1018,17 @@ footer p {
 }
 
 
-/*-----------------Partenariat---------------*/
+/* ----------------- Partenariat --------------- */
+
 #alumni-logo{
   width:200px;
   height: auto;
   justify-content: center;
 }
-/*-------------------Enseignant-------------------*/
+
+
+/* ------------------- Enseignant ------------------- */
+
 #equipe a{
   text-decoration: none;
   font-family: var(--font-corps);
@@ -1033,7 +1042,8 @@ footer p {
   font-weight: 800;
 }
 
-/*----------------------Lien-utile-----------------*/
+/* Liens utiles */
+
 #liens a{
   text-decoration: none;
   font-family: var(--font-corps);
@@ -1043,7 +1053,8 @@ footer p {
 #liens a:hover{
   text-decoration: underline;
 }
-/*--------------------------Parcours-------------------*/
+
+/* ---------------------- Parcours ------------------- */
 
 .schema-cursus{
   font-family: var(--font-corps);
@@ -1111,13 +1122,11 @@ footer p {
   opacity: 0.85;
 }
 
-
 .cursus-bloc.bloc-ingenieur{
   background-color: #e8edf5;
   color: var(--bleu-academique);
   border: 1px solid var(--bleu-academique);
 }
-
 
 .cursus-bloc.bloc-parallele{
   background-color: #e0fafa;
@@ -1131,7 +1140,6 @@ footer p {
   border: 1px solid var(--jaune-electrique);
 }
 
-
 .span-2{ 
   grid-column: span 2; 
 }
@@ -1139,7 +1147,6 @@ footer p {
 .span-3{ 
   grid-column: span 3; 
 }
-
 
 .cursus-legende{
   display: flex;
@@ -1171,27 +1178,27 @@ footer p {
   background-color: var(--jaune-electrique); 
 }
 
-
 @media screen and (max-width: 768px) {
-    .cursus-grid {
-      grid-template-columns: 55px repeat(5, 1fr);
-      gap: 4px;
-    }
+  .cursus-grid {
+    grid-template-columns: 55px repeat(5, 1fr);
+    gap: 4px;
+  }
 
-    .cursus-bloc strong {
-      font-size: 12px;
-    }
+  .cursus-bloc strong {
+    font-size: 12px;
+  }
 
-    .cursus-bloc span {
-      display: none;
-    }
+  .cursus-bloc span {
+    display: none;
+  }
 
-    .annee-header {
-      font-size: 11px;
-    }
+  .annee-header {
+    font-size: 11px;
+  }
 }
 
-/*---------------------Propos------------------*/
+
+/* --------------------- Propos ------------------ */
 
 #doc-projet a img{
   transition: width 0.8s ease-in-out;
@@ -1250,7 +1257,8 @@ footer p {
   font-weight: 600;
 }
 
-/*----------------------Projet-etudiants-----------------*/
+
+/* ---------------------- Projet étudiants ----------------- */
 
 .galerie-grid {
   display: grid;
@@ -1305,7 +1313,6 @@ footer p {
   text-align: left;
   color: white;
 }
-
 
 #modal-overlay {
   display: none;
@@ -1402,7 +1409,6 @@ footer p {
 .modal-lien:hover {
   background: var(--cyan-tech);
 }
-
 
 @media screen and (max-width: 768px) {
   .galerie-grid {
