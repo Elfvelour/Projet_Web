@@ -190,6 +190,8 @@
         border-radius: 8px;
         overflow: hidden;
         box-shadow: 0 1px 4px rgba(0,0,0,0.07);
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .table-enseignants tbody td {
@@ -200,6 +202,9 @@
         padding: 8px 14px;
         border-bottom: 1px solid #eef1f7;
         font-size: 13px;
+        box-sizing: border-box;
+        word-break: break-word;
+        overflow-wrap: break-word;
     }
 
     .table-enseignants tbody td:last-child {
@@ -222,5 +227,17 @@
     .btn-envoyer {
         width: 100%;
         text-align: center;
+    }
+
+    .table-wrapper {
+    width: 100%;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+    .table-enseignants {
+        width: 100%;
+        box-sizing: border-box;
+        table-layout: fixed;
     }
 }
