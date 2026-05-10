@@ -141,19 +141,19 @@
 }
 
 .cursus-bloc.bloc-ingenieur{
-  background-color: #e8edf5;
-  color: var(--bleu-academique);
+  background-color: var(--bleu-academique);
+  color: white;
   border: 1px solid var(--bleu-academique);
 }
 
 .cursus-bloc.bloc-parallele{
-  background-color: #e0fafa;
+  background-color: var(--cyan-tech);
   color:var(--bleu-academique);
   border: 1px solid var(--cyan-tech);
 }
 
 .cursus-bloc.bloc-bachelor{
-  background-color: #fef7e0;
+  background-color: var(--jaune-electrique);
   color: var(--bleu-academique);
   border: 1px solid var(--jaune-electrique);
 }

@@ -485,16 +485,6 @@ section img, .diagramme {
   transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
-.stat-card::before {
-  content: "";
-  position: absolute;
-  top: -30px;
-  right: -30px;
-  width: 90px;
-  height: 90px;
-  border-radius: 50%;
-  background: rgba(129, 236, 236, 0.15);
-}
 
 .stat-card:hover {
   transform: translateY(-4px);

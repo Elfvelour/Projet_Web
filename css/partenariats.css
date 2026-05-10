@@ -89,7 +89,7 @@
 .timeline-item::before {
     content: "";
     position: absolute;
-    left: -1.85rem;
+    left: -2.15rem;
     top: 5px;
     width: 11px;
     height: 11px;

@@ -75,63 +75,92 @@ buttons.forEach((button, index) => {
 (function(){
     "use strict";
 
-    const $slides = document.querySelectorAll('.slide');
+    const carouselInner = document.querySelector('.carousel-inner');
     const dotsContainer = document.querySelector('.carousel-dots');
 
-    if($slides.length === 0 || !dotsContainer) return;
+    if(!carouselInner || !dotsContainer) return;
+
+    const $slidesOriginales = Array.from(document.querySelectorAll('.slide'));
+    if($slidesOriginales.length === 0) return;
 
     const slideTimeout = 5000;
     const prev = document.querySelector('#prev');
     const next = document.querySelector('#next');
     const $text = document.querySelectorAll('.carousel-txt');
 
-    let $dots;
+    const premiereClone = $slidesOriginales[0].cloneNode(true);
+    const derniereClone = $slidesOriginales[$slidesOriginales.length - 1].cloneNode(true);
+
+    carouselInner.appendChild(premiereClone);     
+    carouselInner.insertBefore(derniereClone, $slidesOriginales[0]);
+
+    const $slides = Array.from(carouselInner.querySelectorAll('.slide'));
+    const total = $slides.length;
+    const nbOriginales = $slidesOriginales.length;
+
+    let currentSlide = 1;
+    let isTransitioning = false;
     let intervalId;
-    let currentSlide = 0;
+    let $dots;
 
-    function slideTo(index){
-        if(index >= $slides.length){
-            currentSlide = 0;
-        } else if(index < 0){
-            currentSlide = $slides.length - 1;
-        } else {
-            currentSlide = index;
-        }
+    function slideTo(index, animate = true){
+        if(isTransitioning) return;
 
-        document.querySelector('.carousel-inner').style.transform =
-            `translateX(-${currentSlide * 100}%)`;
+        currentSlide = index;
 
+        carouselInner.style.transition = animate ? 'transform 0.5s ease-in-out' : 'none';
+        carouselInner.style.transform = `translateX(-${currentSlide * 100}%)`;
+
+        const dotIndex = ((currentSlide - 1) + nbOriginales) % nbOriginales;
         $dots.forEach(($elt, key) => {
-            $elt.className = `dot ${key === currentSlide ? 'active' : 'inactive'}`;
+            $elt.className = `dot ${key === dotIndex ? 'active' : 'inactive'}`;
         });
 
         $text.forEach(($elt, key) => {
-            $elt.classList.toggle('visible', key === currentSlide);
+            $elt.classList.toggle('visible', key === dotIndex);
         });
+
+        if(animate){
+            isTransitioning = true;
+            setTimeout(() => {
+                isTransitioning = false;
+
+                if(currentSlide === 0){
+                    currentSlide = nbOriginales;
+                    carouselInner.style.transition = 'none';
+                    carouselInner.style.transform = `translateX(-${currentSlide * 100}%)`;
+                } else if(currentSlide === total - 1){
+                    currentSlide = 1;
+                    carouselInner.style.transition = 'none';
+                    carouselInner.style.transform = `translateX(-${currentSlide * 100}%)`;
+                }
+            }, 500);
+        }
     }
 
     function showSlide(){
         slideTo(currentSlide + 1);
     }
 
-    for(let i = 0; i < $slides.length; i++){
+    for(let i = 0; i < nbOriginales; i++){
         let span = document.createElement('span');
-        span.className = `dot ${i === currentSlide ? 'active' : 'inactive'}`;
+        span.className = `dot ${i === 0 ? 'active' : 'inactive'}`;
         span.dataset.slideId = i;
         dotsContainer.appendChild(span);
     }
 
     $dots = document.querySelectorAll('.dot');
-    $dots.forEach(($elt, key) => $elt.addEventListener('click', () => slideTo(key)));
+    $dots.forEach(($elt, key) => $elt.addEventListener('click', () => slideTo(key + 1)));
 
-    slideTo(0);
+
+    slideTo(1, false);
 
     prev.addEventListener('click', () => slideTo(currentSlide - 1));
     next.addEventListener('click', () => slideTo(currentSlide + 1));
 
     intervalId = setInterval(showSlide, slideTimeout);
 
-    $slides.forEach($elt => {
+    $slidesOriginales.forEach($elt => {
         let startX;
         let endX;
 
@@ -225,10 +254,10 @@ const projets = {
         img: "../img/projet_etudiants/open3map.png",
         titre: "Application IA",
         but: "Développer une application utilisant des modèles de machine learning.",
-        qui: "Groupe P2-SC2",
-        quand: "Semestre 2 — 2025/2026",
+        qui: "Groupe P2-SC1:",
+        quand: "Semestre 4 — 2025/2026",
         liens: [
-            { texte: "Voir le projet", url: "#" }
+            { texte: "Voir le projet", url: "https://github.com/Baptr0b0t" }
         ]
     },
     projet3: {

@@ -327,10 +327,20 @@
   text-align: center;
 }
 
-.lien-card:hover {
-  background: #f0f4fb;
+
+section#liens .lien-card {
+  color: var(--bleu-academique);
+  text-decoration: none;
+}
+
+section#liens .lien-card:hover {
+  background: var(--cyan-tech);
+  color: white;
   transform: translateY(-2px);
 }
+
+
+
 
 .lien-card .lc-icon {
   font-size: 1.2rem;
