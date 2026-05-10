@@ -103,6 +103,8 @@ async function chargerFAQ() {
     }
 }
 
+chargerFAQ();
+
 /* Plan d'accès */
 
 function switchCampus(campusId, btn) {
