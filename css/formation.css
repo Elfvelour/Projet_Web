@@ -16,6 +16,7 @@
   text-align: center;
   color: var(--bleu-academique);
   min-width: 100px;
+  transition:  all 0.3s ease-in-out;
 }
 
 .stat-number {
@@ -50,6 +51,10 @@
   .stats-banner {
     gap: 1rem;
   }
+}
+
+.stat-item:hover{
+  transform: scale(1.05);
 }
 
 
