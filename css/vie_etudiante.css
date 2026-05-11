@@ -96,7 +96,7 @@
 }
 
 #clubrezo{
-  width: 250px;
+  width: 200px;
   height: auto;
 }
 
@@ -119,8 +119,8 @@
   flex-direction: row;
   align-items: center;
   text-align: justify;
-  justify-content: center;
-  gap: 50px;
+  justify-content: space-between;
+  gap: 30px;
   background-color: var(--bleu-academique);
   color: white;
   width: 100%;
@@ -132,6 +132,9 @@
 
 .description-asso p{
   text-decoration: none;
+  flex: 1;
+  margin: 0;
+  min-width: 0;
 }
 
 #para-asso{
