@@ -13,9 +13,9 @@ const projets = {
     },
     projet2: {
         img: "../img/projet_etudiants/open3map.png",
-        titre: "Application IA",
-        but: "Développer une application utilisant des modèles de machine learning.",
-        qui: "Groupe P2-SC1:",
+        titre: "Open3map",
+        but: "Application qui référence tout les points de tri",
+        qui: "Groupe P2-SC1",
         quand: "Semestre 4 — 2025/2026",
         liens: [
             { texte: "Voir le projet", url: "https://github.com/Baptr0b0t" }
